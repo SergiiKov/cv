@@ -1,11 +1,15 @@
 import React from 'react';
 
-import logo from '../../img/MyPhoto.jpg'; 
-
-console.log(logo); // /logo.84287d09.png
+import './photo.styles.scss'
+import photoMy from '../../img/MyPhoto.jpg'; 
 
 function PhotoMain() {
-  // Import result is the URL of your image
-  return <img src={logo} alt="Logo" />;
+  return ( 
+  <div className=''>
+    <img src={photoMy} alt="Sergii Kovtun"  className='photo-container'/>
+  </div>
+  )
+   
+  
 }
 export default PhotoMain;
