@@ -1,31 +1,25 @@
 .header {
-    margin-top: .5rem;
-    padding-left: 10px;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  .logo-container {
+    height: 100%;
+    width: 70px;
+    padding: 25px;
   }
-  
-  .header ul li {
-    list-style: none;
-    margin: 0;
-    padding: .5rem 1rem;
-    border-radius: 3px;
+
+  .options {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .option {
+      padding: 10px 15px;
+    }
   }
-  
-  .header ul li:hover {
-    background-color: #444;
-  }
-  
-  .header a:hover {
-    text-decoration: none;
-  }
-  
-  .header h3 a {
-    color: black;
-  }
-  
-  .header h3 a:hover {
-    color: #00bc8c;
-  }
-  
-.d-flex{
-display: flex;
-  }
+}

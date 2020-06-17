@@ -1,0 +1,9 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 48vw 50vw ;
+}
+
+.grid-item {
+    font-size: 30px;
+    text-align: center;
+}
