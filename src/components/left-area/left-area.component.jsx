@@ -1,5 +1,6 @@
 import React from 'react';
 import photoMy from '../../img/MyPhoto.jpg'; 
+import CustomButton from '../custom-button/custom-button.component';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -15,13 +16,14 @@ const LeftArea = () => {
                 {<img src={photoMy} alt="Sergii Kovtun"  className='photo-container'/>}
                 <h2>Kovtun Sergii</h2>
                 <p>Email: sergiikovtun.vn@gmail.com</p>
-                <p>I'm a software engineer with over four years IT industry experience,
+                <h3>About</h3>
+                <p>Hi, I'm Kovtun Sergii a software engineer with over four years IT industry experience,
                 that wants to evolve in the field of web development.
                 I want to try something new and ready to work hard to learn it.</p>
-                <button>Read more</button>
+                <CustomButton />
                 <p>links</p>    
-            <div>
-                <FontAwesomeIcon icon={faLinkedin} />
+            <div className='icons-container'>
+                <a href='https://mdbootstrap.com/docs/jquery/css/colors/'><FontAwesomeIcon icon={faLinkedin} /></a>
                 <FontAwesomeIcon icon={faGithub} />
                 <FontAwesomeIcon icon={faFacebook} />
                 <FontAwesomeIcon icon={faEnvelope} />

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import './header.style.scss';
 
@@ -23,7 +21,6 @@ const Header = () => {
       </Link>
       <Link className='option' to='/contact'>
         Contact
-        <FontAwesomeIcon icon={faHome} />
       </Link>
     </div>
   </div>
