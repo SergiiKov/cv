@@ -6,6 +6,8 @@ import Header from '../components/header/header.component';
 import HomePage from '../pages/homepage/home-page';
 import AboutPage from '../pages/about/about-page';
 import ContactPage from '../pages/contact/contact-page'; 
+import ProjectsPage from '../pages/projects/projects-page';
+import ResumePage from '../pages/resume/resume-page';
 import LeftArea from '../components/left-area/left-area.component';
 
 function App() {
@@ -19,8 +21,10 @@ function App() {
         <div className='grid-item'>
         <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route path='/shop' component={AboutPage} />
-        <Route path='/signin' component={ContactPage} />
+        <Route path='/about' component={AboutPage} />
+        <Route path='/contact' component={ContactPage} />
+        <Route path='/projects' component={ProjectsPage} />
+        <Route path='/resume' component={ResumePage} />
       </Switch>
         </div>
       </div>
