@@ -3,12 +3,13 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+  // margin-bottom: 25px;
+  background-color: burlywood;
 
   .logo-container {
     height: 100%;
-    width: 70px;
-    padding: 25px;
+    width: 20%;
+    padding: 10px 15px;
   }
 
   .options {

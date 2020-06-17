@@ -4,11 +4,11 @@ import '../homepage/home-page.styles.scss';
 
 const HomePage = () => {  
     return(
-        <div className='homepage'>
-           home page test
+        <div className='home-page'>
+         This is react website created to introduce me and my skills in web development (and my skills in english).
         </div>
         );
-    }
+    };
 
 export default HomePage;
  

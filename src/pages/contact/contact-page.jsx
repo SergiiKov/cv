@@ -4,7 +4,7 @@ import '../contact/contact-page.styles.scss';
 
 const ContactPage = () => {
     return(
-        <div>Contact page test</div>
+        <div className='contact-page'>Contact page test</div>
     )
 };
 
