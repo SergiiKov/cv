@@ -15,7 +15,7 @@ const LeftArea = () => {
         <div className='left-area'>
                 {<img src={photoMy} alt="Sergii Kovtun"  className='photo-container'/>}
                 <h2>Kovtun Sergii</h2>
-                <p>Email: sergiikovtun.vn@gmail.com</p>
+                <p id='mail'>Email: sergiikovtun.vn@gmail.com</p>
                 <h3>About</h3>
                 <p>Hi, I'm Kovtun Sergii a software engineer with over four years IT industry experience,
                 that wants to evolve in the field of web development.
@@ -23,10 +23,10 @@ const LeftArea = () => {
                 <CustomButton />
                 <p>links</p>    
             <div className='icons-container'>
-                <a href='https://mdbootstrap.com/docs/jquery/css/colors/'><FontAwesomeIcon icon={faLinkedin} /></a>
-                <FontAwesomeIcon icon={faGithub} />
-                <FontAwesomeIcon icon={faFacebook} />
-                <FontAwesomeIcon icon={faEnvelope} />
+                <a href='https://www.linkedin.com/in/sergii-kovtun-1b97881a2/'><FontAwesomeIcon icon={faLinkedin} /></a>
+                <a href='https://github.com/SergiiKov'><FontAwesomeIcon icon={faGithub} /></a>
+                <a href='https://www.facebook.com/profile.php?id=100017264941501'><FontAwesomeIcon icon={faFacebook} /></a>
+                <a href="mailto:sergiikovtun.vn@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
             </div>
         </div>
     )

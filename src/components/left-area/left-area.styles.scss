@@ -1,13 +1,44 @@
 .left-area{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     background-color: indianred;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    
+    h2 {
+        font-size: 34px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-left: 20px;
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-left: 20px;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #mail {
+        text-transform: uppercase;
+    }
+
+
 }
 
 .photo-container{
     // max-height: 200px;
-    height: 20vmin;
+    height: 25vmin;
+    border-radius: 50%;
+    margin-top:40px;
+    margin-left: 40px;
 }
 
 .icons-container{

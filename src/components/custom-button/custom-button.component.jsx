@@ -4,7 +4,7 @@ import '../custom-button/custom-buttom.styles.scss';
 
 const CustomButton = () => (
   <button className='custom-button'>
-    Go
+   Learn more
   </button>
 );
 

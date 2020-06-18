@@ -1,26 +1,37 @@
 .header {
-  height: 70px;
+  height: 60px;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  // margin-bottom: 25px;
   background-color: burlywood;
+  border: 2px solid black;
+  margin-bottom: 20px;
 
   .logo-container {
+    display: flex;
+    align-items: center;
     height: 100%;
-    width: 20%;
-    padding: 10px 15px;
+    width: auto;
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color:forestgreen;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
   }
 
   .options {
-    width: 50%;
+    width: 90%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 
     .option {
-      padding: 10px 15px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 }
