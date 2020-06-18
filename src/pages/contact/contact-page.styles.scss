@@ -1,32 +1,52 @@
 .contact-page{
-    background-color: coral;
-    margin: 40px;
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rosybrown;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  
+  h2 {
+      font-size: 1.8em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-left: 20px;
+  }
 
-    h2{
-        font-size: 1.8em;
-        text-transform: uppercase;
-        font-weight: 500;
-        margin-left: 20px;
-        padding-top: 20px;
-        letter-spacing: .25em;
-        line-height: 1.65;
-      }
-      h3{
-        font-size: 1em;
-        font-weight: 500;
-        margin-left: 20px;
-        letter-spacing: .25em;
-        line-height: 1.5;
-      }
-      
-      p{
-        font-size: 1em;
-        font-weight: 400;
-        margin-left: 20px;
-        margin-right: 20px;
-        padding-top: 20px;
-      }
-      a{
-        color: rgb(173, 32, 32);
-      }
+  h3 {
+      font-size: 24px;
+      font-weight: 500;
+      margin-left: 20px;
+  }
+
+  p {
+      font-size: 14px;
+      font-weight: 400;
+      margin-left: 20px;
+      margin-right: 20px;
+  }
+
+  a{
+      color: black;
+      font-size: 24px;
+      font-weight: 500;
+     padding: 0 5px 0 5px;
+  }
+
+  a:hover{
+      color: cadetblue;
+  }
+  
+  #mail {
+      text-transform: uppercase;
+      cursor: pointer;
+  }
+
+  #mail:hover {
+    color: cadetblue;
+  }
+
 }
+
+
