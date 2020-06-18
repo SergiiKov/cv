@@ -7,7 +7,7 @@
     font-weight: 400;
     
     h2 {
-        font-size: 34px;
+        font-size: 1.8em;
         text-transform: uppercase;
         font-weight: 500;
         margin-left: 20px;
@@ -26,11 +26,36 @@
         margin-right: 20px;
     }
 
-    #mail {
-        text-transform: uppercase;
+    a{
+        color: black;
+        font-size: 24px;
+        font-weight: 500;
+       padding: 0 5px 0 5px;
     }
 
+    a:hover{
+        color: cadetblue;
+    }
+    
+    #mail {
+        text-transform: uppercase;
+        cursor: pointer;
+    }
 
+    #mail:hover {
+      color: cadetblue;
+    }
+
+    .links-container{
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+.button-left-area{
+    margin-top: 30px;
+    margin-left: 20px;  
 }
 
 .photo-container{

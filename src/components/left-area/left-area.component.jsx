@@ -21,12 +21,14 @@ const LeftArea = () => {
                 that wants to evolve in the field of web development.
                 I want to try something new and ready to work hard to learn it.</p>
                 <CustomButton />
-                <p>links</p>    
-            <div className='icons-container'>
-                <a href='https://www.linkedin.com/in/sergii-kovtun-1b97881a2/'><FontAwesomeIcon icon={faLinkedin} /></a>
-                <a href='https://github.com/SergiiKov'><FontAwesomeIcon icon={faGithub} /></a>
-                <a href='https://www.facebook.com/profile.php?id=100017264941501'><FontAwesomeIcon icon={faFacebook} /></a>
-                <a href="mailto:sergiikovtun.vn@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
+                <div className='links-container'>
+                <h3>Links:</h3>    
+                    <div className='icons-container'>
+                    <a href='https://www.linkedin.com/in/sergii-kovtun-1b97881a2/'><FontAwesomeIcon icon={faLinkedin} /></a>
+                    <a href='https://github.com/SergiiKov'><FontAwesomeIcon icon={faGithub} /></a>
+                    <a href='https://www.facebook.com/profile.php?id=100017264941501'><FontAwesomeIcon icon={faFacebook} /></a>
+                    <a href="mailto:sergiikovtun.vn@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
+                    </div>
             </div>
         </div>
     )

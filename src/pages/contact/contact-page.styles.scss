@@ -1,3 +1,32 @@
 .contact-page{
     background-color: coral;
+    margin: 40px;
+
+    h2{
+        font-size: 1.8em;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-left: 20px;
+        padding-top: 20px;
+        letter-spacing: .25em;
+        line-height: 1.65;
+      }
+      h3{
+        font-size: 1em;
+        font-weight: 500;
+        margin-left: 20px;
+        letter-spacing: .25em;
+        line-height: 1.5;
+      }
+      
+      p{
+        font-size: 1em;
+        font-weight: 400;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 20px;
+      }
+      a{
+        color: rgb(173, 32, 32);
+      }
 }
