@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
 
 import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import theme from '../ui/theme';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -28,14 +29,37 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 'auto'
   },
   tab:{
-    fontSize:'1rem'
+    ...theme.typography.tab
+  },
+  button:{
+    marginRight:'20px'
   }
 
 }));
 
 export default function Header(props) {
   const classes = useStyles();
-  const { children, value, index, ...other } = props;
+  const [value, setValue] = useState(0);
+  const handleChange = (e, value) => {
+    setValue(value);
+  };
+
+ useEffect(() =>{
+   if (window.location.pathname === '/about' && value !==0 ) {
+    setValue(0)
+  } else  if (window.location.pathname === '/resume' && value !==1) {
+    setValue(1)
+  } else  if (window.location.pathname === '/projects' && value !==2 ) {
+    setValue(2)
+  } else  if (window.location.pathname === '/contact' && value !==3 ) {
+    setValue(3)
+  }else  if (window.location.pathname === '/' && value !==4 ) {
+    setValue(4)
+  }
+}, [value]);
+
+
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -43,50 +67,25 @@ export default function Header(props) {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
-         
-          <Link to='/'>
-            <Typography variant="h6" className={classes.title}>
-                KOVTUN SERGII
-            </Typography>
-          </Link>
 
-          <Tabs className={classes.tabContainer}>
-            <Tab className={classes.tab} label='About' />  
-            <Tab className={classes.tab} label='Resume' />
-            <Tab className={classes.tab} label='Projects' />
-            <Tab className={classes.tab} label='Contact' />
+          <Button   component={Link} to='/' onClick={()=>setValue(4)}>KOVTUN SERGII</Button>
+          
+          <Tabs className={classes.tabContainer} 
+                value={value} 
+                onChange={handleChange}
+          >
+            
+            <Tab className={classes.tab} label='About' component={Link} to='/about' />  
+            <Tab className={classes.tab} label='Resume' component={Link} to='/resume' />
+            <Tab className={classes.tab} label='Projects' component={Link} to='/projects' />
+            <Tab className={classes.tab} label='Contact' component={Link} to='/contact' />
           </Tabs>
         
-          <Button color="inherit">Git</Button>
+          <Button variant='contained' color="secondary" className={classes.button}>Git</Button>
         </Toolbar>
       </AppBar>
     </div>
   );
 }
 
-// const Header = () => {
-//   return (
-//     <div className='header'>
-//     <Link className='logo-container' to='/'>
-//       KOVTUN SERGII
-//     </Link>
-//     <div className='options'>
-//       <Link className='option' to='/about'>
-//         About
-//       </Link>
-//       <Link className='option' to='/resume'>
-//         Resume
-//       </Link>
-//       <Link className='option' to='/projects'>
-//         Projects
-//       </Link>
-//       <Link className='option' to='/contact'>
-//         Contact
-//       </Link>
-//     </div>
-//   </div>
-//   );
-// };
-
-// export default Header;
 
