@@ -36,10 +36,20 @@ const useStyles = makeStyles(theme => ({
     marginLeft: 'auto'
   },
   tab:{
-    ...theme.typography.tab
+    ...theme.typography.tab,
+    textTransform: 'uppercase',
+    minWidth:10,
+    marginLeft:'10px',
+    paddingLeft: '20px',
+    paddingRight: '20px',
+    '&:hover': {
+      opacity: 0.9
+    }
   },
   button:{
-    marginRight:'20px'
+    marginRight:'20px',
+    marginLeft: '50px',
+    
   },
   logoContainer: {
     padding: 0
