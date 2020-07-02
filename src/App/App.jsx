@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import './App.scss';
 import Header from '../components/header/header.component';
+import Footer from '../components/footer/footer';
 import HomePage from '../pages/homepage/home-page';
 import AboutPage from '../pages/about/about-page';
 import ContactPage from '../pages/contact/contact-page'; 
@@ -10,7 +11,7 @@ import ProjectsPage from '../pages/projects/projects-page';
 import ResumePage from '../pages/resume/resume-page';
 import LeftArea from '../components/left-area/left-area.component';
 
-import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 import theme from '../components/ui/theme';
 
 function App() {
@@ -32,8 +33,8 @@ function App() {
             </Switch>
             </div>
           </div>
-      </ThemeProvider>
-     
+          <Footer />
+      </ThemeProvider> 
     </div>
   );
 }
