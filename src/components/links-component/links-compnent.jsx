@@ -11,8 +11,7 @@ import '../links-component/links-component.styles.scss';
 
 const LinksComponent = () =>{
     return(
-        <div className='links-container'>
-        <h3>Links:</h3>    
+        <div className='links-container'>  
             <div className='icons-container'>
             <a href='https://www.linkedin.com/in/sergii-kovtun-1b97881a2/'><FontAwesomeIcon icon={faLinkedin} /></a>
             <a href='https://github.com/SergiiKov'><FontAwesomeIcon icon={faGithub} /></a>

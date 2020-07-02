@@ -1,15 +1,12 @@
 .contact-page{
+    margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   background-color: rosybrown;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
 
-  min-height: 70vh;
-  
   h2 {
       font-size: 1.8em;
       text-transform: uppercase;

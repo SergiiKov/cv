@@ -26,8 +26,13 @@ const useStyles = makeStyles(theme=>({
     photoContainer:{
         height: '25vmin',
         borderRadius: '50%',
-        marginTop: '40px',
-        marginLeft: '40px',
+        marginTop: '20px',
+        marginLeft: '20px',
+    },
+    buttonLeftArea:{
+        marginLeft: '20px',
+        marginTop: '20px',
+        marginBottom: '20px', 
     }
 }))
 
@@ -52,8 +57,9 @@ export default function LeftAreaUi() {
                 <Box className={classes.box}>
                     Hi, I'm Kovtun Sergii a software engineer with over four years IT industry experience,
                     that wants to evolve in the field of web development.
-                    I want to try something new and ready to work hard to learn it.
+                    I want to try something new and ready to work hard to learn it. 
                 </Box>
+                <Button variant="contained" color="secondary" className={classes.buttonLeftArea}>Learn more</Button>
                 <Box className={classes.box}>
                     <LinksComponent />
                 </Box>
