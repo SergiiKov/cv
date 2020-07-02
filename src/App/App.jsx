@@ -38,7 +38,7 @@ function App() {
           </div> */}
           <Grid container>
               <Grid item xs={12} sm={4}>
-                <LeftArea />
+                <LeftAreaUi />
               </Grid>
               <Grid item xs={12} sm={8}>
                 <Switch>

@@ -49,7 +49,6 @@ const useStyles = makeStyles(theme => ({
   button:{
     marginRight:'20px',
     marginLeft: '50px',
-    
   },
   logoContainer: {
     padding: 0
@@ -71,6 +70,11 @@ const useStyles = makeStyles(theme => ({
     drawerItemSelected: {
       opacity:1
     },
+    drawerButton:{
+    marginTop:'20px',
+    marginLeft: '10px',
+    marginRight: '10px',
+  },
     appBar: {
       zIndex: theme.zIndex.modal + 1
     }
@@ -113,7 +117,7 @@ const tabs= (
             <Tab className={classes.tab} label='Projects' component={Link} to='/projects' />
             <Tab className={classes.tab} label='Contact' component={Link} to='/contact' />
           </Tabs>
-          <Button variant='contained' color="secondary" className={classes.button}>Git</Button>
+          <Button variant='contained' color="secondary" className={classes.button}>Sourse</Button>
   </React.Fragment>
 )
 
@@ -131,7 +135,7 @@ const drawer = (
             <List disablePadding>
                 <ListItem divider button component={Link} to='/' selected={value===4}  onClick={()=>{setOpenDrawer(false); setValue(4) }} >
                     <ListItemText className={value === 4 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
-                    Main
+                    Kovtun Sergii
                     </ListItemText>  
                 </ListItem>
                 <ListItem divider button selected={value===0} onClick={()=>{setOpenDrawer(false); setValue(0) }} component={Link} to='/about'  >
@@ -155,7 +159,7 @@ const drawer = (
                     </ListItemText>
                 </ListItem>
             </List>
-        <Button variant='contained' color="secondary" className={classes.button}>Git</Button>
+        <Button variant='contained' color="secondary" className={classes.drawerButton}>Sourse</Button>
     </SwipeableDrawer>
       <IconButton onClick={()=>setOpenDrawer(!openDrawer)} className={classes.iconButton}>
           <MenuIcon />
