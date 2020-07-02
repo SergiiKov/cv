@@ -1,19 +1,20 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
-
-import { createMuiTheme, makeStyles, ThemeProvider, useTheme } from '@material-ui/core/styles';
 import theme from '../ui/theme';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import { fade, makeStyles } from '@material-ui/core/styles';
+
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
+
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
 
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -21,16 +22,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 // import './header.style.scss';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
+const useStyles = makeStyles(theme => ({
+  
   tabContainer: {
     marginLeft: 'auto'
   },
@@ -47,17 +40,20 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 'auto',
     '&:hover': {
       backgroundColor: 'transparent'
+    }},
+    drawer: {
+      backgroundColor: theme.palette.common.blue,
     },
     drawerItem: {
       ...theme.typography.tab,
       color: 'white',
-      marginTop:'10px'
+      marginTop:'10px',
+      opacity: 0.7
     },
-    drawer: {
-      backgroundColor: 'red'
+    drawerItemSelected: {
+      opacity:1
     }
-  }
-
+    
 }));
 
 export default function Header(props) {
@@ -103,36 +99,36 @@ const tabs= (
 const drawer = (
   <React.Fragment>
     <SwipeableDrawer 
-      disableBackdropTransition={!iOS} 
-      disableDiscovery={iOS} 
-      open={openDrawer} 
-      onClose={()=>setOpenDrawer(false)}
-      onOpen={()=>setOpenDrawer(true)}
-      classes={{paper:classes.drawer}}
+       disableBackdropTransition={!iOS} 
+       disableDiscovery={iOS} 
+       open={openDrawer} 
+       onClose={()=>setOpenDrawer(false)}
+       onOpen={()=>setOpenDrawer(true)}
+       classes={{paper: classes.drawer}}
     > 
             <List disablePadding>
-                <ListItem divider button onClick={()=>setOpenDrawer(false)} >
-                    <ListItemText className={classes.drawerItem}>
-                    Menu
-                    </ListItemText>
+                <ListItem divider button component={Link} to='/' selected={value===4}  onClick={()=>{setOpenDrawer(false); setValue(4) }} >
+                    <ListItemText className={value === 4 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
+                    Main
+                    </ListItemText>  
                 </ListItem>
-                <ListItem divider button onClick={()=>setOpenDrawer(false)} component={Link} to='/about'  >
-                    <ListItemText className={classes.drawerItem}>
+                <ListItem divider button selected={value===0} onClick={()=>{setOpenDrawer(false); setValue(0) }} component={Link} to='/about'  >
+                    <ListItemText className={value === 0 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
                     About
                     </ListItemText>
                 </ListItem>
-                <ListItem divider button onClick={()=>setOpenDrawer(false)} component={Link} to='/resume'  >
-                    <ListItemText className={classes.drawerItem}>
+                <ListItem divider button selected={value===1} onClick={()=>{setOpenDrawer(false); setValue(1) }} component={Link} to='/resume'  >
+                    <ListItemText className={value === 1 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
                     Resume
                     </ListItemText>
                 </ListItem>
-                <ListItem divider button onClick={()=>setOpenDrawer(false)} component={Link} to='/projects'  >
-                    <ListItemText className={classes.drawerItem}>
+                <ListItem divider button selected={value===2} onClick={()=>{setOpenDrawer(false); setValue(2) }} component={Link} to='/projects'  >
+                    <ListItemText className={value === 2 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
                     Projects
                     </ListItemText>
                 </ListItem>
-                <ListItem divider button onClick={()=>setOpenDrawer(false)} component={Link} to='/contact'  >
-                    <ListItemText className={classes.drawerItem}>
+                <ListItem divider button selected={value===3} onClick={()=>{setOpenDrawer(false); setValue(3) }} component={Link} to='/contact'  >
+                    <ListItemText className={value === 3 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
                     Contact
                     </ListItemText>
                 </ListItem>
