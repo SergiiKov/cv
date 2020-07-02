@@ -23,7 +23,16 @@ import ListItemText from '@material-ui/core/ListItemText';
 // import './header.style.scss';
 
 const useStyles = makeStyles(theme => ({
-  
+  toolbarMargin: {
+    ...theme.mixins.toolbar,
+    marginBottom: '1em',
+    [theme.breakpoints.down('md')]:{
+      marginBottom: '2em'
+    },
+    [theme.breakpoints.down('xs')]:{
+      marginBottom: '1.25em'
+    }
+  },
   tabContainer: {
     marginLeft: 'auto'
   },
@@ -52,6 +61,9 @@ const useStyles = makeStyles(theme => ({
     },
     drawerItemSelected: {
       opacity:1
+    },
+    appBar: {
+      zIndex: theme.zIndex.modal + 1
     }
     
 }));
@@ -106,6 +118,7 @@ const drawer = (
        onOpen={()=>setOpenDrawer(true)}
        classes={{paper: classes.drawer}}
     > 
+    <div className={classes.toolbarMargin} />
             <List disablePadding>
                 <ListItem divider button component={Link} to='/' selected={value===4}  onClick={()=>{setOpenDrawer(false); setValue(4) }} >
                     <ListItemText className={value === 4 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
@@ -143,7 +156,7 @@ const drawer = (
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <Button 
             disableRipple 
@@ -154,6 +167,7 @@ const drawer = (
         { matches ? drawer : tabs}
         </Toolbar>
       </AppBar>
+      <div className={classes.toolbarMargin} />
     </div>
   );
 }
