@@ -22,16 +22,16 @@ import ListItemText from '@material-ui/core/ListItemText';
 // import './header.style.scss';
 
 const useStyles = makeStyles(theme => ({
-  toolbarMargin: {
-    ...theme.mixins.toolbar,
-    marginBottom: '1em',
-    [theme.breakpoints.down('md')]:{
-      marginBottom: '2em'
-    },
-    [theme.breakpoints.down('xs')]:{
-      marginBottom: '1.25em'
-    }
-  },
+  // toolbarMargin: {
+  //   ...theme.mixins.toolbar,
+  //   marginBottom: '1em',
+  //   [theme.breakpoints.down('md')]:{
+  //     marginBottom: '2em'
+  //   },
+  //   [theme.breakpoints.down('xs')]:{
+  //     marginBottom: '1.25em'
+  //   }
+  // },
   tabContainer: {
     marginLeft: 'auto'
   },
@@ -169,7 +169,8 @@ const drawer = (
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed" className={classes.appBar}>
+     {/* position="fixed" */}
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <Button 
             disableRipple 

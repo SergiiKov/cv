@@ -3,7 +3,6 @@ import React from 'react';
 import LinksComponent from '../links-component/links-compnent';
 import { makeStyles } from '@material-ui/core/styles';
 
-import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 
 
@@ -14,12 +13,12 @@ const useStyles = makeStyles(theme=>({
     mainBox:{
         backgroundColor: 'indianred',
         padding:'10px',
-        margin: '10px',
+        // margin: '10px',
+        marginLeft: '20px',
+        marginTop: '20px',
         [theme.breakpoints.down('xs')]:{
             margin: 0
-          },
-        
-        
+          },  
     },
     box:{
        marginTop:'10px' 
