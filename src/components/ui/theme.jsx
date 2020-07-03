@@ -25,6 +25,12 @@ const theme = createMuiTheme({
             textTransform: 'none',
             fontWeight: '700',
             fontSize:'1rem'
+          },
+          boxTitle: {
+            fontFamily: 'Roboto',
+            textTransform: 'none',
+            fontWeight: '500',
+            fontSize:'1.2rem'
           }
       }
 });

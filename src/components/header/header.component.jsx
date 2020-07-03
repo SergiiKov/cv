@@ -51,7 +51,18 @@ const useStyles = makeStyles(theme => ({
     marginLeft: '50px',
   },
   logoContainer: {
-    padding: 0
+    padding: 0,
+    marginLeft:'10px',
+    color:'white',
+    fontFamily: 'Roboto',
+            textTransform: 'uppercase',
+            fontWeight: '400',
+            letterSpacing: '0.09em',
+            fontSize:'1.2rem',
+            cursor:'pointer',
+            '&:hover': {
+                color:'#FFBA60'
+              }
   },
   iconButton: {
     marginLeft: 'auto',
@@ -159,7 +170,7 @@ const drawer = (
                     </ListItemText>
                 </ListItem>
             </List>
-        <Button variant='contained' color="secondary" className={classes.drawerButton}>Sourse</Button>
+        <Button variant="contained" color="secondary" className={classes.drawerButton}>Sourse</Button>
     </SwipeableDrawer>
       <IconButton onClick={()=>setOpenDrawer(!openDrawer)} className={classes.iconButton}>
           <MenuIcon />

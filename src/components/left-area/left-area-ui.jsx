@@ -11,8 +11,8 @@ import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles(theme=>({
     mainBox:{
-        backgroundColor: 'indianred',
-        padding:'10px',
+        backgroundColor: '#ef5350',
+        padding:'20px',
         // margin: '10px',
         marginLeft: '20px',
         marginTop: '20px',
@@ -28,12 +28,34 @@ const useStyles = makeStyles(theme=>({
         borderRadius: '50%',
         marginTop: '20px',
         marginLeft: '20px',
+        marginBottom:'10px',
+        cursor:'pointer'
     },
     buttonLeftArea:{
-        marginLeft: '20px',
+        marginLeft: '0px',
         marginTop: '20px',
         marginBottom: '20px', 
-    }
+    },
+    boxBody: {
+        ...theme.typography.body1
+      },
+      boxTitle:{
+          ...theme.typography.boxTitle,
+          paddingTop: '10px'
+      },
+      boxEmail:{
+        paddingTop: '10px',
+        fontFamily: 'Roboto',
+            textTransform: 'uppercase',
+            fontWeight: '400',
+            letterSpacing: '0.09em',
+            fontSize:'1rem',
+            cursor:'pointer',
+            '&:hover': {
+                color:'#FFBA60'
+              }
+      }
+
 }))
 
 export default function LeftAreaUi() {
@@ -45,16 +67,16 @@ export default function LeftAreaUi() {
                 <Box>
                 <   img src={photoMy} alt="Sergii Kovtun"  className={classes.photoContainer}/>
                 </Box>
-                <Box className={classes.box}>
+                <Box className={[classes.box, classes.boxTitle]}>
                     Kovtun Sergii
                 </Box>
-                <Box className={classes.box}>
+                <Box className={[classes.box, classes.boxEmail]}>
                     Email: sergiikovtun.vn@gmail.com
                 </Box>
-                <Box className={classes.box}>
+                <Box className={[classes.box, classes.boxTitle]}>
                     About
                 </Box>
-                <Box className={classes.box}>
+                <Box className={[classes.box, classes.boxBody]}>
                     Hi, I'm Kovtun Sergii a software engineer with over four years IT industry experience,
                     that wants to evolve in the field of web development.
                     I want to try something new and ready to work hard to learn it. 
