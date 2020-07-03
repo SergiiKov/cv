@@ -35,3 +35,17 @@
         color: rgb(173, 32, 32);
       }
 }
+
+@media screen and (max-width: 600px) {
+  .resume-page  {
+    margin: 0
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .resume-page  {
+  
+   margin-left: '20px';
+   margin-top: '20px';
+  }
+}
