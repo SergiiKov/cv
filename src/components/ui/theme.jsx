@@ -14,10 +14,12 @@ const theme = createMuiTheme({
           },
         primary: {
           main: `${arcBlue}`,
+          type:'dark'
         },
         secondary: {
             main: `${arcOrange}`,
         },
+        type:'dark'
       },
       typography: {
           tab: {
