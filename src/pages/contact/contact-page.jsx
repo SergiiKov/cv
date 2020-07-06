@@ -27,7 +27,13 @@ const useStyles = makeStyles((theme) => ({
         height:'30em'
     },
     contactPage:{
-        backgroundColor: '#ef9a9a'
+      marginTop: '20px',
+      marginLeft: '20px',
+      marginRight: '20px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+    backgroundColor: '#ef9a9a'
     }
 
   }));
@@ -82,14 +88,16 @@ const useStyles = makeStyles((theme) => ({
   
     return (
         <Grid container direction='row' className={classes.contactPage}>
-            <Grid item container direction='column' justify='center' lg={12}>
+            <Grid item container direction="column"
+  justify="center"
+  alignItems="center" lg={12}>
                 <Grid item>
                     <Typography variant='h2'>Contact US</Typography>
                     <Typography variant='body1'>Contact US</Typography> 
                 </Grid>
                 <Grid item container>
                     <Grid item>
-                      
+                      phone
                     </Grid>
                     <Grid item>
                        <Typography variant='body1'><a href='tel:2323232 34234 23'>2323232 34234 23</a></Typography>
@@ -97,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
                 </Grid>
                 <Grid item container>
                     <Grid item>
-                    {/* <img src={emailIcon} alt='email' /> */}
+                   mail
                     </Grid>
                     <Grid item>
                        <Typography variant='body1'><a href='mailto:mail12345'>@mail12345</a></Typography>
@@ -122,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
                 <TextField multiline rows={5} id='message' value={message} onChange={(event)=> setMessage(event.target.value)} />
                <Grid>
                    <Button 
-                   variant='contained'
+                   variant="contained" color="secondary"
                    disabled={name.length===0 || message.length===0 || phoneHelper.length !==0 || emailHelper.length !==0 }>Send Message</Button>
                </Grid>
                 </Grid>
