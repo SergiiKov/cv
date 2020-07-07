@@ -1,7 +1,7 @@
 import React from 'react';
 import FormInput from '../../components/form-input/form-input.component';
 import LinksComponent from '../../components/links-component/links-compnent';
-
+import axios from 'axios';
 
 import {useState} from 'react';
 
@@ -85,6 +85,11 @@ const useStyles = makeStyles((theme) => ({
         }
       };
 
+  const onConfirm = () =>{
+    axios.get('https://us-central1-material-ui-5daa2.cloudfunctions.net/sendMail')
+    .then(res =>console.log(res))
+    .catch(err =>console.log(err))
+  };
   
     return (
         <Grid container direction='row' className={classes.contactPage}>
@@ -131,7 +136,7 @@ const useStyles = makeStyles((theme) => ({
                <Grid>
                    <Button 
                    variant="contained" color="secondary"
-                   disabled={name.length===0 || message.length===0 || phoneHelper.length !==0 || emailHelper.length !==0 }>Send Message</Button>
+                   disabled={name.length===0 || message.length===0 || phoneHelper.length !==0 || emailHelper.length !==0 } onClick={onConfirm}>Send Message</Button>
                </Grid>
                 </Grid>
             </Grid>
