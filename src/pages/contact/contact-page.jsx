@@ -1,5 +1,4 @@
 import React from 'react';
-import FormInput from '../../components/form-input/form-input.component';
 import LinksComponent from '../../components/links-component/links-compnent';
 import axios from 'axios';
 
@@ -11,6 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Snackbar from '@material-ui/core/Snackbar';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -54,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
     const [message,setMessage] = useState('');
 
     const [loading, setLoading] = React.useState(false);
+    const [alert, setAlert] =  React.useState({message: '', backgroundColor: ''});
 
     const onChange = event => {
         let valid;
@@ -92,13 +93,15 @@ const useStyles = makeStyles((theme) => ({
     setLoading(true);
     axios.get('https://us-central1-material-ui-5daa2.cloudfunctions.net/sendMail')
     .then(res =>{
-      setLoading(false)
-      setName('')
-      setEmail('')
-      setPhone('')
-      setMessage('')
+      setLoading(false);
+      setName('');
+      setEmail('');
+      setPhone('');
+      setMessage('');
+      setAlert({message: "Message send sucsesful", backgroundColor:'#4BB543' })
+
     })
-    .catch(err =>setLoading(false))
+    .catch(err =>{setLoading(false); setAlert({message: "sonting wrong", backgroundColor:'#FF3232' }) })
   };
 
   const buttonContent = (
@@ -108,7 +111,15 @@ const useStyles = makeStyles((theme) => ({
   )
 
     return (
+      
         <Grid container direction='row' className={classes.contactPage}>
+              <Snackbar 
+    open={alert.open} 
+    message={alert.message}
+    ContentProps={{style:{backgroundColor: alert.backgroundColor}}} 
+    anchorOrigin={{vertical:'top', horizontal:'center'}}
+    onClose={()=>setAlert({...alert, open:false})}
+    autoHideDuration={4000} />
             <Grid item container direction="column"
   justify="center"
   alignItems="center" lg={12}>
@@ -153,7 +164,7 @@ const useStyles = makeStyles((theme) => ({
                    <Button 
                    variant="contained" color="secondary"
                    disabled={name.length===0 || message.length===0 || phoneHelper.length !==0 || emailHelper.length !==0 } 
-    onClick={onConfirm}>{loading ? <CircularProgress  /> : buttonContent}</Button>
+    onClick={onConfirm}>{loading ? <CircularProgress size={30} /> : buttonContent}</Button>
                </Grid>
                 </Grid>
             </Grid>
