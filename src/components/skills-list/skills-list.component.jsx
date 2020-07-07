@@ -3,19 +3,19 @@ import SkillCard from '../skill-card/skill-card.component';
 
 import './skills-list.styles.scss'
 
-const SkillsList = ({ districts }) => {
+const SkillsList = ({ skills }) => {
 
   return(
-    <div className='districts-list'>
+    <div className='skills-list'>
        {
-         districts.map( (user, i) =>{
+         skills.map( (user, i) =>{
           return(
             <SkillCard
             key={i} 
-            id={districts[i].id}  
-            name={districts[i].name} 
-            webSite={districts[i].webSite}
-            href={districts[i].href}
+            id={skills[i].id}  
+            name={skills[i].name} 
+            webSite={skills[i].webSite}
+            href={skills[i].href}
              />
           );
       })

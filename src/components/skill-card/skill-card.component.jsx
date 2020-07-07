@@ -9,8 +9,7 @@ const SkillCard = (props) =>{
             <div className='card-container'>
                 {/* <img src={require(`../../img/${id}.png`)} alt='district card' className='img-district' /> */}
                <div className='card-text-container'>
-                <h2>{'Назва: ' + name}</h2>
-                <hr className='style1' />
+                    <h2>{ name }</h2>
                     <a href={href}>{'Cайт: ' + webSite}</a>
                </div>
                 

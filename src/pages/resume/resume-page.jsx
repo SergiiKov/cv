@@ -44,7 +44,7 @@ const ResumePage = () => {
   const [theme, toggleDarkMode] = useDarkMode()
   const themeConfig = createMuiTheme(theme)
   console.log(theme);
-
+ 
   return (
       <MuiThemeProvider theme={themeConfig}>
        <React.Fragment>
@@ -82,8 +82,6 @@ const ResumePage = () => {
                     Knowledge of Adobe Photoshop
                     Knowledge of English on the Pre-Intermediate level (Read/Write)
        </Typography>
-
-
        </CardContent>
    </Card>
        </React.Fragment>

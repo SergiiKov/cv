@@ -3,18 +3,6 @@ a {
   text-align: center;
 }
 
-hr.style1{
-  display: block;
-    margin-left: 20px;
-    margin-right: 20px;
-    border-style: inset;
-    border-width: 1px;
-    color: black;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-}
-
 .card-container {
     display: flex;
     flex-direction: column;
@@ -40,7 +28,7 @@ hr.style1{
     h2 {
       color: black;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 1em;
       font-weight: 500;
       font-family: 'Montserrat', sans-serif;
       text-align: center;
@@ -50,7 +38,7 @@ hr.style1{
   
   .card-text-container a {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 500;
     color: black;
     text-align: center;
@@ -75,11 +63,11 @@ hr.style1{
   
       .card-container a {
         margin-top: 4px;
-          font-size: 12px;
+          font-size: 0.8em;
       }
 
       .card-container h2 {
         margin-top: 10px;
-        font-size: 12px;
+        font-size: 0.7em;
       }
     }
