@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -52,6 +53,8 @@ const useStyles = makeStyles((theme) => ({
 
     const [message,setMessage] = useState('');
 
+    const [loading, setLoading] = React.useState(false);
+
     const onChange = event => {
         let valid;
     
@@ -86,11 +89,24 @@ const useStyles = makeStyles((theme) => ({
       };
 
   const onConfirm = () =>{
+    setLoading(true);
     axios.get('https://us-central1-material-ui-5daa2.cloudfunctions.net/sendMail')
-    .then(res =>console.log(res))
-    .catch(err =>console.log(err))
+    .then(res =>{
+      setLoading(false)
+      setName('')
+      setEmail('')
+      setPhone('')
+      setMessage('')
+    })
+    .catch(err =>setLoading(false))
   };
-  
+
+  const buttonContent = (
+    <React.Fragment>
+      Send Message
+    </React.Fragment>
+  )
+
     return (
         <Grid container direction='row' className={classes.contactPage}>
             <Grid item container direction="column"
@@ -136,7 +152,8 @@ const useStyles = makeStyles((theme) => ({
                <Grid>
                    <Button 
                    variant="contained" color="secondary"
-                   disabled={name.length===0 || message.length===0 || phoneHelper.length !==0 || emailHelper.length !==0 } onClick={onConfirm}>Send Message</Button>
+                   disabled={name.length===0 || message.length===0 || phoneHelper.length !==0 || emailHelper.length !==0 } 
+    onClick={onConfirm}>{loading ? <CircularProgress  /> : buttonContent}</Button>
                </Grid>
                 </Grid>
             </Grid>
