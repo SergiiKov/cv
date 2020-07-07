@@ -91,7 +91,14 @@ const useStyles = makeStyles((theme) => ({
 
   const onConfirm = () =>{
     setLoading(true);
-    axios.get('https://us-central1-material-ui-5daa2.cloudfunctions.net/sendMail')
+    axios.get('https://us-central1-material-ui-5daa2.cloudfunctions.net/sendMail', 
+    {params: {
+      name: name,
+      email: email,
+      phone: phone,
+      message: message
+    }}
+    )
     .then(res =>{
       setLoading(false);
       setName('');
