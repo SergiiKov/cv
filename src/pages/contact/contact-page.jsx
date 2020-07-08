@@ -38,6 +38,14 @@ const useStyles = makeStyles((theme) => ({
     },
     contactPart:{
       backgroundColor: '#ef9a9a'
+    },
+    textField:{
+      border:`2px solid ${theme.palette.common.blue}`,
+      marginTop:'5em',
+      borderRadius: 5
+    },
+    sendButton: {
+      marginTop:'2em'
     }
 
   }));
@@ -133,18 +141,21 @@ const useStyles = makeStyles((theme) => ({
             <Grid item container 
                   direction="column"
                   justify="center"
-                  alignItems="center"
+                  alignItems='center'
                   className={classes.contactPart}
                   style={{
                     marginBottom: matchesMD ? "5em" : 0,
                     marginTop: matchesSM ? "1em" : matchesMD ? "5em" : 0
                   }}
-                   lg={4}>
+                   lg={4}
+                   xl={3}>
+            <Grid item>
+              <Grid container direction='column' justify="center" alignItems='center'>
               <Grid item>
                     <Typography style={{color: theme.palette.common.blue}} variant='h2'>Contact</Typography>
                     <Typography style={{color: theme.palette.common.blue, lineHeight: 1}} variant='body1'>Send emai me</Typography> 
               </Grid>
-                <Grid item container>
+                <Grid item container style={{marginTop:'1em'}}>
                     <Grid item>
                      <img src={phoneIcon} alt='phone number' style={{marginRight:'0.5em'}} />
                     </Grid>
@@ -155,7 +166,7 @@ const useStyles = makeStyles((theme) => ({
                          </Typography>
                     </Grid>
                 </Grid>
-                <Grid item container>
+                <Grid item container style={{marginTop:'0.4em', marginBottom:'1em'}}>
                     <Grid item>
                      <img src={emailIcon} alt='email' style={{marginRight:'0.5em', verticalAlign:'bottom'}} />
                     </Grid>
@@ -178,16 +189,26 @@ const useStyles = makeStyles((theme) => ({
                     <TextField label='Phone' id='phone' error={phoneHelper.length !==0} helperText={phoneHelper} value={phone} onChange={onChange} />
                     </Grid>
                 </Grid>
-                <Grid item>
-                    <TextField multiline rows={5} id='message' value={message} onChange={(event)=> setMessage(event.target.value)} />
-                  <Grid item> 
+                <Grid item >
+                    <TextField 
+                      className={classes.textField}
+                      InputProps={{ disableUnderline: true }} 
+                      multiline rows={8} 
+                      id='message' 
+                      value={message} 
+                      onChange={(event)=> setMessage(event.target.value)} 
+                    />
+                  <Grid item container> 
                     <Button 
+                    className={classes.sendButton}
                       variant="contained" color="secondary"
                       disabled={name.length===0 || message.length===0 || phoneHelper.length !==0 || emailHelper.length !==0 } 
                       onClick={onConfirm}>{loading ? <CircularProgress size={30} /> : buttonContent}
                     </Button>
                   </Grid>
                 </Grid>
+              </Grid>
+            </Grid>
             </Grid>
         
             <Snackbar
@@ -202,7 +223,7 @@ const useStyles = makeStyles((theme) => ({
               autoHideDuration={4000}
               onClose={() => setAlert(false)}
             />
-            <Grid item container lg={8} className={classes.background}></Grid>
+            <Grid item container lg={8} xl={9} className={classes.background}></Grid>
         </Grid>
         
     );
