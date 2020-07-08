@@ -10,9 +10,11 @@ import TextField from '@material-ui/core/TextField';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Snackbar from '@material-ui/core/Snackbar';
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Container from '@material-ui/core/Container';
 
 import phoneIcon from '../../img/phone.svg';
 import emailIcon from '../../img/email.svg';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -137,6 +139,7 @@ const useStyles = makeStyles((theme) => ({
   )
 
     return (
+      <Container>
         <Grid container direction='row' className={classes.contactPage}>
             <Grid item container 
                   direction="column"
@@ -147,8 +150,9 @@ const useStyles = makeStyles((theme) => ({
                     marginBottom: matchesMD ? "5em" : 0,
                     marginTop: matchesSM ? "1em" : matchesMD ? "5em" : 0
                   }}
-                   lg={4}
-                   xl={3}>
+                  //  lg={4}
+                  //  xl={3}
+                   >
             <Grid item>
               <Grid container direction='column' justify="center" alignItems='center'>
               <Grid item>
@@ -223,8 +227,11 @@ const useStyles = makeStyles((theme) => ({
               autoHideDuration={4000}
               onClose={() => setAlert(false)}
             />
-            <Grid item container lg={8} xl={9} className={classes.background}></Grid>
+            {/* <Grid item container lg={8} xl={9} className={classes.background}></Grid> */}
         </Grid>
+
+      </Container>
+        
         
     );
   }
