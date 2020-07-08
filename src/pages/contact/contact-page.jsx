@@ -55,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
 
     const [loading, setLoading] = React.useState(false);
     const [alert, setAlert] =  React.useState({message: '', backgroundColor: ''});
+    const [alertMessage, setAlertMesssage] = useState("");
 
     const onChange = event => {
         let valid;
@@ -104,11 +105,15 @@ const useStyles = makeStyles((theme) => ({
       setName('');
       setEmail('');
       setPhone('');
-      setMessage('');
-      setAlert({message: "Message send sucsesful", backgroundColor:'#4BB543' })
+      setMessage("");
+        setAlert({ open: true, color: "#4BB543" });
+        setAlertMesssage("Message sent successfully!");
 
     })
-    .catch(err =>{setLoading(false); setAlert({message: "sonting wrong", backgroundColor:'#FF3232' }) })
+    .catch(err =>{setLoading(false); 
+      setAlert({message: "sonting wrong", backgroundColor:'#FF3232' })
+      setAlertMesssage("Something went wrong! Please try again.");
+      console.error(err); })
   };
 
   const buttonContent = (
@@ -120,13 +125,7 @@ const useStyles = makeStyles((theme) => ({
     return (
       
         <Grid container direction='row' className={classes.contactPage}>
-              <Snackbar 
-    open={alert.open} 
-    message={alert.message}
-    ContentProps={{style:{backgroundColor: alert.backgroundColor}}} 
-    anchorOrigin={{vertical:'top', horizontal:'center'}}
-    onClose={()=>setAlert({...alert, open:false})}
-    autoHideDuration={4000} />
+             
             <Grid item container direction="column"
   justify="center"
   alignItems="center" lg={12}>
@@ -176,7 +175,18 @@ const useStyles = makeStyles((theme) => ({
                 </Grid>
             </Grid>
         
-            
+            <Snackbar
+        open={alert.open}
+        ContentProps={{
+          style: {
+            backgroundColor: alert.color
+          }
+        }}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        message={alertMessage}
+        autoHideDuration={4000}
+        onClose={() => setAlert(false)}
+      />
         </Grid>
     );
   }
