@@ -1,8 +1,6 @@
 import React from 'react';
-import LinksComponent from '../../components/links-component/links-compnent';
-import axios from 'axios';
-
 import {useState} from 'react';
+import axios from 'axios';
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -11,6 +9,10 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Snackbar from '@material-ui/core/Snackbar';
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
+import phoneIcon from '../../img/phone.svg';
+import emailIcon from '../../img/email.svg';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -31,9 +33,6 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '20px',
       marginLeft: '20px',
       marginRight: '20px',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'flex-start',
     backgroundColor: '#ef9a9a'
     }
 
@@ -42,6 +41,9 @@ const useStyles = makeStyles((theme) => ({
   export default function Contact() {
     const classes = useStyles();
     const theme= useTheme(); 
+    const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
+    const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+    const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
     const [name, setName] = useState('');
 
@@ -123,19 +125,23 @@ const useStyles = makeStyles((theme) => ({
   )
 
     return (
-      
         <Grid container direction='row' className={classes.contactPage}>
-             
-            <Grid item container direction="column"
-  justify="center"
-  alignItems="center" lg={12}>
-                <Grid item>
+            <Grid item container 
+                  direction="column"
+                  justify="center"
+                  alignItems="center"
+                  style={{
+                    marginBottom: matchesMD ? "5em" : 0,
+                    marginTop: matchesSM ? "1em" : matchesMD ? "5em" : 0
+                  }}
+                   lg={12}>
+              <Grid item>
                     <Typography variant='h2'>Contact US</Typography>
                     <Typography variant='body1'>Contact US</Typography> 
-                </Grid>
+              </Grid>
                 <Grid item container>
                     <Grid item>
-                      phone
+                     <img src={phoneIcon} alt='phone number' />
                     </Grid>
                     <Grid item>
                        <Typography variant='body1'><a href='tel:2323232 34234 23'>2323232 34234 23</a></Typography>
@@ -143,7 +149,7 @@ const useStyles = makeStyles((theme) => ({
                 </Grid>
                 <Grid item container>
                     <Grid item>
-                   mail
+                    <img src={emailIcon} alt='Email' />
                     </Grid>
                     <Grid item>
                        <Typography variant='body1'><a href='mailto:mail12345'>@mail12345</a></Typography>
@@ -166,27 +172,28 @@ const useStyles = makeStyles((theme) => ({
                 </Grid>
                 <Grid item>
                 <TextField multiline rows={5} id='message' value={message} onChange={(event)=> setMessage(event.target.value)} />
-               <Grid>
+               <Grid item>
                    <Button 
                    variant="contained" color="secondary"
                    disabled={name.length===0 || message.length===0 || phoneHelper.length !==0 || emailHelper.length !==0 } 
-    onClick={onConfirm}>{loading ? <CircularProgress size={30} /> : buttonContent}</Button>
+                   onClick={onConfirm}>{loading ? <CircularProgress size={30} /> : buttonContent}
+                   </Button>
                </Grid>
                 </Grid>
             </Grid>
         
             <Snackbar
-        open={alert.open}
-        ContentProps={{
-          style: {
-            backgroundColor: alert.color
-          }
-        }}
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
-        message={alertMessage}
-        autoHideDuration={4000}
-        onClose={() => setAlert(false)}
-      />
+              open={alert.open}
+              ContentProps={{
+                style: {
+                  backgroundColor: alert.color
+                }
+              }}
+              anchorOrigin={{ vertical: "top", horizontal: "center" }}
+              message={alertMessage}
+              autoHideDuration={4000}
+              onClose={() => setAlert(false)}
+            />
         </Grid>
     );
   }
