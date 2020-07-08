@@ -24,16 +24,20 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.text.secondary,
     },
     background:{
+      backgroundColor: '#00897b',
         backgroundPosition:'center',
         backgroundSize:'cover',
         backgroundRepeat:'no-repeat',
         height:'30em'
+
     },
     contactPage:{
       marginTop: '20px',
       marginLeft: '20px',
       marginRight: '20px',
-    backgroundColor: '#ef9a9a'
+    },
+    contactPart:{
+      backgroundColor: '#ef9a9a'
     }
 
   }));
@@ -130,29 +134,33 @@ const useStyles = makeStyles((theme) => ({
                   direction="column"
                   justify="center"
                   alignItems="center"
+                  className={classes.contactPart}
                   style={{
                     marginBottom: matchesMD ? "5em" : 0,
                     marginTop: matchesSM ? "1em" : matchesMD ? "5em" : 0
                   }}
-                   lg={12}>
+                   lg={4}>
               <Grid item>
-                    <Typography variant='h2'>Contact US</Typography>
-                    <Typography variant='body1'>Contact US</Typography> 
+                    <Typography style={{color: theme.palette.common.blue}} variant='h2'>Contact</Typography>
+                    <Typography style={{color: theme.palette.common.blue, lineHeight: 1}} variant='body1'>Send emai me</Typography> 
               </Grid>
                 <Grid item container>
                     <Grid item>
-                     <img src={phoneIcon} alt='phone number' />
+                     <img src={phoneIcon} alt='phone number' style={{marginRight:'0.5em'}} />
                     </Grid>
                     <Grid item>
-                       <Typography variant='body1'><a href='tel:2323232 34234 23'>2323232 34234 23</a></Typography>
+                       <Typography   
+                                   variant='body1'>
+                         <a style={{color: theme.palette.common.blue, fontSize:'1rem'}} href='tel:0680030695'>0680030695</a>
+                         </Typography>
                     </Grid>
                 </Grid>
                 <Grid item container>
                     <Grid item>
-                    <img src={emailIcon} alt='Email' />
+                     <img src={emailIcon} alt='email' style={{marginRight:'0.5em', verticalAlign:'bottom'}} />
                     </Grid>
                     <Grid item>
-                       <Typography variant='body1'><a href='mailto:mail12345'>@mail12345</a></Typography>
+                       <Typography variant='body1'><a style={{color: theme.palette.common.blue, fontSize:'1rem'}} href='mailto:sergiikovtun.vn@gmail.com'>sergiikovtun.vn@gmail.com</a></Typography>
                     </Grid>
                 </Grid>
                 <Grid item container>
@@ -171,14 +179,14 @@ const useStyles = makeStyles((theme) => ({
                     </Grid>
                 </Grid>
                 <Grid item>
-                <TextField multiline rows={5} id='message' value={message} onChange={(event)=> setMessage(event.target.value)} />
-               <Grid item>
-                   <Button 
-                   variant="contained" color="secondary"
-                   disabled={name.length===0 || message.length===0 || phoneHelper.length !==0 || emailHelper.length !==0 } 
-                   onClick={onConfirm}>{loading ? <CircularProgress size={30} /> : buttonContent}
-                   </Button>
-               </Grid>
+                    <TextField multiline rows={5} id='message' value={message} onChange={(event)=> setMessage(event.target.value)} />
+                  <Grid item> 
+                    <Button 
+                      variant="contained" color="secondary"
+                      disabled={name.length===0 || message.length===0 || phoneHelper.length !==0 || emailHelper.length !==0 } 
+                      onClick={onConfirm}>{loading ? <CircularProgress size={30} /> : buttonContent}
+                    </Button>
+                  </Grid>
                 </Grid>
             </Grid>
         
@@ -194,6 +202,8 @@ const useStyles = makeStyles((theme) => ({
               autoHideDuration={4000}
               onClose={() => setAlert(false)}
             />
+            <Grid item container lg={8} className={classes.background}></Grid>
         </Grid>
+        
     );
   }
