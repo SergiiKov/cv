@@ -19,7 +19,7 @@ const theme = createMuiTheme({
         secondary: {
             main: `${arcOrange}`,
         },
-        type:'dark'
+        // type:'dark'
       },
       typography: {
           tab: {

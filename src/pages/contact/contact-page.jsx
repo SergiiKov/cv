@@ -16,10 +16,11 @@ import emailIcon from '../../img/email.svg';
 const useStyles = makeStyles((theme) => ({
     contactPage:{
       marginTop: '20px',
-      marginLeft: '20px',
-      marginRight: '20px',
+      // marginLeft: '20px',
+      // marginRight: '20px',
     },
     contactPart:{
+      // border:`2px solid ${theme.palette.common.blue}`,
       // backgroundColor: '#ef9a9a'
     },
     textField:{
@@ -127,8 +128,8 @@ const useStyles = makeStyles((theme) => ({
             <Grid item>
               <Grid container direction='column' justify="center" alignItems='center'>
                 <Grid item>
-                      <Typography style={{color: theme.palette.common.blue}} variant='h2'>Contact</Typography>
-                      <Typography style={{color: theme.palette.common.blue, lineHeight: 1}} variant='body1'>Send emai me</Typography> 
+                      <Typography style={{color: theme.palette.common.blue}} variant='h4'>Send Emai me</Typography>
+                      {/* <Typography style={{color: theme.palette.common.blue, lineHeight: 1}} variant='body1'>Send emai me</Typography>  */}
                 </Grid>
                   <Grid item container style={{marginTop:'1em'}}>
                       <Grid item>
@@ -138,7 +139,7 @@ const useStyles = makeStyles((theme) => ({
                         <Typography   
                           variant='body1'>
                           <a style={{color: theme.palette.common.blue, fontSize:'1rem'}} 
-                          href='tel:0680030695'>0680030695</a>
+                          href='tel:0680030695'>+380680030695</a>
                         </Typography>
                       </Grid>
                   </Grid>
