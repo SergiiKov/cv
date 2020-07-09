@@ -19,7 +19,7 @@ export const skills = [
   },
   {
     id: 4,
-    name: 'JS',
+    name: 'JavaScript',
     webSite: 'test1',
     href:"http://www.ecma-international.org/publications/standards/Ecma-262.htm"
   },

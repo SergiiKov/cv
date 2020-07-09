@@ -4,7 +4,6 @@ import SkillCard from '../skill-card/skill-card.component';
 import './skills-list.styles.scss'
 
 const SkillsList = ({ skills }) => {
-
   return(
     <div className='skills-list'>
        {
@@ -21,7 +20,7 @@ const SkillsList = ({ skills }) => {
       })
        }
     </div>
-)
+  )
 }
 
     
