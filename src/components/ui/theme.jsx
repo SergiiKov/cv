@@ -34,7 +34,26 @@ const theme = createMuiTheme({
             fontWeight: '500',
             fontSize:'1.2rem'
           }
+      },
+      overrides:{
+        MuiInputLabel:{
+          root:{
+            color: arcBlue,
+            fontSize: '1rem'
+          }
+        },
+        MuiInput:{
+          underline:{
+            '&:before':{
+              borderBottom:`2px solid ${arcBlue}`
+            },
+            '&:hover:not($disabled):not(focused):not(error):before': {
+              borderBottom:`2px solid ${arcBlue}`
+            }
+          }
+        }
       }
+
 });
 
 export default theme;

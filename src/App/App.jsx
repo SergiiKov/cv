@@ -5,7 +5,6 @@ import { Switch, Route } from 'react-router-dom';
 
 import Header from '../components/header/header.component';
 
-import contact2 from '../pages/contact/contact2';
 import Footer from '../components/footer/footer';
 import HomePage from '../pages/homepage/home-page';
 import AboutPage from '../pages/about/about-page';
@@ -32,7 +31,7 @@ function App() {
                   <Route exact path='/' component={HomePage} />
                   <Route path='/about' component={AboutPage} />
                   {/* <Route path='/contact' component={ContactPage} /> */}
-                   <Route path='/contact' component={contact2} />
+                   <Route path='/contact' component={ContactPage} />
                   <Route path='/projects' component={ProjectsPage} />
                   <Route path='/resume' component={ResumePage} />
                 </Switch>

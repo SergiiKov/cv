@@ -9,55 +9,32 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Snackbar from '@material-ui/core/Snackbar';
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import Container from '@material-ui/core/Container';
 
 import phoneIcon from '../../img/phone.svg';
 import emailIcon from '../../img/email.svg';
 
-
 const useStyles = makeStyles((theme) => ({
-    root: {
-      flexGrow: 1,
-    },
-    paper: {
-      padding: theme.spacing(2),
-      textAlign: 'center',
-      color: theme.palette.text.secondary,
-    },
-    background:{
-      backgroundColor: '#00897b',
-        backgroundPosition:'center',
-        backgroundSize:'cover',
-        backgroundRepeat:'no-repeat',
-        height:'30em'
-
-    },
     contactPage:{
       marginTop: '20px',
       marginLeft: '20px',
       marginRight: '20px',
     },
     contactPart:{
-      backgroundColor: '#ef9a9a'
+      // backgroundColor: '#ef9a9a'
     },
     textField:{
       border:`2px solid ${theme.palette.common.blue}`,
-      marginTop:'5em',
+      marginTop:'2em',
       borderRadius: 5
     },
     sendButton: {
       marginTop:'2em'
-    }
-
+    },
   }));
   
   export default function Contact() {
     const classes = useStyles();
     const theme= useTheme(); 
-    const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
-    const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-    const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
     const [name, setName] = useState('');
 
@@ -139,46 +116,45 @@ const useStyles = makeStyles((theme) => ({
   )
 
     return (
-      <Container>
-        <Grid container direction='row' className={classes.contactPage}>
-            <Grid item container 
-                  direction="column"
-                  justify="center"
-                  alignItems='center'
-                  className={classes.contactPart}
-                  style={{
-                    marginBottom: matchesMD ? "5em" : 0,
-                    marginTop: matchesSM ? "1em" : matchesMD ? "5em" : 0
-                  }}
-                  //  lg={4}
-                  //  xl={3}
-                   >
+      <React.Fragment>
+            <Grid container direction='row' className={classes.contactPage}>
+              <Grid item container 
+                    direction="column"
+                    justify="center"
+                    alignItems='center'
+                    className={classes.contactPart}
+              >
             <Grid item>
               <Grid container direction='column' justify="center" alignItems='center'>
-              <Grid item>
-                    <Typography style={{color: theme.palette.common.blue}} variant='h2'>Contact</Typography>
-                    <Typography style={{color: theme.palette.common.blue, lineHeight: 1}} variant='body1'>Send emai me</Typography> 
-              </Grid>
-                <Grid item container style={{marginTop:'1em'}}>
-                    <Grid item>
-                     <img src={phoneIcon} alt='phone number' style={{marginRight:'0.5em'}} />
-                    </Grid>
-                    <Grid item>
-                       <Typography   
-                                   variant='body1'>
-                         <a style={{color: theme.palette.common.blue, fontSize:'1rem'}} href='tel:0680030695'>0680030695</a>
-                         </Typography>
-                    </Grid>
+                <Grid item>
+                      <Typography style={{color: theme.palette.common.blue}} variant='h2'>Contact</Typography>
+                      <Typography style={{color: theme.palette.common.blue, lineHeight: 1}} variant='body1'>Send emai me</Typography> 
                 </Grid>
+                  <Grid item container style={{marginTop:'1em'}}>
+                      <Grid item>
+                      <img src={phoneIcon} alt='phone number' style={{marginRight:'0.5em'}} />
+                      </Grid>
+                      <Grid item>
+                        <Typography   
+                          variant='body1'>
+                          <a style={{color: theme.palette.common.blue, fontSize:'1rem'}} 
+                          href='tel:0680030695'>0680030695</a>
+                        </Typography>
+                      </Grid>
+                  </Grid>
                 <Grid item container style={{marginTop:'0.4em', marginBottom:'1em'}}>
                     <Grid item>
                      <img src={emailIcon} alt='email' style={{marginRight:'0.5em', verticalAlign:'bottom'}} />
                     </Grid>
                     <Grid item>
-                       <Typography variant='body1'><a style={{color: theme.palette.common.blue, fontSize:'1rem'}} href='mailto:sergiikovtun.vn@gmail.com'>sergiikovtun.vn@gmail.com</a></Typography>
+                       <Typography 
+                          variant='body1'><a 
+                          style={{color: theme.palette.common.blue, fontSize:'1rem'}} 
+                          href='mailto:sergiikovtun.vn@gmail.com'>sergiikovtun.vn@gmail.com</a>
+                       </Typography>
                     </Grid>
                 </Grid>
-                <Grid item container>
+                <Grid item container direction='column' justify="center" alignItems='center'>
                     <Grid item>
                         <TextField 
                         label='Name' 
@@ -187,10 +163,22 @@ const useStyles = makeStyles((theme) => ({
                         onChange={(event)=> setName(event.target.value)} />
                     </Grid>
                     <Grid item>
-                    <TextField label='Email' id='email' error={emailHelper.length !==0} helperText={emailHelper} value={email} onChange={onChange} />
+                        <TextField 
+                          label='Email' 
+                          id='email' 
+                          error={emailHelper.length !==0} 
+                          helperText={emailHelper} 
+                          value={email} 
+                          onChange={onChange} />
                     </Grid>
                     <Grid item>
-                    <TextField label='Phone' id='phone' error={phoneHelper.length !==0} helperText={phoneHelper} value={phone} onChange={onChange} />
+                      <TextField 
+                        label='Phone' 
+                        id='phone' 
+                        error={phoneHelper.length !==0} 
+                        helperText={phoneHelper} 
+                        value={phone} 
+                        onChange={onChange} />
                     </Grid>
                 </Grid>
                 <Grid item >
@@ -214,7 +202,6 @@ const useStyles = makeStyles((theme) => ({
               </Grid>
             </Grid>
             </Grid>
-        
             <Snackbar
               open={alert.open}
               ContentProps={{
@@ -227,11 +214,7 @@ const useStyles = makeStyles((theme) => ({
               autoHideDuration={4000}
               onClose={() => setAlert(false)}
             />
-            {/* <Grid item container lg={8} xl={9} className={classes.background}></Grid> */}
         </Grid>
-
-      </Container>
-        
-        
+      </React.Fragment>   
     );
   }
