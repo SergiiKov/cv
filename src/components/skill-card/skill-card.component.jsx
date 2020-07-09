@@ -7,7 +7,7 @@ const SkillCard = (props) =>{
     return(
        <a href={href} target="_blank" rel="noopener noreferrer">
             <div className='card-container'>
-                {/* <img src={require(`../../img/${id}.png`)} alt='district card' className='img-district' /> */}
+                <img src={require(`../../img/${id}.svg`)} alt='skill card' className='img-skill' />
                <div className='card-text-container'>
                     <h2>{ name }</h2>
                     <a href={href}>{'Cайт: ' + webSite}</a>

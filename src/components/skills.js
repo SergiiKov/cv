@@ -12,34 +12,28 @@ export const skills = [
     href:"https://www.w3.org/"
   },
   {
-    id: 2,
+    id: 3,
     name: 'Sass',
     webSite: 'test',
     href:"https://sass-lang.com/"
   },
   {
-    id: 3,
+    id: 4,
     name: 'JS',
     webSite: 'test1',
     href:"http://www.ecma-international.org/publications/standards/Ecma-262.htm"
   },
   {
-    id: 4,
+    id: 5,
     name: 'React',
     webSite: 'test1',
     href:"https://reactjs.org/"
   },
   {
-    id: 5,
+    id: 6,
     name: 'Bootstrap',
     webSite: 'test1',
     href:"https://getbootstrap.com/"
-  },
-  {
-    id: 6,
-    name: 'Material Design for Bootstrap',
-    webSite: 'test1',
-    href:"https://mdbootstrap.com/"
   },
   {
     id: 7,
