@@ -128,7 +128,7 @@ const useStyles = makeStyles((theme) => ({
             <Grid item>
               <Grid container direction='column' justify="center" alignItems='center'>
                 <Grid item>
-                      <Typography style={{color: theme.palette.common.blue}} variant='h4'>Send Emai me</Typography>
+                      <Typography style={{color: theme.palette.common.blue}} variant='h4'>Send me a message</Typography>
                       {/* <Typography style={{color: theme.palette.common.blue, lineHeight: 1}} variant='body1'>Send emai me</Typography>  */}
                 </Grid>
                   <Grid item container style={{marginTop:'1em'}}>
