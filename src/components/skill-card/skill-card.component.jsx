@@ -10,9 +10,8 @@ const SkillCard = (props) =>{
                 <img src={require(`../../img/${id}.svg`)} alt='skill card' className='img-skill' />
                <div className='card-text-container'>
                     <h2>{ name }</h2>
-                    <a href={href}>{'Cайт: ' + webSite}</a>
+                    <p>{webSite}</p>
                </div>
-                
             </div>
        </a> 
     )

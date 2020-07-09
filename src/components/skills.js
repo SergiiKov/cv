@@ -2,7 +2,7 @@ export const skills = [
   {
     id: 1,
     name: 'HTML',
-    webSite: '45454',
+    webSite: '10/10',
     href:"https://www.w3.org/"
   },
   {

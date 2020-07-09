@@ -9,11 +9,12 @@
         // min-height: 70vh;
 
     h2{
-        font-size: 1.8em;
+      color: black;
+        font-size: 1.4em;
         text-transform: uppercase;
         font-weight: 500;
         margin-left: 20px;
-        padding-top: 20px;
+        // padding-top: 20px;
         letter-spacing: .25em;
         line-height: 1.65;
       }
@@ -26,11 +27,12 @@
       }
       
       p{
+        color: black;
         font-size: 1em;
         font-weight: 400;
         margin-left: 20px;
         margin-right: 20px;
-        padding-top: 20px;
+        // padding-top: 20px;
       }
       a{
         color: rgb(173, 32, 32);

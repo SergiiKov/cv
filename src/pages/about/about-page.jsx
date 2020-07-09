@@ -9,9 +9,6 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
-
-// import './header.style.scss';
-
 const useStyles = makeStyles({
   cardMargin:{
     marginTop: '20px',

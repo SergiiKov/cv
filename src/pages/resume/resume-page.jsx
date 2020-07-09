@@ -3,7 +3,7 @@ import React from 'react';
 import SearchBox from '../../components/serch-box/serch-box.component';
 import Scroll from '../../components/scroll/scroll.component';
 import SkillsList from '../../components/skills-list/skills-list.component';
-import '../about/about-page.styles.scss';
+import '../resume/resume-page.styles.scss';
 import { skills } from '../../components/skills';
 
 class ResumePage extends React.Component {
@@ -24,7 +24,7 @@ class ResumePage extends React.Component {
             skill.name.toLowerCase().includes(searchField.toLowerCase()))
         return(
             <React.Fragment>
-                <div className='about-page'>
+                <div className='resume-page'>
                 <h3> Education</h3>
                 <p>  2008-2013. Vinnytsia National Technical University.<br />
                     Faculty of Information Technologies and Computer Engineering.<br />
