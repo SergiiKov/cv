@@ -18,7 +18,6 @@ import IconButton from '@material-ui/core/IconButton';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { light } from '@material-ui/core/styles/createPalette';
 
 // import './header.style.scss';
 
@@ -27,10 +26,13 @@ const useStyles = makeStyles(theme => ({
     ...theme.mixins.toolbar,
     marginBottom: '0.5em',
     [theme.breakpoints.down('md')]:{
-      marginBottom: '2em'
+      marginBottom: '0.1em'
     },
     [theme.breakpoints.down('xs')]:{
       marginBottom: '1.25em'
+    },
+    [theme.breakpoints.down('sm')]:{
+      marginBottom: '0.05em'
     }
   },
   tabContainer: {

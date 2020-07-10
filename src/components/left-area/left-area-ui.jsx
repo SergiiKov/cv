@@ -12,16 +12,7 @@ const useStyles = makeStyles(theme=>({
         backgroundColor: '#ef5350',
         padding:'20px',
         marginLeft: '20px',
-        marginTop: '20px',
-        [theme.breakpoints.down('xs')]:{
-            margin: 0
-          },  
-          [theme.breakpoints.down('sm')]:{
-            margin: 0
-          },
-          [theme.breakpoints.down('md')]:{
-            margin: 0
-          }
+        marginTop: '20px'
     },
     box:{
        marginTop:'10px' 
