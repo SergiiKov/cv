@@ -16,8 +16,6 @@ import emailIcon from '../../img/email.svg';
 const useStyles = makeStyles((theme) => ({
     contactPage:{
       marginTop: '20px',
-      // marginLeft: '20px',
-      // marginRight: '20px',
     },
     contactPart:{
       // border:`2px solid ${theme.palette.common.blue}`,
@@ -31,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
     sendButton: {
       marginTop:'2em'
     },
+    widthForm:{
+      width:'240px'
+    }
   }));
   
   export default function Contact() {
@@ -129,7 +130,6 @@ const useStyles = makeStyles((theme) => ({
               <Grid container direction='column' justify="center" alignItems='center'>
                 <Grid item>
                       <Typography style={{color: theme.palette.common.blue}} variant='h4'>Send me a message</Typography>
-                      {/* <Typography style={{color: theme.palette.common.blue, lineHeight: 1}} variant='body1'>Send emai me</Typography>  */}
                 </Grid>
                   <Grid item container style={{marginTop:'1em'}}>
                       <Grid item>
@@ -158,6 +158,7 @@ const useStyles = makeStyles((theme) => ({
                 <Grid item container direction='column' justify="center" alignItems='center'>
                     <Grid item>
                         <TextField 
+                        className={classes.widthForm}
                         label='Name' 
                         id='name' 
                         value={name} 
@@ -165,6 +166,7 @@ const useStyles = makeStyles((theme) => ({
                     </Grid>
                     <Grid item>
                         <TextField 
+                        className={classes.widthForm}
                           label='Email' 
                           id='email' 
                           error={emailHelper.length !==0} 
@@ -174,6 +176,7 @@ const useStyles = makeStyles((theme) => ({
                     </Grid>
                     <Grid item>
                       <TextField 
+                      className={classes.widthForm}
                         label='Phone' 
                         id='phone' 
                         error={phoneHelper.length !==0} 
@@ -184,7 +187,7 @@ const useStyles = makeStyles((theme) => ({
                 </Grid>
                 <Grid item >
                     <TextField 
-                      className={classes.textField}
+                      className={[classes.textField, classes.widthForm] }
                       InputProps={{ disableUnderline: true }} 
                       multiline rows={8} 
                       id='message' 

@@ -14,6 +14,10 @@ const useStyles = makeStyles({
     marginTop: '20px',
     marginLeft: '20px',
     marginRight: '20px'
+  },
+  tab: {
+    marginTop: '20px',
+    marginBottom: '10px',
   }
 });
 
@@ -58,17 +62,17 @@ const AboutPage = () => {
    <Card className={classes.cardMargin}>
        <CardContent>
        < FormControlLabel control={<Switch onClick={toggleDarkMode}/>} />
-          <Typography variant="h5">
+          <Typography variant='h4'>
           ABOUT ME
           </Typography>
 
-          <Typography variant="body1">
+          <Typography variant="body1" className={classes.tab}>
           Hi, I'm Kovtun Sergii a software engineer with over four years IT industry experience, that wants to evolve in the field of web development.
           I want to try something new and ready to work hard to learn it.        
           </Typography>
           
-          <Typography variant="subtitle1">
-          SOME STATS ABOUT ME
+          <Typography variant='h5' className={classes.tab}>
+          Some stats about me
           </Typography>
 
           <Typography variant="body1">

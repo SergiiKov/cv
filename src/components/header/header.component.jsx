@@ -130,7 +130,7 @@ const tabs= (
             <Tab className={classes.tab} label='Contact' component={Link} to='/contact' />
           </Tabs>
 
-          <Button variant='contained' color="secondary" className={classes.button}>Sourse</Button>
+          <Button variant='contained' color="secondary" className={classes.button} href='https://github.com/SergiiKov/cv'>Sourse</Button>
   </React.Fragment>
 )
 

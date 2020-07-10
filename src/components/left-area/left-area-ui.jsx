@@ -16,14 +16,20 @@ const useStyles = makeStyles(theme=>({
         [theme.breakpoints.down('xs')]:{
             margin: 0
           },  
+          [theme.breakpoints.down('sm')]:{
+            margin: 0
+          },
+          [theme.breakpoints.down('md')]:{
+            margin: 0
+          }
     },
     box:{
        marginTop:'10px' 
     },
     photoContainer:{
-        height: '25vmin',
+        height: '30vmin',
         borderRadius: '50%',
-        marginTop: '20px',
+        marginTop: '10px',
         marginLeft: '20px',
         marginBottom:'10px',
         cursor:'pointer'
