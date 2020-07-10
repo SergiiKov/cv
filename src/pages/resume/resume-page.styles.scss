@@ -8,6 +8,7 @@
     align-items: flex-start;
 
     h2{
+      font-family: 'Roboto';
         font-size: 1.6em;
         text-transform: uppercase;
         font-weight: 500;
@@ -18,16 +19,28 @@
       }
 
       h3{
+        font-family: 'Roboto';
         font-size: 1.2em;
         font-weight: 500;
         margin-left: 20px;
-        letter-spacing: .25em;
+        letter-spacing: 0.25em;
         line-height: 1.5;
       }
       
       p{
+        // font-family: 'Roboto';
+        // letter-spacing: 0.05em;
+        // line-height: 1.5;
+        // font-size: 1em;
+        // font-weight: 400;
+
+        font-family: "Raleway",Helvetica,sans-serif;
         font-size: 1em;
         font-weight: 400;
+        letter-spacing: .05em;
+        line-height: 2.5;
+      
+
         margin-left: 20px;
         margin-right: 20px;
         color: black;

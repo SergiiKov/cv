@@ -11,8 +11,18 @@ const SkillCard = (props) =>{
                <div className='card-text-container'>
                     <h2>{ name }</h2>
                     <p>{webSite}</p>
+                    <div className="skill-bar">
+                         <div className='skillbar-title' >
+                              HTML
+                         </div>
+                         <div className='skillbar-persent' >
+                               10/10
+                         </div>
+                    </div>
                </div>
+              
             </div>
+
        </a> 
     )
 };

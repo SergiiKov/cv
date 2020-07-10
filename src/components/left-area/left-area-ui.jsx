@@ -2,18 +2,15 @@ import React from 'react';
 
 import LinksComponent from '../links-component/links-compnent';
 import { makeStyles } from '@material-ui/core/styles';
-
 import Box from '@material-ui/core/Box';
-
+import { Button } from '@material-ui/core';
 
 import photoMy from '../../img/MyPhoto.jpg'; 
-import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles(theme=>({
     mainBox:{
         backgroundColor: '#ef5350',
         padding:'20px',
-        // margin: '10px',
         marginLeft: '20px',
         marginTop: '20px',
         [theme.breakpoints.down('xs')]:{
@@ -55,7 +52,6 @@ const useStyles = makeStyles(theme=>({
                 color:'#FFBA60'
               }
       }
-
 }))
 
 export default function LeftAreaUi() {
@@ -84,11 +80,8 @@ export default function LeftAreaUi() {
                 <Button variant="contained" color="secondary" className={classes.buttonLeftArea}>Learn more</Button>
                 <Box className={classes.box}>
                     <LinksComponent />
-                </Box>
-                
+                </Box>  
             </Box>
-   
         </div>
     )
-
 }
