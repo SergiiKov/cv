@@ -5,6 +5,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import { Button } from '@material-ui/core';
 
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+
 import photoMy from '../../img/MyPhoto.jpg'; 
 
 import Switch from "@material-ui/core/Switch";
@@ -112,8 +117,6 @@ export default function LeftAreaUi() {
                 </Box>  
             </Box>
             </React.Fragment>
-        </ ThemeProvider>
-
-       
+        </ ThemeProvider>   
     )
 }
