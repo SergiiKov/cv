@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import LinksComponent from '../links-component/links-compnent';
 import { makeStyles } from '@material-ui/core/styles';
@@ -6,6 +6,16 @@ import Box from '@material-ui/core/Box';
 import { Button } from '@material-ui/core';
 
 import photoMy from '../../img/MyPhoto.jpg'; 
+
+import Switch from "@material-ui/core/Switch";
+import {
+    orange,
+    lightBlue,
+    deepPurple,
+    deepOrange
+  } from "@material-ui/core/colors";
+  import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+
 
 const useStyles = makeStyles(theme=>({
     mainBox:{
@@ -54,9 +64,32 @@ const useStyles = makeStyles(theme=>({
 export default function LeftAreaUi() {
     const classes = useStyles();
 
+    const [darkState, setDarkState] = useState(false);
+    const palletType = darkState ? "dark" : "light";
+    const mainPrimaryColor = darkState ? orange[500] : lightBlue[500];
+    const mainSecondaryColor = darkState ? deepOrange[900] : deepPurple[500];
+    const darkTheme = createMuiTheme({
+      palette: {
+        type: palletType,
+        primary: {
+          main: mainPrimaryColor
+        },
+        secondary: {
+          main: mainSecondaryColor
+        }
+      }
+    });
+  
+    const handleThemeChange = () => {
+      setDarkState(!darkState);
+    };
+
     return(
-        <div className={classes.footer}>
+        <ThemeProvider theme={darkTheme}>
+           
+             <div className={classes.footer}>
             <Box className={classes.mainBox} >
+            <Switch checked={darkState} onChange={handleThemeChange} />
                 <Box>
                 <   img src={photoMy} alt="Sergii Kovtun"  className={classes.photoContainer}/>
                 </Box>
@@ -80,5 +113,8 @@ export default function LeftAreaUi() {
                 </Box>  
             </Box>
         </div>
+            </ ThemeProvider>
+
+       
     )
 }

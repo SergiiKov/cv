@@ -18,21 +18,32 @@ import IconButton from '@material-ui/core/IconButton';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 
 // import './header.style.scss';
+
+function ElevationScroll(props) {
+  const { children } = props;
+
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0
+  });
+
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0
+  });
+}
 
 const useStyles = makeStyles(theme => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
     marginBottom: '0.5em',
-    [theme.breakpoints.down('md')]:{
-      marginBottom: '0.1em'
+    [theme.breakpoints.down("md")]: {
+      marginBottom: "0.1em"
     },
-    [theme.breakpoints.down('xs')]:{
-      marginBottom: '1.25em'
-    },
-    [theme.breakpoints.down('sm')]:{
-      marginBottom: '0.05em'
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: "0.1em"
     }
   },
   tabContainer: {
@@ -95,7 +106,7 @@ const useStyles = makeStyles(theme => ({
     
 }));
 
-export default function Header(props) {
+export default function Header(checked1, onChange1) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('md'));
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -131,7 +142,6 @@ const tabs= (
             <Tab className={classes.tab} label='Projects' component={Link} to='/projects' />
             <Tab className={classes.tab} label='Contact' component={Link} to='/contact' />
           </Tabs>
-
           <Button variant='contained' color="secondary" className={classes.button} href='https://github.com/SergiiKov/cv'>Sourse</Button>
   </React.Fragment>
 )
@@ -183,7 +193,9 @@ const drawer = (
 )
 
   return (
-    <div className={classes.root}>
+    <React.Fragment>
+      <ElevationScroll>
+      <div className={classes.root}>
      {/* position="fixed static" */}
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
@@ -198,6 +210,9 @@ const drawer = (
       </AppBar>
       <div className={classes.toolbarMargin} />
     </div>
+      </ElevationScroll>
+    </React.Fragment>
+    
   );
 }
 
