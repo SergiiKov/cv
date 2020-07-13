@@ -19,7 +19,7 @@ import {
 
 const useStyles = makeStyles(theme=>({
     mainBox:{
-        backgroundColor: '#ef5350',
+        backgroundColor: theme.palette.common.red,
         padding:'20px',
         marginLeft: '20px',
         marginTop: '20px'
@@ -86,8 +86,7 @@ export default function LeftAreaUi() {
 
     return(
         <ThemeProvider theme={darkTheme}>
-           
-             <div className={classes.footer}>
+            <React.Fragment>
             <Box className={classes.mainBox} >
             <Switch checked={darkState} onChange={handleThemeChange} />
                 <Box>
@@ -112,8 +111,8 @@ export default function LeftAreaUi() {
                     <LinksComponent />
                 </Box>  
             </Box>
-        </div>
-            </ ThemeProvider>
+            </React.Fragment>
+        </ ThemeProvider>
 
        
     )
