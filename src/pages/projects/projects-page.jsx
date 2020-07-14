@@ -38,7 +38,7 @@ class ProjectsPage extends React.Component {
             <div className='project'>
                 <h3>VN Create</h3>
                 <p>Сайт візитка розробки сайтів</p>
-                <a href='' target="_blank" rel="noopener noreferrer">
+                <a href='https://github.com/SergiiKov/vncreate' target="_blank" rel="noopener noreferrer">
                     <div className='card-container'>
                         <img src={require(`../../img/vncreate-1.png`)} alt='VN Create' className='img-district' />
                         <img src={require(`../../img/vncreate-2.png`)} alt='VN Create' className='img-district' />
@@ -53,23 +53,23 @@ class ProjectsPage extends React.Component {
             <div className='project'>
                 <h3>robot-page</h3>
                 <p>It's just a string</p>
-                <a href='' target="_blank" rel="noopener noreferrer">
+                <a href='https://github.com/SergiiKov/cards-friends' target="_blank" rel="noopener noreferrer">
                     <div className='card-container'>
                         <img src={require(`../../img/robot-friends.png`)} alt='robot-friends' className='img-district' />
                             <div className='card-text-container'>
-                                <p>robot</p>
+                                <p>React app that searches through an API of random robots</p>
                             </div>   
                     </div>
                 </a>
             </div>
             <div className='project'>
-                <h3>todolist</h3>
-                <p>It's just a string</p>
-                <a href='' target="_blank" rel="noopener noreferrer">
+                <h3>Todo List</h3>
+                <p>Todo List app</p>
+                <a href='https://github.com/SergiiKov/My-ToDo-List' target="_blank" rel="noopener noreferrer">
                     <div className='card-container'>
                         <img src={require(`../../img/todolist.png`)} alt='todolist' className='img-district' />
                             <div className='card-text-container'>
-                                <p>todolist</p>
+                                <p>A simple to-do list application built with React</p>
                             </div>   
                     </div>
                 </a>
