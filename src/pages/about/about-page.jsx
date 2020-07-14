@@ -76,15 +76,15 @@ const AboutPage = () => {
           </Typography>
 
           <Typography variant="body1">
-          Current age:
+          Current age: 29
           </Typography>
 
           <Typography variant="body1">
-          Current city:
+          Current city: Vinnitsa
           </Typography>
           
           <Typography variant="body1">
-          Marital status: link
+          Marital status: один
           </Typography>
        </CardContent>
    </Card>

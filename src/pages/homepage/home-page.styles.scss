@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-background-color:#90caf9;
+background-color:#1e88e5;
 
 h2{
   font-size: 1.8em;
@@ -16,6 +16,7 @@ h2{
   padding-top: 20px;
   letter-spacing: .25em;
   line-height: 1.65;
+  font-family: 'Roboto';
 }
 h3{
   font-size: 1em;
@@ -23,6 +24,9 @@ h3{
   margin-left: 20px;
   letter-spacing: .25em;
   line-height: 1.5;
+  font-family: 'Roboto';
+  // color: #3c3b3b;
+  //   font-family: "Raleway",Helvetica,sans-serif;
 }
 
 p{
@@ -31,9 +35,10 @@ p{
   margin-left: 20px;
   margin-right: 20px;
   padding-top: 20px;
+  font-family: 'Roboto';
 }
 a{
-  color:white;
+  color:#FFBA60;
 }
 
   }

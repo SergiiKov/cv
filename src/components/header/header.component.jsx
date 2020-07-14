@@ -20,8 +20,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 
-// import './header.style.scss';
-
 function ElevationScroll(props) {
   const { children } = props;
 
@@ -196,7 +194,6 @@ const drawer = (
     <React.Fragment>
       <ElevationScroll>
       <div className={classes.root}>
-     {/* position="fixed static" */}
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <Button 
@@ -211,8 +208,7 @@ const drawer = (
       <div className={classes.toolbarMargin} />
     </div>
       </ElevationScroll>
-    </React.Fragment>
-    
+    </React.Fragment> 
   );
 }
 

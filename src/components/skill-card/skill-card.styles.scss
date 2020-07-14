@@ -25,36 +25,6 @@ a {
     background-color: #448aff;
   }
 
-  .skill-bar{
-    background-color: chocolate;
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 35px;
-  }
-
-  .skillbar-title{
-    position: absolute;
-    // top: 0;
-    // left: 0;
-    font-weight: bold;
-    font-size: 13px;
-    color: #fff;
-    background-color: darkgreen;
-    height: 35px;
-  }
-
-  .skillbar-persent{
-    position: absolute;
-    height: 35px;
-    // top: 0;
-    right: 0;
-    font-weight: bold;
-    font-size: 13px;
-    color: #fff;
-    background-color: red;
-  }
-
   .img-skill{
     margin-top: 10px;
     margin-bottom: 10px;

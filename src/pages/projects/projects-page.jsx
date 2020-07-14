@@ -1,16 +1,19 @@
 import React from 'react';
 
+import '../projects/projects-page.styles.scss'; 
 
-  function ProjectsPage() {
+class ProjectsPage extends React.Component { 
+  constructor(){
+      super();
+  } 
 
-    return (
-        <React.Fragment>
-      <div>
-      ProjectsPage 
-      </div>
-        </React.Fragment>
-        
-    );
+  render(){
+      return(
+          <div className='projects-page'>
+              <h2>ABOUT THIS SITE</h2>
+          </div>
+          );
   }
+};
 
 export default ProjectsPage;

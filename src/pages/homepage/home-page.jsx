@@ -16,7 +16,6 @@ class HomePage extends React.Component {
                 <p>Source available <a href='https://github.com/SergiiKov/cv.git'>here.</a></p>
                     <div>
                         <p>It's just a string</p>
-                        <p>This string randomly changes color.</p>
                     </div>
             </div>
             );

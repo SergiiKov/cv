@@ -1,11 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-// import './App.scss';
-
 import Header from '../components/header/header.component';
-
-import Footer from '../components/footer/footer';
 import HomePage from '../pages/homepage/home-page';
 import AboutPage from '../pages/about/about-page';
 import ContactPage from '../pages/contact/contact-page'; 
@@ -30,17 +26,14 @@ function App() {
                   <Switch>
                   <Route exact path='/' component={HomePage} />
                   <Route path='/about' component={AboutPage} />
-                  {/* <Route path='/contact' component={ContactPage} /> */}
                    <Route path='/contact' component={ContactPage} />
                   <Route path='/projects' component={ProjectsPage} />
                   <Route path='/resume' component={ResumePage} />
                 </Switch>
                 </Grid>
             </Grid>
-            <Footer />
         </ThemeProvider> 
-      </React.Fragment>
-      
+      </React.Fragment>   
   );
 }
 

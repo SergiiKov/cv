@@ -6,18 +6,21 @@ import SkillsList from '../../components/skills-list/skills-list.component';
 import '../resume/resume-page.styles.scss';
 import { skills } from '../../components/skills';
 
+
+
 class ResumePage extends React.Component {
-    constructor(){
-        super();
-        this.state = {
+   
+      state = {
             searchField:'',
             skills: skills 
         }
-    };
+
     
     handleChange = e => {
         this.setState({searchField: e.target.value});
     }
+
+
     render(){
         const { searchField } = this.state;
         const filterSkills= this.state.skills.filter(skill => 
@@ -50,8 +53,11 @@ class ResumePage extends React.Component {
                             placeholder='skill' 
                             handleChange={this.handleChange}
                         /> 
-                        <SkillsList skills={filterSkills} />
-                    {/* <Scroll></Scroll> */}
+                     
+
+                    <Scroll>
+                    <SkillsList skills={filterSkills} /> 
+                    </Scroll>
                 </div>       
             </React.Fragment>
             

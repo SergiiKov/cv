@@ -13,7 +13,7 @@ const SkillsList = ({ skills }) => {
             key={i} 
             id={skills[i].id}  
             name={skills[i].name} 
-            webSite={skills[i].webSite}
+            percent={skills[i].percent}
             href={skills[i].href}
              />
           );
