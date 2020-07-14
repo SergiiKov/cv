@@ -2,7 +2,6 @@
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  // min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -23,10 +22,8 @@ h3{
   font-weight: 500;
   margin-left: 20px;
   letter-spacing: .25em;
-  line-height: 1.5;
+  line-height: 1.5em;
   font-family: 'Roboto';
-  // color: #3c3b3b;
-  //   font-family: "Raleway",Helvetica,sans-serif;
 }
 
 p{
@@ -34,8 +31,8 @@ p{
   font-weight: 400;
   margin-left: 20px;
   margin-right: 20px;
-  padding-top: 20px;
   font-family: 'Roboto';
+  line-height: 1.6em;
 }
 a{
   color:#FFBA60;

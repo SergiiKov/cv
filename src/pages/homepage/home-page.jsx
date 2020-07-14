@@ -11,12 +11,11 @@ class HomePage extends React.Component {
         return(
             <div className='home-page'>
                 <h2>ABOUT THIS SITE</h2>
-                <h3>A BEAUTIFUL, RESPONSIVE, REACT APP WRITTEN WITH MODERN JAVASCRIPT.</h3>
+                <h3>A beautiful, responsive, React app written with modern JavaScript.</h3>
+                <p>Welcome to my website. Please feel free to read more about me, or you can check out my resume, projects, view site statistics, or contact me.</p>
                 <p>This is react website created to introduce me and my skills in web development (and my skills in english).</p>
-                <p>Source available <a href='https://github.com/SergiiKov/cv.git'>here.</a></p>
-                    <div>
-                        <p>It's just a string</p>
-                    </div>
+                <p>It's just a string</p>
+                <p>Source available <a href='https://github.com/SergiiKov/cv.git'>here.</a></p>  
             </div>
             );
     }
