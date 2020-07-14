@@ -12,7 +12,15 @@ const useStyles = makeStyles(theme=>({
         backgroundColor: theme.palette.common.red,
         padding:'20px',
         marginLeft: '20px',
-        marginTop: '20px'
+        marginTop: '20px',
+        [theme.breakpoints.down("md")]: {
+            marginLeft: '0px',
+            marginTop: '0px',
+          },
+          [theme.breakpoints.down("xs")]: {
+            marginLeft: '0px',
+            marginTop: '0px',
+          }
     },
     box:{
        marginTop:'10px' 
@@ -74,7 +82,7 @@ export default function LeftAreaUi() {
                     that wants to evolve in the field of web development.
                     I want to try something new and ready to work hard to learn it. 
                 </Box>
-                <Button variant="contained" color="secondary" className={classes.buttonLeftArea}>Learn more</Button>
+                <Button variant="contained" color="secondary" className={classes.buttonLeftArea} href='https://github.com/SergiiKov/cv/blob/master/public/CV.pdf'>Learn more</Button>
                 <Box className={classes.box}>
                     <LinksComponent />
                 </Box>  

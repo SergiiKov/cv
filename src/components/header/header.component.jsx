@@ -182,7 +182,7 @@ const drawer = (
                     </ListItemText>
                 </ListItem>
             </List>
-        <Button variant="contained" color="secondary" className={classes.drawerButton}>Sourse</Button>
+        <Button variant="contained" color="secondary" className={classes.drawerButton} href='https://github.com/SergiiKov/cv'>Sourse</Button>
     </SwipeableDrawer>
       <IconButton onClick={()=>setOpenDrawer(!openDrawer)} className={classes.iconButton}>
           <MenuIcon />
