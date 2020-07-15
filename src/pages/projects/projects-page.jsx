@@ -12,7 +12,7 @@ class ProjectsPage extends React.Component {
         <div className='projects-page'>
              <h2>MY PROJECTS</h2>
             <div className='project'>
-                <h3>smp.vin.ua</h3>
+                <h3>Smp.vin.ua</h3>
                     <div className='card-container'>
                     <a href='http://smp.vin.ua/joomla/' target="_blank" rel="noopener noreferrer">
                         <img src={require(`../../img/smp.png`)} alt='smp.vin.ua' className='img-projects' />
@@ -24,7 +24,7 @@ class ProjectsPage extends React.Component {
                 
             </div>
             <div className='project'>
-                <h3>main-page iac</h3>
+                <h3>Main-page iac</h3>
                 <a href='http://smp.vin.ua/joomla/' target="_blank" rel="noopener noreferrer">
                     <div className='card-container'>
                         <img src={require(`../../img/main-page.png`)} alt='main-page iac' className='img-projects' />
@@ -50,7 +50,7 @@ class ProjectsPage extends React.Component {
                 </a>
             </div>
             <div className='project'>
-                <h3>robot-page</h3>
+                <h3>Robot-page</h3>
                 <a href='https://github.com/SergiiKov/cards-friends' target="_blank" rel="noopener noreferrer">
                     <div className='card-container'>
                         <img src={require(`../../img/robot-friends.png`)} alt='robot-friends' className='img-projects' />

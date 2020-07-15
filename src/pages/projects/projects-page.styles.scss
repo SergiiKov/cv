@@ -1,5 +1,5 @@
 .projects-page{
-    background-color: #a5d6a7;
+    background-color: #f06292;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -24,8 +24,6 @@
       }
     }
 
-    
-
     h3{
       font-size: 1.4em;
       font-weight: 500;
@@ -34,13 +32,8 @@
       line-height: 1.5em;
       font-family: 'Roboto';
       color:#212121;
-      
-      &:hover{
-        color: #FFBA60;
-        cursor: pointer;
-      }
     }
-    
+
     p{
       font-size: 1em;
       font-weight: 400;
@@ -94,7 +87,7 @@
   // cursor: pointer;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: transform 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
   }
