@@ -8,6 +8,7 @@
     align-items: flex-start;
 
     h2{
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
       font-size: 1.6em;
       text-transform: uppercase;
       font-weight: 500;
@@ -15,7 +16,6 @@
       padding-top: 20px;
       letter-spacing: .25em;
       line-height: 1.65;
-      font-family: 'Roboto';
       color:#212121;
 
       &:hover{
@@ -25,19 +25,19 @@
     }
 
     h3{
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
       font-size: 1.4em;
       font-weight: 500;
       margin-left: 20px;
       letter-spacing: .25em;
       line-height: 1.5em;
-      font-family: 'Roboto';
       color:#212121;
     }
 
     p{
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
       font-size: 1em;
       font-weight: 400;
-      font-family: 'Roboto';
       line-height: 1.6em;
       color:#212121;
       margin-left: 20px;
@@ -96,8 +96,9 @@
     margin: 0;
 
     p{
-      font-size: 0.5em;
-      line-height: 1.4em;
+      font-size: 0.6em;
+      line-height: 1.5em;
+      opacity: 0.9;
     }
   }
 
@@ -115,8 +116,9 @@
    margin-top: '20px';
 
    p{
-    font-size: 0.5em;
-    line-height: 1.4em;
+    font-size: 0.6em;
+    line-height: 1.5em;
+    opacity: 0.9;
   }
   }
 

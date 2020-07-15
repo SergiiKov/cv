@@ -9,7 +9,7 @@ const SkillCard = (props) =>{
             <div className='card-container'>
                <img src={require(`../../img/${id}.svg`)} alt='skill card' className='img-skill' /> 
                <div className='card-text-container'>
-                    <h2>{ name }</h2>
+                    <h3>{ name }</h3>
                    <p>{percent}</p> 
                </div>
             </div>

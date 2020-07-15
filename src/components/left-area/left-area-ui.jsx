@@ -31,7 +31,13 @@ const useStyles = makeStyles(theme=>({
         marginTop: '10px',
         marginLeft: '20px',
         marginBottom:'10px',
-        cursor:'pointer'
+        cursor:'pointer',
+        [theme.breakpoints.down("md")]: {
+            height: '40vmin',
+          },
+          [theme.breakpoints.down("xs")]: {
+            height: '50vmin',
+          }
     },
     buttonLeftArea:{
         marginLeft: '0px',
@@ -55,7 +61,14 @@ const useStyles = makeStyles(theme=>({
             cursor:'pointer',
             '&:hover': {
                 color:'#FFBA60'
+              },
+              [theme.breakpoints.down("md")]: {
+                fontSize:'0.8rem',
+              },
+              [theme.breakpoints.down("xs")]: {
+                fontSize:'0.8rem',
               }
+              
       }
 }))
 

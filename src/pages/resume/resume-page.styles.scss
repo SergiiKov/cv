@@ -1,5 +1,6 @@
 .resume-page{
-    background-color: #eeeeee;
+    // background-color: #eeeeee;
+    background-color: #ba68c8;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -8,14 +9,20 @@
     align-items: flex-start;
 
     h2{
-        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-        font-size: 1.5em;
-        text-transform: uppercase;
-        font-weight: 500;
-        letter-spacing: .25em;
-        line-height: 1.65;
-        margin-left: 20px;
-        color: #1b1b1b;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-size: 1.6em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-left: 20px;
+      padding-top: 20px;
+      letter-spacing: .25em;
+      line-height: 1.65;
+      color:#212121;
+
+        &:hover{
+          color: #FFBA60;
+          cursor: pointer;
+        }
       }
 
       h3{
