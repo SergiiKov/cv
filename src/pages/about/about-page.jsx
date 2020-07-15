@@ -30,12 +30,23 @@ const useStyles = makeStyles(theme=>({
 const themeObject = {
   palette: {
     primary: {
-      main: '#053f5b',
+      main: '#053f5b'
     },
     secondary: {
       main: '#5e3c6f',
     },
-    type:'dark'
+    type:'dark',
+    h2: {
+      fontFamily: "Roboto", 
+      fontSize: '1.6em',
+      textTransform: 'uppercase',
+      fontWeight: '500',
+      marginleft: '20px',
+      paddingTop: '20px',
+      letterspacing: '0.25em',
+      lineheight: '1.65em',
+      color:'#212121',
+          }
   }
 }
 

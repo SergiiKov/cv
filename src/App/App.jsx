@@ -18,7 +18,7 @@ function App() {
       <React.Fragment>
         <ThemeProvider theme={theme}>
           <Header />
-            <Grid container >
+            <Grid container>
                 <Grid item xs={12} sm={4} >
                   <LeftAreaUi />
                 </Grid>

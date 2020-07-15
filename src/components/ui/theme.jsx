@@ -35,7 +35,7 @@ const theme = createMuiTheme({
             textTransform: 'none',
             fontWeight: '500',
             fontSize:'1.2rem'
-          }
+          },
       },
       overrides:{
         MuiInputLabel:{
