@@ -37,7 +37,11 @@ const useStyles = makeStyles(theme=>({
           },
           [theme.breakpoints.down("xs")]: {
             height: '50vmin',
-          }
+          },
+          transition: '1s ease-in-out',
+          '&:hover': {
+            transform: 'translate(3em,0)'
+          },
     },
     buttonLeftArea:{
         marginLeft: '0px',
@@ -60,7 +64,8 @@ const useStyles = makeStyles(theme=>({
             fontSize:'1rem',
             cursor:'pointer',
             '&:hover': {
-                color:'#FFBA60'
+                color:'#FFBA60',
+                transition: 'all 0.2s ease-out'
               },
               [theme.breakpoints.down("md")]: {
                 fontSize:'0.8rem',
