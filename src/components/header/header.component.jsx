@@ -116,16 +116,16 @@ export default function Header(checked1, onChange1) {
   };
 
  useEffect(() =>{
-   if (window.location.pathname === '/about' && value !==0 ) {
-    setValue(0)
-  } else  if (window.location.pathname === '/resume' && value !==1) {
-    setValue(1)
-  } else  if (window.location.pathname === '/projects' && value !==2 ) {
-    setValue(2)
-  } else  if (window.location.pathname === '/contact' && value !==3 ) {
-    setValue(3)
-  }else  if (window.location.pathname === '/' && value !==4 ) {
+  if (window.location.pathname === '/' && value !==4 ) {
     setValue(4)
+  } else  if (window.location.pathname === '/about' && value !==0) {
+    setValue(0)
+  } else  if (window.location.pathname === '/resume' && value !==1 ) {
+    setValue(1)
+  } else  if (window.location.pathname === '/projects ' && value !==2 ) {
+    setValue(2)
+  }else if (window.location.pathname === '/contact ' && value !==3 ) {
+      setValue(3)
   }
 }, [value]);
 

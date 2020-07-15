@@ -94,6 +94,11 @@
 @media screen and (max-width: 600px) {
   .projects-page  {
     margin: 0;
+
+    p{
+      font-size: 0.5em;
+      line-height: 1.4em;
+    }
   }
 
   .img-projects{
@@ -102,16 +107,17 @@
       transition: none;
       }
     }
-    p{
-      font-size: 0.6em;
-    }
-
 }
 
 @media screen and (max-width: 1279px) {
   .projects-page  {
    margin-left: '20px';
    margin-top: '20px';
+
+   p{
+    font-size: 0.5em;
+    line-height: 1.4em;
+  }
   }
 
   .img-projects{
@@ -119,8 +125,5 @@
       transform: none;
       transition: none;
       }
-    }
-    p{
-      font-size: 0.6em;
     }
 }
