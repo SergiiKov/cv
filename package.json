@@ -1,6 +1,5 @@
 {
   "name": "cv",
-  "homepage": "https://SergiiKov.github.io/cv",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
