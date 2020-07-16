@@ -19,6 +19,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import Tooltip from '@material-ui/core/Tooltip';
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -140,7 +141,9 @@ const tabs= (
             <Tab className={classes.tab} label='Projects' component={Link} to='/projects' />
             <Tab className={classes.tab} label='Contact' component={Link} to='/contact' />
           </Tabs>
-          <Button variant='contained' color="secondary" className={classes.button} href='https://github.com/SergiiKov/cv'>Sourse</Button>
+          <Tooltip title="Source code of the website">
+            <Button variant='contained' color="secondary" className={classes.button} href='https://github.com/SergiiKov/cv'>Sourse</Button>
+          </Tooltip>
   </React.Fragment>
 )
 

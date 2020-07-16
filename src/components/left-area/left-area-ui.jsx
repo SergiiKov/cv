@@ -4,6 +4,8 @@ import LinksComponent from '../links-component/links-compnent';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import { Button } from '@material-ui/core';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import photoMy from '../../img/MyPhoto.jpg'; 
 
@@ -99,8 +101,15 @@ export default function LeftAreaUi() {
                     Hi, I'm Kovtun Sergii a software engineer with over four years IT industry experience,
                     that wants to evolve in the field of web development.
                     I want to try something new and ready to work hard to learn it. 
-                </Box>
-                <Button variant="contained" color="secondary" className={classes.buttonLeftArea} href='https://github.com/SergiiKov/cv/blob/master/public/CV.pdf'>Learn more</Button>
+                </Box>    
+                  <ButtonGroup variant="contained" color="secondary" className={classes.buttonLeftArea} aria-label="contained secondary button group">
+                  <Tooltip title="Download pdf file of my resume in english">
+                    <Button href='https://github.com/SergiiKov/cv/blob/master/public/CV.pdf'>resume</Button>
+                   </Tooltip>
+                   <Tooltip title="Загрузіть pdf файл мого резюме на українській">
+                    <Button>резюме</Button>
+                    </Tooltip>
+                  </ButtonGroup>
                 <Box className={classes.box}>
                     <LinksComponent />
                 </Box>  
