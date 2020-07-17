@@ -47,20 +47,17 @@ class ResumePage extends React.Component {
                         Understanding: NPM, Gulp, Git, GitHub
                         Knowledge of CMS Wordpress, Joomla
                         Knowledge of Adobe Photoshop
-                        Knowledge of English on the Pre-Intermediate level (Read/Write)</p>
-                    
+                        Knowledge of English on the Pre-Intermediate level (Read/Write)
+                    </p>
                         <SearchBox
                             placeholder='skill' 
                             handleChange={this.handleChange}
-                        /> 
-                     
-
+                        />
                     <Scroll>
                     <SkillsList skills={filterSkills} /> 
                     </Scroll>
                 </div>       
-            </React.Fragment>
-            
+            </React.Fragment>   
         )
     }
 };
