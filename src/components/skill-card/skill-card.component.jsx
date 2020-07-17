@@ -13,7 +13,6 @@ const SkillCard = (props) =>{
                    <p>{percent}</p> 
                </div>
             </div>
-
        </a> 
     )
 };

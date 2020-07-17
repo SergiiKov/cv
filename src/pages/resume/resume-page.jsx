@@ -9,17 +9,15 @@ import { skills } from '../../components/skills';
 
 
 class ResumePage extends React.Component {
-   
+    
       state = {
             searchField:'',
             skills: skills 
         }
 
-    
     handleChange = e => {
         this.setState({searchField: e.target.value});
     }
-
 
     render(){
         const { searchField } = this.state;
