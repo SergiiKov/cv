@@ -12,14 +12,15 @@ const SkillsList = ({ state: { skills, displayCategory } }) => {
          ({ category }) =>
            displayCategory === category || displayCategory === "All"
        )
-       .map(({ category, name, webSite, href, id }) => (
+       .map(({ category, name, href, id, percent }) => (
          <SkillCard 
+         href={href}
          key={name} 
          id={id} 
          category={category} 
          name={name}
-         webSite={webSite}
-         href={href} />
+         percent={percent}
+        />
      ))}
   </div>
     
