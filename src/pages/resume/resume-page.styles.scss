@@ -22,9 +22,9 @@
           color: #FFBA60;
           cursor: pointer;
         }
-      }
-   
+      }  
 }
+
 p{   
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
@@ -46,7 +46,8 @@ h3{
   color: #212121;
 }
 
-button {
+
+.button-filter {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   border: 2px solid #FFBA60;
   border-radius: 5px;
@@ -55,24 +56,26 @@ button {
   background-color:white;
   font-size: 1rem;
   color: #212121;
+  min-width: 100px;
 }
 
-button:hover{
+
+.button-filter:hover{
   background-color:#FFBA60;
   border: 2px solid #f57f17;
 }
 
-button:focus{
+.button-filter:focus{
   background-color:#FFBA60;
   border: 2px solid #f57f17;
 }
 
-.button:active {
+.button-filter:active {
   background-color:#FFBA60;
   border: 2px solid #f57f17;
 }
 
-.button:visited {
+.button-filter:visited {
   background-color:#FFBA60;
   border: 2px solid #f57f17;
 }

@@ -8,10 +8,10 @@ import SkillsList from '../../components/skills-list/skills-list.component';
 import '../resume/resume-page.styles.scss';
 import { skills } from '../../components/skills';
 
-  const ButtonCategory = ({ setCategory, category }) => (
-    <button className={`btn-${category}`} onClick={() => setCategory(category)}>
-      {category}
-    </button>
+  const ButtonCategory = ({ setCategory, category }) => (  
+        <button className={'button-filter'} onClick={() => setCategory(category)}>
+         {category}
+        </button>
   );
   
   const ButtonCategories = (productCategories, setCategory ) => (
