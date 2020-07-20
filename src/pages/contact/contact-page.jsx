@@ -27,7 +27,8 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: 5
     },
     sendButton: {
-      marginTop:'2em'
+      marginTop:'2em',
+      minWidth: '150px'
     },
     widthForm:{
       width:'240px'
@@ -199,7 +200,7 @@ const useStyles = makeStyles((theme) => ({
                     className={classes.sendButton}
                       variant="contained" color="secondary"
                       disabled={name.length===0 || message.length===0 || phoneHelper.length !==0 || emailHelper.length !==0 } 
-                      onClick={onConfirm}>{loading ? <CircularProgress size={30} /> : buttonContent}
+                      onClick={onConfirm}>{loading ? <CircularProgress size={30}/> : buttonContent}
                     </Button>
                   </Grid>
                 </Grid>
