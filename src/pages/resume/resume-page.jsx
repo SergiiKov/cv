@@ -1,31 +1,68 @@
 
 import React from 'react';
-import SearchBox from '../../components/serch-box/serch-box.component';
-import Scroll from '../../components/scroll/scroll.component';
+
+// import SearchBox from '../../components/serch-box/serch-box.component';
+// import Scroll from '../../components/scroll/scroll.component';
+
 import SkillsList from '../../components/skills-list/skills-list.component';
 import '../resume/resume-page.styles.scss';
 import { skills } from '../../components/skills';
 
-
-
-class ResumePage extends React.Component {
-    
-      state = {
-            searchField:'',
-            skills: skills 
-        }
-
-    handleChange = e => {
-        this.setState({searchField: e.target.value});
+  const ButtonCategory = ({ setCategory, category }) => (
+    <button className={`btn-${category}`} onClick={() => setCategory(category)}>
+      {category}
+    </button>
+  );
+  
+  const ButtonCategories = (productCategories, setCategory ) => (
+    productCategories.map((category,i) => (
+          <ButtonCategory key={category} setCategory={setCategory} category={category} />
+        ))
+  );
+  
+  const UI = ({
+    state,
+    state: { productCategories },
+    setCategory,
+    allProducts
+  }) => (
+    <div className="">
+      <div>
+        <h3>SKILLS</h3>
+        {ButtonCategories(productCategories, setCategory )}
+      </div>
+      <div >
+        <SkillsList state={state} />
+      </div>
+    </div>
+  );
+  
+  class ResumePage  extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        searchField:'',
+        displayCategory: "All",
+        skills: skills,
+        productCategories: PRODUCT_CATEGORIES
+      };
+      this.setCategory = this.setCategory.bind(this);
     }
-
-    render(){
-        const { searchField } = this.state;
-        const filterSkills= this.state.skills.filter(skill => 
-            skill.name.toLowerCase().includes(searchField.toLowerCase()))
-        return(
-            <React.Fragment>
-                <div className='resume-page'>
+    setCategory(category) {
+      this.setState({
+        displayCategory: category
+      });
+    }
+  
+    handleChange = e => {
+      this.setState({searchField: e.target.value});
+  }
+  
+    render() {
+         
+      return (
+        <React.Fragment>
+          <div className='resume-page'>
                     <h2>My resume</h2>
                     <h3>Education</h3>
                     <p>  2008-2013. Vinnytsia National Technical University.<br />
@@ -47,17 +84,21 @@ class ResumePage extends React.Component {
                         Knowledge of Adobe Photoshop
                         Knowledge of English on the Pre-Intermediate level (Read/Write)
                     </p>
-                        <SearchBox
-                            placeholder='skill' 
-                            handleChange={this.handleChange}
-                        />
-                    <Scroll>
-                    <SkillsList skills={filterSkills} /> 
-                    </Scroll>
-                </div>       
-            </React.Fragment>   
-        )
-    }
-};
 
-export default ResumePage;
+                      <UI setCategory={this.setCategory} state={this.state} /> 
+                    </div>
+        </React.Fragment>
+      )
+    }
+  }
+  
+  // get unique category items
+  const uniqueItems = (x, i, a) => a.indexOf(x) === i;
+  const PRODUCT_CATEGORIES = skills.map(prod => prod.category).filter(
+    uniqueItems
+  );
+  
+  PRODUCT_CATEGORIES.push("All");
+  PRODUCT_CATEGORIES.sort();
+    
+  export default ResumePage ;
