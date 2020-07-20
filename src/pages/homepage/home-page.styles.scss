@@ -18,6 +18,10 @@ h2{
   letter-spacing: .25em;
   line-height: 1.65;
   color:#212121;
+  &:hover{
+    color: #FFBA60;
+    cursor: pointer;
+  }
 }
 h3{
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;

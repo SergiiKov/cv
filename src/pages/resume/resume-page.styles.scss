@@ -1,5 +1,6 @@
 .resume-page{
     background-color: #fafafa;
+    border: 1px solid #FFBA60;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -46,7 +47,6 @@ h3{
   color: #212121;
 }
 
-
 .button-filter {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   border: 2px solid #FFBA60;
@@ -58,7 +58,6 @@ h3{
   color: #212121;
   min-width: 100px;
 }
-
 
 .button-filter:hover{
   background-color:#FFBA60;
@@ -79,7 +78,6 @@ h3{
   background-color:#FFBA60;
   border: 2px solid #f57f17;
 }
-
 
 @media screen and (max-width: 600px) {
   .resume-page  {

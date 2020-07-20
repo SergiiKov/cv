@@ -16,6 +16,7 @@ import emailIcon from '../../img/email.svg';
 const useStyles = makeStyles((theme) => ({
     contactPage:{
       marginTop: '20px',
+      backgroundColor: '#fafafa'
     },
     contactPart:{
       // border:`2px solid ${theme.palette.common.blue}`,

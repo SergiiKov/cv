@@ -1,8 +1,4 @@
-
 import React from 'react';
-
-// import SearchBox from '../../components/serch-box/serch-box.component';
-// import Scroll from '../../components/scroll/scroll.component';
 
 import SkillsList from '../../components/skills-list/skills-list.component';
 import '../resume/resume-page.styles.scss';
@@ -19,14 +15,14 @@ import { skills } from '../../components/skills';
           <ButtonCategory key={category} setCategory={setCategory} category={category} />
         ))
   );
-  
+
   const UI = ({
     state,
     state: { productCategories },
     setCategory,
     allProducts
   }) => (
-    <div className="">
+    <div>
       <div>
         <h3>SKILLS</h3>
         {ButtonCategories(productCategories, setCategory )}
@@ -41,25 +37,20 @@ import { skills } from '../../components/skills';
     constructor(props) {
       super(props);
       this.state = {
-        searchField:'',
         displayCategory: "All",
         skills: skills,
         productCategories: PRODUCT_CATEGORIES
       };
       this.setCategory = this.setCategory.bind(this);
     }
+
     setCategory(category) {
       this.setState({
         displayCategory: category
       });
     }
-  
-    handleChange = e => {
-      this.setState({searchField: e.target.value});
-  }
-  
-    render() {
-         
+
+    render() {   
       return (
         <React.Fragment>
           <div className='resume-page'>
@@ -77,14 +68,13 @@ import { skills } from '../../components/skills';
                         hardware forend-users. Performed network support tasks for WAN,
                         LAN. Repair and maintenance computer and peripheral equipment.</p>
                     <h3> Professional Skills </h3>
-                    <p>Knowledge of: HTML, CSS, Bootstrap, Material Design
-                        Basic Knowledge of: PHP, MySql, JS, JQ, ReactJS
-                        Understanding: NPM, Gulp, Git, GitHub
+                    <p>Knowledge of: HTML, CSS, JS, ReactJS, Bootstrap, Material-UI
+                        Basic Knowledge of: PHP, MySql
+                        Understanding: NPM, Webpack, Gulp, Git, GitHub
                         Knowledge of CMS Wordpress, Joomla
                         Knowledge of Adobe Photoshop
                         Knowledge of English on the Pre-Intermediate level (Read/Write)
                     </p>
-
                       <UI setCategory={this.setCategory} state={this.state} /> 
                     </div>
         </React.Fragment>
@@ -92,7 +82,6 @@ import { skills } from '../../components/skills';
     }
   }
   
-  // get unique category items
   const uniqueItems = (x, i, a) => a.indexOf(x) === i;
   const PRODUCT_CATEGORIES = skills.map(prod => prod.category).filter(
     uniqueItems
