@@ -34,6 +34,7 @@ import {
 
 import Title from '../ui/title';
 
+
 function ElevationScroll(props) {
   const { children } = props;
 
@@ -96,7 +97,7 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: 'transparent'
     }},
     drawer: {
-      backgroundColor: theme.palette.common.blue,
+     backgroundColor: '#1a237e',
     },
     drawerItem: {
       ...theme.typography.tab,
@@ -132,7 +133,6 @@ export default function Header(checked1, onChange1) {
   const [darkState, setDarkState] = useState(false);
   const palletType = darkState ? "dark" : "light";
   const mainPrimaryColor = darkState ? orange[500] : indigo[500];
-  // const mainSecondaryColor = darkState ? deepOrange[900] : deepPurple[500];
   const mainSecondaryColor = darkState ? indigo[500] : orange[500];
   const darkTheme = createMuiTheme({
     palette: {
@@ -192,7 +192,8 @@ const drawer = (
        classes={{paper: classes.drawer}}
     > 
     <div className={classes.toolbarMargin} />
-            <List disablePadding>
+   
+    <List disablePadding>
                 <ListItem divider button component={Link} to='/' selected={value===4}  onClick={()=>{setOpenDrawer(false); setValue(4) }} >
                     <ListItemText className={value === 4 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
                     Kovtun Sergii
@@ -219,6 +220,9 @@ const drawer = (
                     </ListItemText>
                 </ListItem>
             </List>
+
+  
+            
         <Button variant="contained" color="secondary" className={classes.drawerButton} href='https://github.com/SergiiKov/cv'>Sourse</Button>
     </SwipeableDrawer>
       <IconButton onClick={()=>setOpenDrawer(!openDrawer)} className={classes.iconButton}>

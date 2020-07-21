@@ -23,6 +23,30 @@ const useStyles = makeStyles(theme=>({
   },
   tab: {
     marginTop: '20px'
+  },
+  boxH2: {
+    fontFamily: "Roboto",
+    fontSize: '1.6em',
+    textTransform: 'uppercase',
+    fontWeight: '500',
+    marginleft: '20px',
+    paddingTop: '20px',
+    letterSpacing: '.25em',
+    lineHeight: '1.65',
+  },
+  boxH3: {
+    fontFamily: "Roboto",
+    fontSize: '1.4em',
+    fontWeight: '500',
+    marginleft: '20px',
+    letterSpacing: '.25em',
+    lineHeight: '1.5',
+  },
+  boxP: {
+    fontFamily: "Roboto",
+    fontSize: '1em',
+    fontWeight: '400',
+    marginleft: '20px'
   }
 }));
 
@@ -35,20 +59,20 @@ const AboutPage = () => {
    <Card className={classes.cardMargin} square >
        <CardContent>
           <Title>ABOUT ME</Title> 
-    <Paper elevation={0} >
+    <Paper elevation={0} className={classes.boxP}>
       Hi, I'm Kovtun Sergii a software engineer with over four years IT industry experience, that wants to evolve in the field of web development.
       I want to try something new and ready to work hard to learn it.    
     </Paper>
-          <Paper variant='h5' className={classes.tab}>
+          <Paper className={classes.boxH3}>
           Some stats about me
           </Paper>
-          <Paper variant="body1">
+          <Paper className={classes.boxP}>
           Current age: 29
           </Paper>
-          <Paper variant="body1">
+          <Paper >
           Current city: Vinnitsa
           </Paper>
-          <Paper variant="body1" elevation={0}>
+          <Paper  elevation={0}>
           Marital status: один
           </Paper>
        </CardContent>
