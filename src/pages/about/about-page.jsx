@@ -7,7 +7,6 @@ import Paper from '@material-ui/core/Paper';
 import Title from '../../components/ui/title';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles(theme=>({
   cardMargin:{
@@ -33,35 +32,27 @@ const AboutPage = () => {
 
   return (
        <React.Fragment>
-   <Card className={classes.cardMargin}>
+   <Card className={classes.cardMargin} square >
        <CardContent>
-          <Title>ABOUT ME</Title>
-          <Typography variant="body1" className={classes.tab} >
-          Hi, I'm Kovtun Sergii a software engineer with over four years IT industry experience, that wants to evolve in the field of web development.
-          I want to try something new and ready to work hard to learn it.        
-          </Typography>
-          <Typography variant='h5'color='primary' className={classes.tab}>
+          <Title>ABOUT ME</Title> 
+    <Paper elevation={0} >
+      Hi, I'm Kovtun Sergii a software engineer with over four years IT industry experience, that wants to evolve in the field of web development.
+      I want to try something new and ready to work hard to learn it.    
+    </Paper>
+          <Paper variant='h5' className={classes.tab}>
           Some stats about me
-          </Typography>
-          <Typography variant="body1">
+          </Paper>
+          <Paper variant="body1">
           Current age: 29
-          </Typography>
-          <Typography variant="body1">
+          </Paper>
+          <Paper variant="body1">
           Current city: Vinnitsa
-          </Typography>
-          <Typography variant="body1">
+          </Paper>
+          <Paper variant="body1" elevation={0}>
           Marital status: один
-          </Typography>
+          </Paper>
        </CardContent>
    </Card>
-   <Box >
-                    Email: sergiikovtun.vn@gmail.com
-                    <Title>ABOUT ME</Title>
-                    <Paper>
-                    Email: sergiikovtun.vn@gmail.com
-                    <Title>ABOUT ME</Title>
-                    </Paper>
-                </Box>
        </React.Fragment>
      
       );
