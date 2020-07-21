@@ -26,10 +26,13 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Switch from "@material-ui/core/Switch";
 import {
   orange,
+  indigo,
   lightBlue,
   deepPurple,
   deepOrange
 } from "@material-ui/core/colors";
+
+import Title from '../ui/title';
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -128,8 +131,9 @@ export default function Header(checked1, onChange1) {
 
   const [darkState, setDarkState] = useState(false);
   const palletType = darkState ? "dark" : "light";
-  const mainPrimaryColor = darkState ? orange[500] : lightBlue[500];
-  const mainSecondaryColor = darkState ? deepOrange[900] : deepPurple[500];
+  const mainPrimaryColor = darkState ? orange[500] : indigo[500];
+  // const mainSecondaryColor = darkState ? deepOrange[900] : deepPurple[500];
+  const mainSecondaryColor = darkState ? indigo[500] : orange[500];
   const darkTheme = createMuiTheme({
     palette: {
       type: palletType,
@@ -239,6 +243,7 @@ const drawer = (
           </Button>
         { matches ? drawer : tabs}
         <Switch checked={darkState} onChange={handleThemeChangeTheme} />
+        <Title></Title>
         </Toolbar>
       </AppBar>
       <div className={classes.toolbarMargin} />

@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../../components/header/header.component';
 
 import LinksComponent from '../links-component/links-compnent';
 import { makeStyles } from '@material-ui/core/styles';
@@ -6,12 +7,13 @@ import Box from '@material-ui/core/Box';
 import { Button } from '@material-ui/core';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Tooltip from '@material-ui/core/Tooltip';
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 import photoMy from '../../img/MyPhoto.jpg'; 
 
 const useStyles = makeStyles(theme=>({
     mainBox:{
-        backgroundColor: theme.palette.common.red,
+        backgroundColor: '#e53935',
         padding:'20px',
         marginLeft: '20px',
         marginTop: '20px',
@@ -107,7 +109,7 @@ export default function LeftAreaUi() {
                     <Button href='https://github.com/SergiiKov/cv/blob/master/public/CV.pdf'>resume</Button>
                    </Tooltip>
                    <Tooltip title="Загрузіть pdf файл мого резюме на українській">
-                    <Button>резюме</Button>
+                    <Button >резюме</Button>
                     </Tooltip>
                   </ButtonGroup>
                 <Box className={classes.box}>
