@@ -171,7 +171,7 @@ const tabs= (
                 value={value} 
                 onChange={handleChange}
           >
-            <Tab className={classes.tab} label='About' component={Link} to='/' />  
+            <Tab className={classes.tab} label='About' component={Link} to='/cv' />  
             <Tab className={classes.tab} label='Resume' component={Link} to='/resume' />
             <Tab className={classes.tab} label='Projects' component={Link} to='/projects' />
             <Tab className={classes.tab} label='Contact' component={Link} to='/contact' />

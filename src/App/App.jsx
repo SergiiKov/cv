@@ -16,9 +16,8 @@ import Grid from '@material-ui/core/Grid';
 
 function App() {
   return (
-      <React.Fragment>
-             <BrowserRouter>
-              <Header />
+     <div>
+            <Header />
             <ThemeProvider theme={theme}>
               <Grid container>
                   <Grid item xs={12} sm={4} >
@@ -27,7 +26,7 @@ function App() {
                   <Grid item xs={12} sm={8} >
                     <Switch>
                        {/* <Route exact  path='/' component={HomePage} /> */}
-                      <Route exact path='/' component={AboutPage} />
+                      <Route exact path='/cv' component={AboutPage} />
                       <Route path='/resume' component={ResumePage} />
                       <Route path='/projects' component={ProjectsPage} />
                       <Route path='/contact' component={ContactPage} />
@@ -35,9 +34,10 @@ function App() {
                   </Grid>
               </Grid>
               </ThemeProvider>
-             </BrowserRouter>
-          
-      </React.Fragment>   
+
+     </div>
+         
+      
   );
 }
 
