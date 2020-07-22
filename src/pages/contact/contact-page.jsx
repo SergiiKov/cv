@@ -3,6 +3,7 @@ import {useState} from 'react';
 import axios from 'axios';
 
 import Title from '../../components/ui/title';
+import ColorBody1 from '../../components/ui/colorBody1';
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -135,26 +136,25 @@ const useStyles = makeStyles((theme) => ({
                 </Grid>
                   <Grid item container style={{marginTop:'1em'}}>
                       <Grid item>
-                        <PhoneAndroidIcon style={{marginRight:'0.5em'}} color="primary"  />     
+                        <ColorBody1><PhoneAndroidIcon style={{marginRight:'0.5em'}} /></ColorBody1>
                       </Grid>
                       <Grid item>
                         <Typography 
-                        color='primary'  
-                          >
+                        color='primary'>
                           <a   style={{color: theme.palette.common.blue, fontSize:'1rem'}} 
-                          href='tel:0680030695'>+380680030695</a>
+                          href='tel:0680030695'><ColorBody1>+380680030695</ColorBody1></a>
                         </Typography>
                       </Grid>
                   </Grid>
                 <Grid item container style={{marginTop:'0.4em', marginBottom:'1em'}}>
                     <Grid item>
-                    <MailOutlineIcon style={{marginRight:'0.5em'}} color="primary"  />
+                    <ColorBody1><MailOutlineIcon style={{marginRight:'0.5em'}} /></ColorBody1>
                     </Grid>
                     <Grid item>
                        <Typography 
                           variant='body1'><a 
                           style={{color: theme.palette.common.blue, fontSize:'1rem'}} 
-                          href='mailto:sergiikovtun.vn@gmail.com'>sergiikovtun.vn@gmail.com</a>
+                          href='mailto:sergiikovtun.vn@gmail.com'><ColorBody1>sergiikovtun.vn@gmail.com</ColorBody1></a>
                        </Typography>
                     </Grid>
                 </Grid>

@@ -6,8 +6,9 @@ import Box from '@material-ui/core/Box';
 import { Button } from '@material-ui/core';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Tooltip from '@material-ui/core/Tooltip';
-import TextTitle from '../../components/ui/text-title';
-import TextBody2 from '../../components/ui/link-text';
+import TextH5 from '../ui/TextH5';
+import TextH6 from '../ui/TextH6';
+import TextBody2 from '../ui/TextBody2';
 //import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 import photoMy from '../../img/MyPhoto.jpg'; 
@@ -85,17 +86,17 @@ export default function LeftAreaUi() {
                 <Box>
                 <   img src={photoMy} alt="Sergii Kovtun"  className={classes.photoContainer}/>
                 </Box>
-                <Box className={[classes.box, classes.boxTitle]}>
+                <TextH5 className={[classes.box, classes.boxTitle]}>
                     Kovtun Sergii
-                </Box>
+                </TextH5>
                 <Box className={classes.boxEmail}>
                   <a className={classes.boxEmail} href='mailto:sergiikovtun.vn@gmail.com'>
-                    <TextTitle>Email: sergiikovtun.vn@gmail.com</TextTitle>
+                    <TextH6>Email: sergiikovtun.vn@gmail.com</TextH6>
                   </a>
                 </Box>
-                <Box className={[classes.box, classes.boxTitle]}>
+                <TextH6 className={[classes.box, classes.boxTitle]}>
                     About
-                </Box>
+                </TextH6>
                 <TextBody2 className={[classes.box, classes.boxBody]}>
                     Hi, I'm Kovtun Sergii a software engineer with over four years IT industry experience,
                     that wants to evolve in the field of web development.

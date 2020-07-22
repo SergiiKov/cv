@@ -54,10 +54,10 @@ const useStyles = makeStyles(theme => ({
     ...theme.mixins.toolbar,
     marginBottom: '0.5em',
     [theme.breakpoints.down("md")]: {
-      marginBottom: "0.1em"
+      marginBottom: "0.01em"
     },
     [theme.breakpoints.down("xs")]: {
-      marginBottom: "0.1em"
+      marginBottom: "0.01em"
     }
   },
   tabContainer: {
