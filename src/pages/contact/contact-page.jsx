@@ -15,6 +15,7 @@ import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 import SendIcon from '@material-ui/icons/Send';
 
 import Title from '../../components/ui/title';
+import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     contactPage:{

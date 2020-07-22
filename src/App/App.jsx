@@ -10,6 +10,7 @@ import ResumePage from '../pages/resume/resume-page';
 import LeftAreaUi from '../components/left-area/left-area-ui';
 import Grid from '@material-ui/core/Grid';
 
+
  import { ThemeProvider } from '@material-ui/core/styles';
  import theme from '../components/ui/theme';
 
