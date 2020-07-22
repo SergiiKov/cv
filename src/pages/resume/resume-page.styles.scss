@@ -29,12 +29,24 @@
 p{   
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: 0.00938em;
   font-size: 1em;
   margin-left: 20px;
   margin-right: 20px;
   color: #212121;
+}
+
+.list-skills{
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.00938em;
+  font-size: 1em;
+
+  margin-right: 20px;
+  color: #212121; 
+  list-style: none;
 }
 
 h3{

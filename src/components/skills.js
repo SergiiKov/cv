@@ -93,9 +93,9 @@ export const skills = [
   {
     category: "Back-end",
     id: 14,
-    name: 'PHP',
+    name: 'Firebase',
     percent: '10/10',
-    href:"https://www.php.net/"
+    href:"https://firebase.google.com/"
   },
   {
     category: "Back-end",

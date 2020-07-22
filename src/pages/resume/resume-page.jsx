@@ -68,13 +68,13 @@ import { skills } from '../../components/skills';
                         hardware forend-users. Performed network support tasks for WAN,
                         LAN. Repair and maintenance computer and peripheral equipment.</p>
                     <h3> Professional Skills </h3>
-                    <p>Knowledge of: HTML, CSS, JS, ReactJS, Bootstrap, Material-UI
-                        Basic Knowledge of: PHP, MySql
-                        Understanding: NPM, Webpack, Gulp, Git, GitHub
-                        Knowledge of CMS Wordpress, Joomla
-                        Knowledge of Adobe Photoshop
-                        Knowledge of English on the Pre-Intermediate level (Read/Write)
-                    </p>
+                    <ul className='list-skills'>
+                      <li>Knowledge of: HTML, CSS, JS, ReactJS, Bootstrap, Material-UI</li>
+                      <li>Basic Knowledge of: PHP, MySql</li>
+                      <li>Understanding: NPM, Webpack, Gulp, Git, GitHub, Adobe Photoshop</li>
+                    <li>Knowledge of CMS Wordpress, Joomla</li>
+                    <li>Knowledge of English on the Pre-Intermediate level (Read/Write)</li>
+                    </ul>
                       <UI setCategory={this.setCategory} state={this.state} /> 
                     </div>
         </React.Fragment>

@@ -5,8 +5,8 @@ import {  MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Paper from '@material-ui/core/Paper';
 import Title from '../../components/ui/title';
+import SubTitle from '../../components/ui/sub-tittle';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
@@ -61,6 +61,19 @@ const AboutPage = () => {
 
   return (
        <React.Fragment>
+  <Card className={classes.cardMargin} square>
+     <CardContent>
+     <Title>ABOUT THIS SITE</Title>
+    <SubTitle>A beautiful, responsive, React app written with modern JavaScript.</SubTitle>
+     <Box className={classes.boxP}>
+       Welcome to my website. Please feel free to read more <Link color="primary" to="/about">about me</Link>, or you can check out <Link to="/resume"> my resume</Link>, <Link to="/projects">my projects</Link>, or <Link to="/contact">contact me</Link>.
+     </Box>
+    <Box className={classes.boxP}>
+      This is react website created to introduce me and my skills in web development (and my skills in english).
+     </Box>
+     </CardContent>
+   </Card>
+
 <Card className={classes.cardMargin} square >
   <CardContent>
     <Title>ABOUT ME</Title> 
@@ -68,9 +81,10 @@ const AboutPage = () => {
       Hi, I'm Kovtun Sergii a software engineer with over four years IT industry experience, that wants to evolve in the field of web development.
       I want to try something new and ready to work hard to learn it.    
     </Box>
-    <Box className={classes.boxH3}>
+
+    <SubTitle>
       Some stats about me
-    </Box>
+    </SubTitle>
     <Box className={classes.boxP}>
       Current age: 29
     </Box>
@@ -81,22 +95,8 @@ const AboutPage = () => {
       Marital status: один
     </Box>
   </CardContent>
-</Card>
-
-   <Card className={classes.cardMargin} square>
-     <CardContent>
-     <Title>ABOUT THIS SITE</Title>
-    <Box className={classes.boxH3}>A beautiful, responsive, React app written with modern JavaScript.</Box>
-     <Box className={classes.boxP}>
-       Welcome to my website. Please feel free to read more <Link color="primary" to="/about">about me</Link>, or you can check out <Link to="/resume"> my resume</Link>, <Link to="/projects">my projects</Link>, or <Link to="/contact">contact me</Link>.
-     </Box>
-    <Box className={classes.boxP}>
-      This is react website created to introduce me and my skills in web development (and my skills in english).
-     </Box>
-     </CardContent>
-   </Card>
-       </React.Fragment>
-     
+  </Card>
+</React.Fragment>
       );
 }
 

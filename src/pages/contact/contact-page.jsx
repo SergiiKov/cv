@@ -2,6 +2,8 @@ import React from 'react';
 import {useState} from 'react';
 import axios from 'axios';
 
+import Title from '../../components/ui/title';
+
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
@@ -13,9 +15,6 @@ import Snackbar from '@material-ui/core/Snackbar';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 import SendIcon from '@material-ui/icons/Send';
-
-import Title from '../../components/ui/title';
-import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     contactPage:{
