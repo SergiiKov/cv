@@ -12,11 +12,12 @@ import Snackbar from '@material-ui/core/Snackbar';
 
 import phoneIcon from '../../img/phone.svg';
 import emailIcon from '../../img/email.svg';
+import Title from '../../components/ui/title';
 
 const useStyles = makeStyles((theme) => ({
     contactPage:{
       marginTop: '20px',
-      backgroundColor: '#fafafa'
+      // backgroundColor: '#fafafa'
     },
     contactPart:{
       // border:`2px solid ${theme.palette.common.blue}`,
@@ -121,6 +122,9 @@ const useStyles = makeStyles((theme) => ({
 
     return (
       <React.Fragment>
+       
+
+ 
             <Grid container direction='row' className={classes.contactPage}>
               <Grid item container 
                     direction="column"
@@ -131,16 +135,17 @@ const useStyles = makeStyles((theme) => ({
             <Grid item>
               <Grid container direction='column' justify="center" alignItems='center'>
                 <Grid item>
-                      <Typography style={{color: theme.palette.common.blue}} variant='h4'>Send me a message</Typography>
+                      <Title>Send me a message</Title>
                 </Grid>
                   <Grid item container style={{marginTop:'1em'}}>
                       <Grid item>
                       <img src={phoneIcon} alt='phone number' style={{marginRight:'0.5em'}} />
                       </Grid>
                       <Grid item>
-                        <Typography   
-                          variant='body1'>
-                          <a style={{color: theme.palette.common.blue, fontSize:'1rem'}} 
+                        <Typography 
+                        color='primary'  
+                          >
+                          <a style={{ fontSize:'1rem'}} 
                           href='tel:0680030695'>+380680030695</a>
                         </Typography>
                       </Grid>
@@ -221,6 +226,7 @@ const useStyles = makeStyles((theme) => ({
               onClose={() => setAlert(false)}
             />
         </Grid>
+        
       </React.Fragment>   
     );
   }

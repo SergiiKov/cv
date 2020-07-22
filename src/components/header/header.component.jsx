@@ -246,7 +246,9 @@ const drawer = (
             onClick={()=>setValue(4)}>KOVTUN SERGII
           </Button>
         { matches ? drawer : tabs}
+        <Tooltip title="Toggle light/dark theme">
         <Switch checked={darkState} onChange={handleThemeChangeTheme} />
+        </ Tooltip>
         <Title></Title>
         </Toolbar>
       </AppBar>

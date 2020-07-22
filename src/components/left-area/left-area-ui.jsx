@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../../components/header/header.component';
 
 import LinksComponent from '../links-component/links-compnent';
 import { makeStyles } from '@material-ui/core/styles';
@@ -7,7 +6,7 @@ import Box from '@material-ui/core/Box';
 import { Button } from '@material-ui/core';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Tooltip from '@material-ui/core/Tooltip';
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+//import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 import photoMy from '../../img/MyPhoto.jpg'; 
 
@@ -60,9 +59,9 @@ const useStyles = makeStyles(theme=>({
           paddingTop: '10px'
       },
       boxEmail:{
+            marginTop:'10px',
             paddingTop: '10px',
             fontFamily: 'Roboto',
-            textTransform: 'uppercase',
             fontWeight: '400',
             letterSpacing: '0.09em',
             fontSize:'1rem',
@@ -93,7 +92,7 @@ export default function LeftAreaUi() {
                 <Box className={[classes.box, classes.boxTitle]}>
                     Kovtun Sergii
                 </Box>
-                <Box className={[classes.box, classes.boxEmail]}>
+                <Box className={classes.boxEmail}>
                     Email: sergiikovtun.vn@gmail.com
                 </Box>
                 <Box className={[classes.box, classes.boxTitle]}>

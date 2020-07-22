@@ -10,14 +10,14 @@ import ResumePage from '../pages/resume/resume-page';
 import LeftAreaUi from '../components/left-area/left-area-ui';
 import Grid from '@material-ui/core/Grid';
 
-// import { ThemeProvider } from '@material-ui/core/styles';
-// import theme from '../components/ui/theme';
+ import { ThemeProvider } from '@material-ui/core/styles';
+ import theme from '../components/ui/theme';
 
 function App() {
   return (
       <React.Fragment>
-       
           <Header />
+          <ThemeProvider theme={theme}>
             <Grid container>
                 <Grid item xs={12} sm={4} >
                   <LeftAreaUi />
@@ -32,7 +32,7 @@ function App() {
                   </Switch>
                 </Grid>
             </Grid>
-      
+            </ThemeProvider>
       </React.Fragment>   
   );
 }
