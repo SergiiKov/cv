@@ -6,7 +6,8 @@ import Box from '@material-ui/core/Box';
 import { Button } from '@material-ui/core';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Tooltip from '@material-ui/core/Tooltip';
-import SubTitle from '../../components/ui/sub-tittle';
+import TextTitle from '../../components/ui/text-title';
+import TextBody2 from '../../components/ui/link-text';
 //import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 import photoMy from '../../img/MyPhoto.jpg'; 
@@ -57,7 +58,7 @@ const useStyles = makeStyles(theme=>({
       },
       boxTitle:{
           ...theme.typography.boxTitle,
-          paddingTop: '10px',
+          paddingTop: '10px'
       },
       boxEmail:{
             marginTop:'10px',
@@ -71,14 +72,7 @@ const useStyles = makeStyles(theme=>({
             '&:hover': {
                 color:'#FFBA60',
                 transition: 'all 0.2s ease-out'
-              },
-              [theme.breakpoints.down("md")]: {
-                fontSize:'0.8rem',
-              },
-              [theme.breakpoints.down("xs")]: {
-                fontSize:'0.8rem',
-              }
-              
+              }       
       }
 }))
 
@@ -95,16 +89,18 @@ export default function LeftAreaUi() {
                     Kovtun Sergii
                 </Box>
                 <Box className={classes.boxEmail}>
-                <a className={classes.boxEmail} href='mailto:sergiikovtun.vn@gmail.com'>Email: sergiikovtun.vn@gmail.com</a>
+                  <a className={classes.boxEmail} href='mailto:sergiikovtun.vn@gmail.com'>
+                    <TextTitle>Email: sergiikovtun.vn@gmail.com</TextTitle>
+                  </a>
                 </Box>
                 <Box className={[classes.box, classes.boxTitle]}>
                     About
                 </Box>
-                <Box className={[classes.box, classes.boxBody]}>
+                <TextBody2 className={[classes.box, classes.boxBody]}>
                     Hi, I'm Kovtun Sergii a software engineer with over four years IT industry experience,
                     that wants to evolve in the field of web development.
                     I want to try something new and ready to work hard to learn it. 
-                </Box>    
+                </TextBody2>    
                   <ButtonGroup variant="contained" color="secondary" className={classes.buttonLeftArea} aria-label="contained secondary button group">
                   <Tooltip title="Download pdf file of my resume in english">
                     <Button href='https://github.com/SergiiKov/cv/blob/master/public/CV.pdf'>resume</Button>

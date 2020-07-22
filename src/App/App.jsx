@@ -17,7 +17,7 @@ import Grid from '@material-ui/core/Grid';
 function App() {
   return (
      <div>
-            <Header />
+              <Header />
             <ThemeProvider theme={theme}>
               <Grid container>
                   <Grid item xs={12} sm={4} >

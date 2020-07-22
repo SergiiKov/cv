@@ -29,7 +29,8 @@ import {
   indigo,
   lightBlue,
   deepPurple,
-  deepOrange
+  deepOrange,
+  grey
 } from "@material-ui/core/colors";
 
 import Title from '../ui/title';
@@ -134,6 +135,9 @@ export default function Header(checked1, onChange1) {
   const palletType = darkState ? "dark" : "light";
   const mainPrimaryColor = darkState ? orange[500] : indigo[500];
   const mainSecondaryColor = darkState ? indigo[500] : orange[500];
+  const thirdStyle = darkState ? lightBlue[500] : deepPurple[500];
+  const textStyle = darkState ? grey[50] : grey[900];
+ 
   const darkTheme = createMuiTheme({
     palette: {
       type: palletType,
@@ -142,6 +146,12 @@ export default function Header(checked1, onChange1) {
       },
       secondary: {
         main: mainSecondaryColor
+      },
+      error:{
+         main:textStyle
+      },
+      info:{
+        main:thirdStyle
       }
     }
   });

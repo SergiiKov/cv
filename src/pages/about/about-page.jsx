@@ -6,9 +6,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Title from '../../components/ui/title';
+import LinkText from '../../components/ui/link-text';
 import SubTitle from '../../components/ui/sub-tittle';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+
 
 const useStyles = makeStyles(theme=>({
   cardMargin:{
@@ -66,7 +68,7 @@ const AboutPage = () => {
      <Title>ABOUT THIS SITE</Title>
     <SubTitle>A beautiful, responsive, React app written with modern JavaScript.</SubTitle>
      <Box className={classes.boxP}>
-       Welcome to my website. Please feel free to read more <Link color="primary" to="/about">about me</Link>, or you can check out <Link to="/resume"> my resume</Link>, <Link to="/projects">my projects</Link>, or <Link to="/contact">contact me</Link>.
+       Welcome to my website. Please feel free to read more <Link color="primary" to="/about">about me</Link>, or you can check out  <Link to="/resume"> my resume</Link>, <Link to="/projects">my projects</Link>, or <Link to="/contact">contact me</Link>.
      </Box>
     <Box className={classes.boxP}>
       This is react website created to introduce me and my skills in web development (and my skills in english).
