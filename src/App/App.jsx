@@ -24,8 +24,8 @@ function App() {
                 </Grid>
                 <Grid item xs={12} sm={8} >
                   <Switch>
-                    <Route exact  path='/' component={HomePage} />
-                    <Route path='/about' component={AboutPage} />
+                    {/* <Route exact  path='/' component={HomePage} /> */}
+                    <Route exact path='/' component={AboutPage} />
                     <Route path='/resume' component={ResumePage} />
                     <Route path='/projects' component={ProjectsPage} />
                     <Route path='/contact' component={ContactPage} />

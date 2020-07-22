@@ -151,9 +151,10 @@ export default function Header(checked1, onChange1) {
   };
 
  useEffect(() =>{
-  if (window.location.pathname === '/' && value !==4 ) {
-    setValue(4)
-  } else  if (window.location.pathname === '/about' && value !==0) {
+  // if (window.location.pathname === '/' && value !==4 ) {
+  //   setValue(4)
+  // } else  
+  if (window.location.pathname === '/' && value !==0) {
     setValue(0)
   } else  if (window.location.pathname === '/resume' && value !==1 ) {
     setValue(1)
@@ -170,7 +171,7 @@ const tabs= (
                 value={value} 
                 onChange={handleChange}
           >
-            <Tab className={classes.tab} label='About' component={Link} to='/about' />  
+            <Tab className={classes.tab} label='About' component={Link} to='/' />  
             <Tab className={classes.tab} label='Resume' component={Link} to='/resume' />
             <Tab className={classes.tab} label='Projects' component={Link} to='/projects' />
             <Tab className={classes.tab} label='Contact' component={Link} to='/contact' />
@@ -194,12 +195,12 @@ const drawer = (
     <div className={classes.toolbarMargin} />
    
     <List disablePadding>
-                <ListItem divider button component={Link} to='/' selected={value===4}  onClick={()=>{setOpenDrawer(false); setValue(4) }} >
+                {/* <ListItem divider button component={Link} to='/' selected={value===4}  onClick={()=>{setOpenDrawer(false); setValue(4) }} >
                     <ListItemText className={value === 4 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
                     Kovtun Sergii
                     </ListItemText>  
-                </ListItem>
-                <ListItem divider button selected={value===0} onClick={()=>{setOpenDrawer(false); setValue(0) }} component={Link} to='/about'  >
+                </ListItem> */}
+                <ListItem divider button selected={value===0} onClick={()=>{setOpenDrawer(false); setValue(0) }} component={Link} to='/'  >
                     <ListItemText className={value === 0 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
                     About
                     </ListItemText>
@@ -243,7 +244,7 @@ const drawer = (
             disableRipple 
             className={classes.logoContainer} 
             component={Link} to='/' 
-            onClick={()=>setValue(4)}>KOVTUN SERGII
+            onClick={()=>setValue(0)}>KOVTUN SERGII
           </Button>
         { matches ? drawer : tabs}
         <Tooltip title="Toggle light/dark theme">

@@ -38,17 +38,20 @@ const useStyles = makeStyles(theme=>({
   },
   boxH3: {
     fontFamily: "Roboto",
-    fontSize: '1.4em',
-    fontWeight: '500',
+    fontSize: '1.2em',
+    fontWeight: '400',
     marginleft: '20px',
-    letterSpacing: '.25em',
+    marginTop: '20px',
+    marginBottom: '10px',
+    letterSpacing: '.15em',
     lineHeight: '1.5',
   },
   boxP: {
     fontFamily: "Roboto",
     fontSize: '1em',
     fontWeight: '400',
-    marginleft: '20px'
+    marginleft: '20px',
+    lineHeight: '1.8'
   }
 }));
 
