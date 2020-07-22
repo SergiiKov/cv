@@ -151,10 +151,10 @@ export default function Header(checked1, onChange1) {
   };
 
  useEffect(() =>{
-  // if (window.location.pathname === '/' && value !==4 ) {
-  //   setValue(4)
-  // } else  
-  if (window.location.pathname === '/' && value !==0) {
+  if (window.location.pathname === '/' && value !==4 ) {
+    setValue(4)
+  } else  
+  if (window.location.pathname === '/cv' && value !==0) {
     setValue(0)
   } else  if (window.location.pathname === '/resume' && value !==1 ) {
     setValue(1)
@@ -195,12 +195,12 @@ const drawer = (
     <div className={classes.toolbarMargin} />
    
     <List disablePadding>
-                {/* <ListItem divider button component={Link} to='/' selected={value===4}  onClick={()=>{setOpenDrawer(false); setValue(4) }} >
+                <ListItem divider button component={Link} to='/' selected={value===4}  onClick={()=>{setOpenDrawer(false); setValue(4) }} >
                     <ListItemText className={value === 4 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
                     Kovtun Sergii
                     </ListItemText>  
-                </ListItem> */}
-                <ListItem divider button selected={value===0} onClick={()=>{setOpenDrawer(false); setValue(0) }} component={Link} to='/'  >
+                </ListItem>
+                <ListItem divider button selected={value===0} onClick={()=>{setOpenDrawer(false); setValue(0) }} component={Link} to='/cv'  >
                     <ListItemText className={value === 0 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
                     About
                     </ListItemText>
@@ -220,10 +220,7 @@ const drawer = (
                     Contact
                     </ListItemText>
                 </ListItem>
-            </List>
-
-  
-            
+            </List>    
         <Button variant="contained" color="secondary" className={classes.drawerButton} href='https://github.com/SergiiKov/cv'>Sourse</Button>
     </SwipeableDrawer>
       <IconButton onClick={()=>setOpenDrawer(!openDrawer)} className={classes.iconButton}>
@@ -244,7 +241,7 @@ const drawer = (
             disableRipple 
             className={classes.logoContainer} 
             component={Link} to='/' 
-            onClick={()=>setValue(0)}>KOVTUN SERGII
+            onClick={()=>setValue(4)}>KOVTUN SERGII
           </Button>
         { matches ? drawer : tabs}
         <Tooltip title="Toggle light/dark theme">
