@@ -10,18 +10,16 @@ import TextField from '@material-ui/core/TextField';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Snackbar from '@material-ui/core/Snackbar';
 
-import phoneIcon from '../../img/phone.svg';
-import emailIcon from '../../img/email.svg';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
+import SendIcon from '@material-ui/icons/Send';
+
 import Title from '../../components/ui/title';
 
 const useStyles = makeStyles((theme) => ({
     contactPage:{
       marginTop: '20px',
       // backgroundColor: '#fafafa'
-    },
-    contactPart:{
-      // border:`2px solid ${theme.palette.common.blue}`,
-      // backgroundColor: '#ef9a9a'
     },
     textField:{
       border:`2px solid ${theme.palette.common.blue}`,
@@ -116,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
 
   const buttonContent = (
     <React.Fragment>
-      Send Message
+      <SendIcon fontSize="small" style={{marginRight:'0.5em'}}/>Send Message 
     </React.Fragment>
   )
 
@@ -139,20 +137,20 @@ const useStyles = makeStyles((theme) => ({
                 </Grid>
                   <Grid item container style={{marginTop:'1em'}}>
                       <Grid item>
-                      <img src={phoneIcon} alt='phone number' style={{marginRight:'0.5em'}} />
+                        <PhoneAndroidIcon style={{marginRight:'0.5em'}} color="primary"  />     
                       </Grid>
                       <Grid item>
                         <Typography 
                         color='primary'  
                           >
-                          <a style={{ fontSize:'1rem'}} 
+                          <a   style={{color: theme.palette.common.blue, fontSize:'1rem'}} 
                           href='tel:0680030695'>+380680030695</a>
                         </Typography>
                       </Grid>
                   </Grid>
                 <Grid item container style={{marginTop:'0.4em', marginBottom:'1em'}}>
                     <Grid item>
-                     <img src={emailIcon} alt='email' style={{marginRight:'0.5em', verticalAlign:'bottom'}} />
+                    <MailOutlineIcon style={{marginRight:'0.5em'}} color="primary"  />
                     </Grid>
                     <Grid item>
                        <Typography 

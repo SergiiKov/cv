@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Header from '../components/header/header.component';
 import HomePage from '../pages/homepage/home-page';
@@ -16,23 +16,26 @@ import Grid from '@material-ui/core/Grid';
 function App() {
   return (
       <React.Fragment>
-          <Header />
-          <ThemeProvider theme={theme}>
-            <Grid container>
-                <Grid item xs={12} sm={4} >
-                  <LeftAreaUi />
-                </Grid>
-                <Grid item xs={12} sm={8} >
-                  <Switch>
-                    {/* <Route exact  path='/' component={HomePage} /> */}
-                    <Route exact path='/' component={AboutPage} />
-                    <Route path='/resume' component={ResumePage} />
-                    <Route path='/projects' component={ProjectsPage} />
-                    <Route path='/contact' component={ContactPage} />
-                  </Switch>
-                </Grid>
-            </Grid>
-            </ThemeProvider>
+             <BrowserRouter>
+              <Header />
+            <ThemeProvider theme={theme}>
+              <Grid container>
+                  <Grid item xs={12} sm={4} >
+                    <LeftAreaUi />
+                  </Grid>
+                  <Grid item xs={12} sm={8} >
+                    <Switch>
+                       {/* <Route exact  path='/' component={HomePage} /> */}
+                      <Route exact path='/' component={AboutPage} />
+                      <Route path='/resume' component={ResumePage} />
+                      <Route path='/projects' component={ProjectsPage} />
+                      <Route path='/contact' component={ContactPage} />
+                    </Switch>
+                  </Grid>
+              </Grid>
+              </ThemeProvider>
+             </BrowserRouter>
+          
       </React.Fragment>   
   );
 }
