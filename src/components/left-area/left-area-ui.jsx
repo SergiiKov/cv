@@ -57,7 +57,7 @@ const useStyles = makeStyles(theme=>({
       },
       boxTitle:{
           ...theme.typography.boxTitle,
-          paddingTop: '10px'
+          paddingTop: '10px',
       },
       boxEmail:{
             marginTop:'10px',
@@ -67,6 +67,7 @@ const useStyles = makeStyles(theme=>({
             letterSpacing: '0.09em',
             fontSize:'1rem',
             cursor:'pointer',
+            color:'black',
             '&:hover': {
                 color:'#FFBA60',
                 transition: 'all 0.2s ease-out'
@@ -94,7 +95,7 @@ export default function LeftAreaUi() {
                     Kovtun Sergii
                 </Box>
                 <Box className={classes.boxEmail}>
-                    Email: sergiikovtun.vn@gmail.com
+                <a className={classes.boxEmail} href='mailto:sergiikovtun.vn@gmail.com'>Email: sergiikovtun.vn@gmail.com</a>
                 </Box>
                 <Box className={[classes.box, classes.boxTitle]}>
                     About

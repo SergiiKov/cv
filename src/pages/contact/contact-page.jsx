@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
     },
     sendButton: {
       marginTop:'2em',
-      minWidth: '150px'
+      minWidth: '150px',
+      marginBottom:'1em'
     },
     widthForm:{
       width:'240px'
@@ -120,9 +121,6 @@ const useStyles = makeStyles((theme) => ({
 
     return (
       <React.Fragment>
-       
-
- 
             <Grid container direction='row' className={classes.contactPage}>
               <Grid item container 
                     direction="column"
