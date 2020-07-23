@@ -4,6 +4,8 @@ import axios from 'axios';
 
 import Title from '../../components/ui/title';
 import ColorBody1 from '../../components/ui/colorBody1';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -122,7 +124,7 @@ const useStyles = makeStyles((theme) => ({
 
     return (
       <React.Fragment>
-            <Grid container direction='row' className={classes.contactPage}>
+        <Grid container direction='row' className={classes.contactPage}>
               <Grid item container 
                     direction="column"
                     justify="center"
@@ -134,6 +136,8 @@ const useStyles = makeStyles((theme) => ({
                 <Grid item>
                       <Title>Send me a message</Title>
                 </Grid>
+          <Card>
+            <CardContent>
                   <Grid item container style={{marginTop:'1em'}}>
                       <Grid item>
                         <ColorBody1><PhoneAndroidIcon style={{marginRight:'0.5em'}} /></ColorBody1>
@@ -188,7 +192,7 @@ const useStyles = makeStyles((theme) => ({
                         value={phone} 
                         onChange={onChange} />
                     </Grid>
-                </Grid>
+                </Grid>           
                 <Grid item >
                     <TextField 
                       className={[classes.textField, classes.widthForm] }
@@ -197,8 +201,10 @@ const useStyles = makeStyles((theme) => ({
                       id='message' 
                       value={message} 
                       onChange={(event)=> setMessage(event.target.value)} 
-                    />
-                  <Grid item container> 
+                    />                    
+               
+                </Grid>
+                <Grid item container> 
                     <Button 
                     className={classes.sendButton}
                       variant="contained" color="secondary"
@@ -206,7 +212,9 @@ const useStyles = makeStyles((theme) => ({
                       onClick={onConfirm}>{loading ? <CircularProgress size={30}/> : buttonContent}
                     </Button>
                   </Grid>
-                </Grid>
+          </CardContent>
+            </Card>
+        
               </Grid>
             </Grid>
             </Grid>
@@ -222,8 +230,7 @@ const useStyles = makeStyles((theme) => ({
               autoHideDuration={4000}
               onClose={() => setAlert(false)}
             />
-        </Grid>
-        
+        </Grid>  
       </React.Fragment>   
     );
   }
