@@ -30,7 +30,9 @@ import {
   lightBlue,
   deepPurple,
   deepOrange,
-  grey
+  grey,
+  common
+
 } from "@material-ui/core/colors";
 
 import Title from '../ui/title';
@@ -137,6 +139,7 @@ export default function Header(checked1, onChange1) {
   const mainSecondaryColor = darkState ? indigo[500] : orange[500];
   const thirdStyle = darkState ? lightBlue[500] : deepPurple[500];
   const textStyle = darkState ? grey[50] : grey[900];
+  const colorCommon = darkState ? common['black'] : common['white'];
  
   const darkTheme = createMuiTheme({
     palette: {
@@ -147,8 +150,8 @@ export default function Header(checked1, onChange1) {
       secondary: {
         main: mainSecondaryColor
       },
-      error:{
-         main:textStyle
+      common:{
+         main:colorCommon
       },
       info:{
         main:thirdStyle

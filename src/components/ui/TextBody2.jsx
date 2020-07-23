@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 
 export default function TextBody2(props) {
   return (
-    <Typography component="h2" variant="body2" color="error" align='left' gutterBottom>
+    <Typography component="h2" variant="body2" color="common" align='left' gutterBottom>
       {props.children}
     </Typography>
   );

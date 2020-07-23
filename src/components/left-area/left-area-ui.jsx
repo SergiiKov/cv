@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Link from '@material-ui/core/Link';
 import LinksComponent from '../links-component/links-compnent';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
@@ -89,11 +90,11 @@ export default function LeftAreaUi() {
                 <TextH5 className={[classes.box, classes.boxTitle]}>
                     Kovtun Sergii
                 </TextH5>
-                <Box className={classes.boxEmail}>
-                  <a className={classes.boxEmail} href='mailto:sergiikovtun.vn@gmail.com'>
-                    <TextH6>Email: sergiikovtun.vn@gmail.com</TextH6>
-                  </a>
-                </Box>
+                  <TextH6 >
+                    <Link href="mailto:sergiikovtun.vn@gmail.com" color='inherit' >
+                      Email: sergiikovtun.vn@gmail.com
+                    </Link>
+                  </TextH6>
                 <TextH6 className={[classes.box, classes.boxTitle]}>
                     About
                 </TextH6>

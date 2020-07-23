@@ -162,13 +162,13 @@ const useStyles = makeStyles((theme) => ({
                     <Grid item>
                         <TextField 
                         className={classes.widthForm}
-                        label='Name' 
+                        label='Name'
                         id='name' 
                         value={name} 
                         onChange={(event)=> setName(event.target.value)} />
                     </Grid>
                     <Grid item>
-                        <TextField 
+                        <TextField                         
                         className={classes.widthForm}
                           label='Email' 
                           id='email' 
@@ -176,6 +176,7 @@ const useStyles = makeStyles((theme) => ({
                           helperText={emailHelper} 
                           value={email} 
                           onChange={onChange} />
+                          
                     </Grid>
                     <Grid item>
                       <TextField 
