@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6187b8de7cd01a8be72ffd32f8d80b48",
+    "revision": "05913b52e41534ebd4cf12eccec532d2",
     "url": "/cv/index.html"
   },
   {
-    "revision": "71ec1c0a1b35ff10fdb9",
-    "url": "/cv/static/css/main.d9b0b480.chunk.css"
+    "revision": "0e2f15427bf1a71ac2a8",
+    "url": "/cv/static/css/main.41585479.chunk.css"
   },
   {
-    "revision": "e68c3c56c14e7056bd64",
-    "url": "/cv/static/js/2.f1c43d9b.chunk.js"
+    "revision": "680fb309278ea003d282",
+    "url": "/cv/static/js/2.e54013bf.chunk.js"
   },
   {
     "revision": "89b0379e7bcda1a468d8b0343aeb4e53",
-    "url": "/cv/static/js/2.f1c43d9b.chunk.js.LICENSE.txt"
+    "url": "/cv/static/js/2.e54013bf.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "71ec1c0a1b35ff10fdb9",
-    "url": "/cv/static/js/main.b8f860e8.chunk.js"
+    "revision": "0e2f15427bf1a71ac2a8",
+    "url": "/cv/static/js/main.3cf5e74c.chunk.js"
   },
   {
     "revision": "9e0e921495960402e4a4",
@@ -96,39 +96,35 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cv/static/media/9.6f7aeee8.svg"
   },
   {
-    "revision": "53ef23b9e1ae3a7f8c310175697c6166",
-    "url": "/cv/static/media/MyPhoto.53ef23b9.jpg"
+    "revision": "a5bd2aef4b4ab6962c53241887bc13fd",
+    "url": "/cv/static/media/MyPhoto.a5bd2aef.jpg"
   },
   {
     "revision": "b90c2773b2ac2ed3b98ea0f59dc7d173",
     "url": "/cv/static/media/email.b90c2773.svg"
   },
   {
-    "revision": "9fb816e82883e618a0e0ee8b117ededd",
-    "url": "/cv/static/media/main-page.9fb816e8.png"
+    "revision": "7b85e05dae0b11c85c808936394d7540",
+    "url": "/cv/static/media/main-page.7b85e05d.png"
   },
   {
     "revision": "171f2b32ae323f5d2692cb2927d55283",
     "url": "/cv/static/media/phone.171f2b32.svg"
   },
   {
-    "revision": "435b981fa66c23885445f09256e71535",
-    "url": "/cv/static/media/robot-friends.435b981f.png"
+    "revision": "e1ad4763b25223170728235e91c5d741",
+    "url": "/cv/static/media/robot-friends.e1ad4763.png"
   },
   {
-    "revision": "255fdb233d285d67bed10b317fd281e8",
-    "url": "/cv/static/media/smp.255fdb23.png"
+    "revision": "90513e3320358bd57886f2832d2401e9",
+    "url": "/cv/static/media/smp.90513e33.png"
   },
   {
-    "revision": "9e4be437564a4bc521e7da9cd0d6ac88",
-    "url": "/cv/static/media/todolist.9e4be437.png"
+    "revision": "a40dd8e5f115851d12e9674c3c5666c3",
+    "url": "/cv/static/media/vncreate-1.a40dd8e5.png"
   },
   {
-    "revision": "fe72aefeb223a9b548631f3580135aaa",
-    "url": "/cv/static/media/vncreate-1.fe72aefe.png"
-  },
-  {
-    "revision": "75291cfdeb604e041246e4feaf46578c",
-    "url": "/cv/static/media/vncreate-2.75291cfd.png"
+    "revision": "f307f9b4a6a9012cfb1afb06f2dab0d5",
+    "url": "/cv/static/media/vncreate-2.f307f9b4.png"
   }
 ]);
