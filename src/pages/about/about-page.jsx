@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link as LinkReact } from 'react-router-dom';
+import Link from '@material-ui/core/Link';
 import {  MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -68,7 +68,7 @@ const AboutPage = () => {
      <Title>ABOUT THIS SITE</Title>
     <SubTitle>A beautiful, responsive, React app written with modern JavaScript.</SubTitle>
      <Box className={classes.boxP}>
-       Welcome to my website. Please feel free to read more <Link color="primary" to="/about">about me</Link>, or you can check out  <Link to="/resume"> my resume</Link>, <Link to="/projects">my projects</Link>, or <Link to="/contact">contact me</Link>.
+       Welcome to my website. Please feel free to read more <Link href="/resume">about me</Link> , or you can check out  <Link href="/resume"> my resume</Link>, <Link href="/projects">my projects</Link>, or <Link href="/contact">contact me</Link>.
      </Box>
     <Box className={classes.boxP}>
       This is react website created to introduce me and my skills in web development (and my skills in english).

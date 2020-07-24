@@ -10,6 +10,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import TextH5 from '../ui/TextH5';
 import TextH6 from '../ui/TextH6';
 import TextBody2 from '../ui/TextBody2';
+import SvgIconsColor from '../links-component/links-icons-ui';
 //import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 import photoMy from '../../img/MyPhoto.jpg'; 
@@ -104,15 +105,16 @@ export default function LeftAreaUi() {
                     I want to try something new and ready to work hard to learn it. 
                 </TextBody2>    
                   <ButtonGroup variant="contained" color="secondary" className={classes.buttonLeftArea} aria-label="contained secondary button group">
-                  <Tooltip title="Download pdf file of my resume in english">
+                  <Tooltip title="Download pdf file of my resume in english" placement="top">
                     <Button href='https://github.com/SergiiKov/cv/blob/master/public/CV.pdf'>resume</Button>
                    </Tooltip>
-                   <Tooltip title="Загрузіть pdf файл мого резюме на українській">
+                   <Tooltip title="Загрузіть pdf файл мого резюме на українській" placement="top">
                     <Button >резюме</Button>
                     </Tooltip>
                   </ButtonGroup>
                 <Box className={classes.box}>
-                    <LinksComponent />
+                    {/* <LinksComponent /> */}
+                    <SvgIconsColor />
                 </Box>  
             </Box>
             </React.Fragment>

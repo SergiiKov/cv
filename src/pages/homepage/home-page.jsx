@@ -11,12 +11,7 @@ class HomePage extends React.Component {
     render(){
         return(
             <div className='home-page'>
-                <h2>ABOUT THIS SITE</h2>
-                <h3>A beautiful, responsive, React app written with modern JavaScript.</h3>
-                <p>Welcome to my website. Please feel free to read more <Link to="/about">about me</Link>, or you can check out <Link to="/resume"> my resume</Link>, <Link to="/projects">my projects</Link>, or <Link to="/contact">contact me</Link>.</p>
-                <p>This is react website created to introduce me and my skills in web development (and my skills in english).</p>
-                <p>It's just a string.</p>
-                <p>Source available <a href='https://github.com/SergiiKov/cv.git'>here.</a></p>  
+              
             </div>
             );
     }
