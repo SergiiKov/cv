@@ -5,35 +5,22 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import MailIcon from '@material-ui/icons/Mail';
+
 import Tooltip from '@material-ui/core/Tooltip';
-
-
 import Link from '@material-ui/core/Link';
-
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > svg': {
-      margin: theme.spacing(1),
-    },
-  },
   icons:{
     paddingTop: '5px'    
-  },
-  iconsContainer:{
-    display: 'flex',
-    alignItems: 'center',
-}
+  }
 }));
 
 export default function SvgIconsColor() {
   const classes = useStyles();
 
   return (
-<div className={classes.iconsContainer}>
-    <div className={classes.root}>
     <ButtonGroup color="secondary" aria-label="outlined primary button group">
     <Tooltip title="GitHub">
         <Button><Link href='https://github.com/SergiiKov' color="secondary" className={classes.icons}><GitHubIcon /></Link></Button>
@@ -48,7 +35,5 @@ export default function SvgIconsColor() {
             <Button><Link href="mailto:sergiikovtun.vn@gmail.com" color="secondary" className={classes.icons}><MailIcon/></Link></Button>
             </Tooltip>
     </ButtonGroup>
-    </div>
-</div>
   );
 }

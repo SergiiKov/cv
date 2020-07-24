@@ -23,11 +23,12 @@ import { skills } from '../../components/skills';
     allProducts
   }) => (
     <div>
-      <div>
-        <h3>SKILLS</h3>
+        <h3 className='text-skills'>Skills</h3>
+        <div className='buttons-container'>
         {ButtonCategories(productCategories, setCategory )}
-      </div>
-      <div >
+        </div>
+       
+      <div className='container-skills-list'>
         <SkillsList state={state} />
       </div>
     </div>

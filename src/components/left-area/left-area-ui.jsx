@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Link from '@material-ui/core/Link';
-import LinksComponent from '../links-component/links-compnent';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import { Button } from '@material-ui/core';
@@ -11,7 +10,6 @@ import TextH5 from '../ui/TextH5';
 import TextH6 from '../ui/TextH6';
 import TextBody2 from '../ui/TextBody2';
 import SvgIconsColor from '../links-component/links-icons-ui';
-//import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 import photoMy from '../../img/MyPhoto.jpg'; 
 
@@ -113,7 +111,6 @@ export default function LeftAreaUi() {
                     </Tooltip>
                   </ButtonGroup>
                 <Box className={classes.box}>
-                    {/* <LinksComponent /> */}
                     <SvgIconsColor />
                 </Box>  
             </Box>
