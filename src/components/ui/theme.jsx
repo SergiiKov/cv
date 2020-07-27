@@ -2,8 +2,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 // const arcBlue = "#0B72B9";
 const arcBlue = "#3f51b5";
-const orange = "#ff9800";
-const arcOrange = "#FFBA60";
+const arcOrange = "#ff9800";
 const leftRed = '#e53935';
 
 
