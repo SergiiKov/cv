@@ -9,6 +9,7 @@ import ProjectsPage from '../pages/projects/projects-page';
 import ResumePage from '../pages/resume/resume-page';
 import LeftAreaUi from '../components/left-area/left-area-ui';
 import Grid from '@material-ui/core/Grid';
+import MyApp1 from '../components/pdf1';
 
 import Project2 from '../pages/projects/projects2';
 import ResumeUi from '../pages/resume/resume-ui';
@@ -27,7 +28,7 @@ function App() {
                   </Grid>
                   <Grid item xs={12} sm={8} >
                     <Switch>
-                      <Route exact  path='/' component={HomePage} />
+                      <Route exact  path='/' component={MyApp1} />
                       <Route exact path='/cv' component={AboutPage} />
                       <Route path='/resume' component={ResumeUi} />
                       <Route path='/projects' component={Project2} />
