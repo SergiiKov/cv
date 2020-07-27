@@ -11,6 +11,8 @@ import TextH6 from '../ui/TextH6';
 import TextBody2 from '../ui/TextBody2';
 import SvgIconsColor from '../links-component/links-icons-ui';
 
+import cvUa from '../../img/cv_ua.pdf'
+import cvEn from '../../img/cv_en.pdf'
 import photoMy from '../../img/MyPhoto.jpg'; 
 
 const useStyles = makeStyles(theme=>({
@@ -105,10 +107,10 @@ export default function LeftAreaUi() {
                 </TextBody2>    
                   <ButtonGroup variant="contained" color="secondary" className={classes.buttonLeftArea} aria-label="contained secondary button group">
                   <Tooltip title="Download pdf file of my resume in english" placement="top">
-                    <Button href='https://github.com/SergiiKov/cv/blob/master/public/CV.pdf'>resume</Button>
+                    <Button href={cvEn} target="_blank">resume</Button>
                    </Tooltip>
                    <Tooltip title="Загрузіть pdf файл мого резюме на українській" placement="top">
-                    <Button >резюме</Button>
+                    <Button href={cvUa} target="_blank" >резюме</Button>
                     </Tooltip>
                   </ButtonGroup>
                 <Box className={classes.box}>
