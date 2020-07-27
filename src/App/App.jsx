@@ -11,6 +11,7 @@ import LeftAreaUi from '../components/left-area/left-area-ui';
 import Grid from '@material-ui/core/Grid';
 
 import Project2 from '../pages/projects/projects2';
+import ResumeUi from '../pages/resume/resume-ui';
 
  import { ThemeProvider } from '@material-ui/core/styles';
  import theme from '../components/ui/theme';
@@ -28,7 +29,7 @@ function App() {
                     <Switch>
                       <Route exact  path='/' component={HomePage} />
                       <Route exact path='/cv' component={AboutPage} />
-                      <Route path='/resume' component={ResumePage} />
+                      <Route path='/resume' component={ResumeUi} />
                       <Route path='/projects' component={Project2} />
                       <Route path='/contact' component={ContactPage} />
                     </Switch>
