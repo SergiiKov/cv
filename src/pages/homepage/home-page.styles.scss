@@ -8,6 +8,8 @@
 background-color:#fafafa;
 border: 1px solid #FFBA60;
 
+
+
 h2{
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 1.6em;
@@ -48,6 +50,15 @@ a:hover{
   color:#FFBA60;
 }
 
+  }
+
+ 
+  .photo{
+    max-height: 100vh;
+  }
+
+  .tewr{
+    position: absolute;
   }
 
   @media screen and (max-width: 600px) {
