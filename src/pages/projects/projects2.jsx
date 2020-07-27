@@ -4,9 +4,7 @@ import Link from '@material-ui/core/Link';
 import {  MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import Title from '../../components/ui/title';
-
 import SubTitle from '../../components/ui/sub-title';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -26,7 +24,7 @@ const useStyles = makeStyles(theme=>({
     }
   },
   tab: {
-    marginTop: '20px'
+    padding: theme.spacing(1)
   },
   boxH2: {
     fontFamily: "Roboto",
@@ -67,79 +65,83 @@ const Project2 = () => {
      <CardContent>
      <Title>MY PROJECTS</Title>
     <SubTitle>Smp.vin.ua</SubTitle>
+    <Link href='http://smp.vin.ua/joomla/' target="_blank" rel="noopener noreferrer">
      <div className='project-card-container'>
-                    <Link href='http://smp.vin.ua/joomla/' target="_blank" rel="noopener noreferrer">
                         <img src={require(`../../img/smp.png`)} alt='smp.vin.ua' className='img-projects' />
-                        </Link> 
                             <div className='projects-text-container'>
-                                <p>Офіційний сайт. Соціальна та молодіжна політика на Вінниччині</p>
-                            </div>   
+                                <Typography className={classes.tab}  variant='body2'>
+                                  Офіційний сайт. Соціальна та молодіжна політика на Вінниччині
+                                  </Typography>
+                            </div>                       
                     </div>
+                    </Link>  
      </CardContent>
    </Card>
 
    <Card className={classes.cardMargin} square>
      <CardContent>
     <SubTitle>Main-page iac</SubTitle>
-    <div className='project-card-container'>
     <Link href='http://smp.vin.ua/joomla/' target="_blank" rel="noopener noreferrer">
-                   
+    <div className='project-card-container'>
                         <img src={require(`../../img/main-page.png`)} alt='main-page iac' className='img-projects' />
                             <div className='projects-text-container'>
-                                <p>Головна сторінка для сукупності сайтів соціальної політики Вінниччини. 
-                                    ОКО Інформаційно-аналітичний центр з обслуговування установ соціального захисту населення</p>
+                                <Typography className={classes.tab}  variant='body2'>Головна сторінка для сукупності сайтів соціальної політики Вінниччини. 
+                                    ОКО Інформаційно-аналітичний центр з обслуговування установ соціального захисту населенн
+                                </Typography>
                             </div>   
-                            </Link>
                     </div>
-               
+                    </Link>        
      </CardContent>
    </Card>
 
    <Card className={classes.cardMargin} square>
      <CardContent>
     <SubTitle>VN Create</SubTitle>
-    <a href='https://github.com/SergiiKov/vncreate' target="_blank" rel="noopener noreferrer">
+    <Link href='https://github.com/SergiiKov/vncreate' target="_blank" rel="noopener noreferrer">
                     <div className='project-card-container'>
                         <img src={require(`../../img/vncreate-1.png`)} alt='VN Create' className='img-projects' />
                         <img src={require(`../../img/vncreate-2.png`)} alt='VN Create' className='img-projects' />
                             <div className='projects-text-container'>
-                                <p>Сайт візитка. Розробка сайту за бажанням клієнта з унікальним дизайном та можливостями. 
+                                <Typography className={classes.tab}  variant='body2'p>Сайт візитка. Розробка сайту за бажанням клієнта з унікальним дизайном та можливостями. 
                                     Створення сайту на CMS WordPress, Joomla. 
-                                    Реєстрація домену та перенесення на хостинг. Доопрацювання вже існуючого сайту.</p>
+                                </Typography>
                             </div>   
                     </div>
-                </a>
+                </Link>
      </CardContent>
    </Card>
 
    <Card className={classes.cardMargin} square>
      <CardContent>
     <SubTitle>Robot-page</SubTitle>
-    <a href='https://github.com/SergiiKov/cards-friends' target="_blank" rel="noopener noreferrer">
+    <Link href='https://github.com/SergiiKov/cards-friends' target="_blank" rel="noopener noreferrer">
                     <div className='project-card-container'>
                         <img src={require(`../../img/robot-friends.png`)} alt='robot-friends' className='img-projects' />
                             <div className='projects-text-container'>
-                                <p>React app that searches through an API of random robots</p>
+                                <Typography className={classes.tab}  variant='body2'>
+                                  React app that searches through an API of random robots
+                                  </Typography>
                             </div>   
                     </div>
-                </a>
+                </Link>
      </CardContent>
    </Card>
 
    <Card className={classes.cardMargin} square>
      <CardContent>
     <SubTitle>Todo List</SubTitle>
-    <a href='https://github.com/SergiiKov/My-ToDo-List' target="_blank" rel="noopener noreferrer">
+    <Link href='https://github.com/SergiiKov/My-ToDo-List' target="_blank" rel="noopener noreferrer">
                     <div className='project-card-container'>
                         <img src={require(`../../img/todolist.png`)} alt='todolist' className='img-projects' />
                             <div className='projects-text-container'>
-                                <p>A simple to-do list application built with React</p>
+                                <Typography className={classes.tab}  variant='body2'>
+                                  A simple to-do list application built with React
+                                </Typography>
                             </div>   
                     </div>
-                </a>
+                </Link>
      </CardContent>
    </Card>
-
 
 </React.Fragment>
       );
