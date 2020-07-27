@@ -22,7 +22,6 @@ import SendIcon from '@material-ui/icons/Send';
 const useStyles = makeStyles((theme) => ({
     contactPage:{
       marginTop: '20px',
-      // backgroundColor: '#fafafa'
     },
     textField:{
       border:`2px solid ${theme.palette.common.blue}`,

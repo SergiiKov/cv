@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import '../projects/projects-page.styles.scss'; 
 
 import Link from '@material-ui/core/Link';
 import {  MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
@@ -56,7 +57,7 @@ const useStyles = makeStyles(theme=>({
 }));
 
 
-const Project2 = () => {
+const ProjectPageUI = () => {
   const classes = useStyles();
 
   return (
@@ -147,4 +148,4 @@ const Project2 = () => {
       );
 }
 
-export default Project2;
+export default ProjectPageUI;

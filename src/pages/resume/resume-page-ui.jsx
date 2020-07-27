@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
 
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Title from '../../components/ui/title';
 
 import SubTitle from '../../components/ui/sub-title';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+
+import ResumeUI from './resume-ui';
 
 
 const useStyles = makeStyles(theme=>({
@@ -57,48 +57,43 @@ const useStyles = makeStyles(theme=>({
 }));
 
 
-const AboutPage = () => {
+const ResumePageUi = () => {
   const classes = useStyles();
 
   return (
        <React.Fragment>
   <Card className={classes.cardMargin} square>
      <CardContent>
-     <Title>ABOUT THIS SITE</Title>
-    <SubTitle>A beautiful, responsive, React app written with modern JavaScript.</SubTitle>
+     <Title>My resume</Title>
+    <SubTitle>Education</SubTitle>
      <Box className={classes.boxP}>
-       Welcome to my website. Please feel free to read more about me, or you can check out my resume, my projects, or contact me.
+     2008-2013. Vinnytsia National Technical University.
+                        Faculty of Information Technologies and Computer Engineering.
+                        Specialty - computer systems and networks            
      </Box>
-    <Box className={classes.boxP}>
-      This is react website created to introduce me and my skills in web development (and my skills in english).
+     <SubTitle>Work Experience</SubTitle>
+     <Box className={classes.boxP}>
+     Mar.2016 - Feb.2020 Regional organization Vinnytsia
+                        Information-analytical center as software engineer.
+                        Maintenance of  computer systems and networks. Analyzed, and
+                        tested applications and system software for user compatibility.
+                        Installed, configured, and routinel upgraded software and
+                        hardware forend-users. Performed network support tasks for WAN,
+                        LAN. Repair and maintenance computer and peripheral equipment.           
+     </Box>
+     <SubTitle>Professional Skills</SubTitle>
+     <Box className={classes.boxP}>
+     Knowledge of: HTML, CSS, JS, ReactJS, Bootstrap, Material-UI
+                      Basic Knowledge of: PHP, MySql
+                     Understanding: NPM, Webpack, Gulp, Git, GitHub, Adobe Photoshop
+                   Knowledge of CMS Wordpress, Joomla
+                    Knowledge of English on the Pre-Intermediate level (Read/Write)      
      </Box>
      </CardContent>
    </Card>
-
-<Card className={classes.cardMargin} square >
-  <CardContent>
-    <Title>ABOUT ME</Title> 
-    <Box elevation={0} className={classes.boxP}>
-      Hi, I'm Kovtun Sergii a software engineer with over four years IT industry experience, that wants to evolve in the field of web development.
-      I want to try something new and ready to work hard to learn it.    
-    </Box>
-
-    <SubTitle>
-      Some stats about me
-    </SubTitle>
-    <Box className={classes.boxP}>
-      Current age: 29
-    </Box>
-    <Box className={classes.boxP}>
-      Current city: Vinnitsa
-    </Box>
-    <Box className={classes.boxP}>
-      Marital status: один
-    </Box>
-  </CardContent>
-  </Card>
+<ResumeUI />
 </React.Fragment>
       );
 }
 
-export default AboutPage;
+export default ResumePageUi;
