@@ -155,10 +155,7 @@ export default function Header(checked1, onChange1) {
       },
       info:{
         main:thirdStyle
-      },
-      // background:{
-      //   default: mainPrimaryColor
-      // }
+      }
     }
   });
 

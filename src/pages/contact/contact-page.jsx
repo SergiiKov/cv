@@ -26,7 +26,8 @@ const useStyles = makeStyles((theme) => ({
     textField:{
       border:`2px solid ${theme.palette.common.blue}`,
       marginTop:'2em',
-      borderRadius: 5
+      borderRadius: 5,
+      width:'240px'
     },
     sendButton: {
       marginTop:'2em',
@@ -133,7 +134,7 @@ const useStyles = makeStyles((theme) => ({
             <Grid item>
               <Grid container direction='column' justify="center" alignItems='center'>
                 <Grid item>
-                      <Title>Send me a message</Title>
+                      <Title>MY CONTACT</Title>
                 </Grid>
           <Card>
             <CardContent>
@@ -194,7 +195,7 @@ const useStyles = makeStyles((theme) => ({
                 </Grid>           
                 <Grid item >
                     <TextField 
-                      className={[classes.textField, classes.widthForm] }
+                      className={classes.textField}
                       InputProps={{ disableUnderline: true }} 
                       multiline rows={8} 
                       id='message' 

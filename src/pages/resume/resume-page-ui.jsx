@@ -64,7 +64,7 @@ const ResumePageUi = () => {
        <React.Fragment>
   <Card className={classes.cardMargin} square>
      <CardContent>
-     <Title>My resume</Title>
+     <Title>MY RESUME</Title>
     <SubTitle>Education</SubTitle>
      <Box className={classes.boxP}>
      2008-2013. Vinnytsia National Technical University.
