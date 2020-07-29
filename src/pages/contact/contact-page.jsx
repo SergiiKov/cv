@@ -124,18 +124,18 @@ const useStyles = makeStyles((theme) => ({
 
     return (
       <React.Fragment>
-        <Grid container direction='row' className={classes.contactPage}>
-              <Grid item container 
+         <Grid container direction='row' className={classes.contactPage}>
+              <Grid item container             
                     direction="column"
                     justify="center"
                     alignItems='center'
                     className={classes.contactPart}
-              >
+              >                    
             <Grid item>
-              <Grid container direction='column' justify="center" alignItems='center'>
+              <Grid container direction='column' justify="center" alignItems='center'>          
                 <Grid item>
                       <Title>MY CONTACT</Title>
-                </Grid>
+                </Grid>       
           <Card>
             <CardContent>
                   <Grid item container style={{marginTop:'1em'}}>
@@ -213,8 +213,7 @@ const useStyles = makeStyles((theme) => ({
                     </Button>
                   </Grid>
           </CardContent>
-            </Card>
-        
+            </Card>  
               </Grid>
             </Grid>
             </Grid>
@@ -230,7 +229,7 @@ const useStyles = makeStyles((theme) => ({
               autoHideDuration={4000}
               onClose={() => setAlert(false)}
             />
-        </Grid>  
+        </Grid>   
       </React.Fragment>   
     );
   }

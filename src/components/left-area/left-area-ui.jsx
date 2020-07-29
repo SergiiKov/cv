@@ -15,6 +15,8 @@ import cvUa from '../../img/cv_ua.pdf'
 import cvEn from '../../img/cv_en.pdf'
 import photoMy from '../../img/MyPhoto.jpg'; 
 
+import './test.scss'
+
 const useStyles = makeStyles(theme=>({
     mainBox:{
         backgroundColor: '#e53935',
@@ -49,7 +51,7 @@ const useStyles = makeStyles(theme=>({
           transition: '1s ease-in-out',
           '&:hover': {
            transform: 'translate(3em,0)'
-          },
+          }
     },
 
     buttonLeftArea:{
@@ -87,7 +89,7 @@ export default function LeftAreaUi() {
             <React.Fragment>
             <Box className={classes.mainBox} >
                 <Box>
-                <   img src={photoMy} alt="Sergii Kovtun"  className={classes.photoContainer}/>
+                <   img src={photoMy} alt="Sergii Kovtun"  className='test'/>
                 </Box>
                 <TextH5 className={[classes.box, classes.boxTitle]}>
                     Kovtun Sergii

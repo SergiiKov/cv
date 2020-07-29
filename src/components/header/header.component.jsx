@@ -164,18 +164,17 @@ export default function Header(checked1, onChange1) {
   };
 
  useEffect(() =>{
-  if (window.location.pathname === '/' && value !==4 ) {
-    setValue(4)
-  } else  
   if (window.location.pathname === '/cv' && value !==0) {
     setValue(0)
   } else  if (window.location.pathname === '/resume' && value !==1 ) {
     setValue(1)
-  } else  if (window.location.pathname === '/projects ' && value !==2 ) {
+  } else  if (window.location.pathname === '/projects' && value !==2 ) {
     setValue(2)
-  }else if (window.location.pathname === '/contact ' && value !==3 ) {
+  }else if (window.location.pathname === '/contact' && value !==3 ) {
       setValue(3)
-  }
+  } else if (window.location.pathname === '/' && value !==4 ) {
+    setValue(4)
+  }   
 }, [value]);
 
 const tabs= (
@@ -208,11 +207,7 @@ const drawer = (
     <div className={classes.toolbarMargin} />
    
     <List disablePadding>
-                <ListItem divider button component={Link} to='/' selected={value===4}  onClick={()=>{setOpenDrawer(false); setValue(4) }} >
-                    <ListItemText className={value === 4 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
-                    Kovtun Sergii
-                    </ListItemText>  
-                </ListItem>
+
                 <ListItem divider button selected={value===0} onClick={()=>{setOpenDrawer(false); setValue(0) }} component={Link} to='/cv'  >
                     <ListItemText className={value === 0 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
                     About
@@ -232,6 +227,11 @@ const drawer = (
                     <ListItemText className={value === 3 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
                     Contact
                     </ListItemText>
+                </ListItem>
+                <ListItem divider button component={Link} to='/' selected={value===4}  onClick={()=>{setOpenDrawer(false); setValue(4) }} >
+                    <ListItemText className={value === 4 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
+                    Kovtun Sergii
+                    </ListItemText>  
                 </ListItem>
             </List>    
         <Button variant="contained" color="secondary" className={classes.drawerButton} href='https://github.com/SergiiKov/cv'>Sourse</Button>
