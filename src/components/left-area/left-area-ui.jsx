@@ -15,14 +15,10 @@ import cvUa from '../../img/cv_ua.pdf'
 import cvEn from '../../img/cv_en.pdf'
 import photoMy from '../../img/MyPhoto.jpg'; 
 
-import './test.scss'
-
 const useStyles = makeStyles(theme=>({
     mainBox:{
         backgroundColor: '#e53935',
         padding:'20px',
-        marginLeft: '20px',
-        marginTop: '20px',
         [theme.breakpoints.down("md")]: {
             marginLeft: '0px',
             marginTop: '0px',
@@ -53,33 +49,11 @@ const useStyles = makeStyles(theme=>({
            transform: 'translate(3em,0)'
           }
     },
-
     buttonLeftArea:{
         marginLeft: '0px',
         marginTop: '20px',
         marginBottom: '20px', 
-    },
-    boxBody: {
-        ...theme.typography.body1
-      },
-      boxTitle:{
-          ...theme.typography.boxTitle,
-          paddingTop: '10px'
-      },
-      boxEmail:{
-            marginTop:'10px',
-            paddingTop: '10px',
-            fontFamily: 'Roboto',
-            fontWeight: '400',
-            letterSpacing: '0.09em',
-            fontSize:'1rem',
-            cursor:'pointer',
-            color:'black',
-            '&:hover': {
-                color:'#FFBA60',
-                transition: 'all 0.2s ease-out'
-              }       
-      }
+    }
 }))
 
 export default function LeftAreaUi() {
@@ -89,9 +63,9 @@ export default function LeftAreaUi() {
             <React.Fragment>
             <Box className={classes.mainBox} >
                 <Box>
-                <   img src={photoMy} alt="Sergii Kovtun"  className='test'/>
+                <   img src={photoMy} alt="Sergii Kovtun"  className={classes.photoContainer}/>
                 </Box>
-                <TextH5 className={[classes.box, classes.boxTitle]}>
+                <TextH5>
                     Kovtun Sergii
                 </TextH5>
                   <TextH6 >
@@ -99,10 +73,10 @@ export default function LeftAreaUi() {
                       Email: sergiikovtun.vn@gmail.com
                     </Link>
                   </TextH6>
-                <TextH6 className={[classes.box, classes.boxTitle]}>
+                <TextH6>
                     About
                 </TextH6>
-                <TextBody2 className={[classes.box, classes.boxBody]}>
+                <TextBody2>
                     Hi, I'm Kovtun Sergii a software engineer with over four years IT industry experience,
                     that wants to evolve in the field of web development.
                     I want to try something new and ready to work hard to learn it. 

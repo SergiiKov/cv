@@ -22,6 +22,7 @@ import SendIcon from '@material-ui/icons/Send';
 const useStyles = makeStyles((theme) => ({
     contactPage:{
       marginTop: '20px',
+      marginBottom: '20px'
     },
     textField:{
       border:`2px solid ${theme.palette.common.blue}`,
@@ -31,12 +32,24 @@ const useStyles = makeStyles((theme) => ({
     },
     sendButton: {
       marginTop:'2em',
-      minWidth: '150px',
-      marginBottom:'1em'
+      minWidth: '150px'
     },
     widthForm:{
       width:'240px'
+    },
+    cardContent:{
+      paddingLeft:'4em', 
+      paddingRight:'4em',
+      [theme.breakpoints.down("md")]: {
+        paddingLeft:'1em', 
+      paddingRight:'1em'
+      },
+      [theme.breakpoints.down("xs")]: {
+        paddingLeft:'0.5em', 
+        paddingRight:'0.5em'
+      }
     }
+
   }));
   
   export default function Contact() {
@@ -137,7 +150,7 @@ const useStyles = makeStyles((theme) => ({
                       <Title>MY CONTACT</Title>
                 </Grid>       
           <Card>
-            <CardContent>
+            <CardContent className={classes.cardContent}>
                   <Grid item container style={{marginTop:'1em'}}>
                       <Grid item>
                         <ColorBody1><PhoneAndroidIcon style={{marginRight:'0.5em'}} /></ColorBody1>

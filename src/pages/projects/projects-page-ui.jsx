@@ -2,14 +2,12 @@ import React, {useState} from 'react';
 import '../projects/projects-page.styles.scss'; 
 
 import Link from '@material-ui/core/Link';
-import {  MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Title from '../../components/ui/title';
 import SubTitle from '../../components/ui/sub-title';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-
 
 const useStyles = makeStyles(theme=>({
   cardMargin:{
@@ -56,12 +54,11 @@ const useStyles = makeStyles(theme=>({
   }
 }));
 
-
 const ProjectPageUI = () => {
   const classes = useStyles();
 
   return (
-       <React.Fragment>
+  <React.Fragment>
             <Card className={classes.cardMargin} square>
      <CardContent>
     <SubTitle>Todo List</SubTitle>
@@ -143,9 +140,8 @@ const ProjectPageUI = () => {
                     </Link>        
      </CardContent>
    </Card>
-
-</React.Fragment>
-      );
+  </React.Fragment>
+);
 }
 
 export default ProjectPageUI;
