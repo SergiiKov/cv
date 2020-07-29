@@ -40,8 +40,13 @@ a {
     }
   }
 
-  .card-text-container:hover{
-    opacity: 0.9;
+  .card-container:hover{
+    .card-text-container{
+      opacity: 0.9;
+      .joke{
+        opacity: 0.01;
+      }
+    }
   }
 
   .img-skill{
