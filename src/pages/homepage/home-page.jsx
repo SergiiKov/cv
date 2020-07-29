@@ -12,7 +12,7 @@ class HomePage extends React.Component {
             <div className='home-page'>
                 <p>Kovtun Sergii </p> 
                 <p>Personal Website</p> 
-                <p>in the process of developing</p> 
+                <p>In the process of developing</p> 
             </div>
         );
     } 
