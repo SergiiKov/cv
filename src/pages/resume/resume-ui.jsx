@@ -1,13 +1,14 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
-import SubTitle from '../../components/ui/sub-title';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import SubTitle from '../../components/ui/sub-title';
 import Scroll from '../../components/scroll/scroll.component';
 import SkillsList from '../../components/skills-list/skills-list.component';
+import { skills } from '../../components/data/skills';
+
 import '../resume/resume-page.styles.scss';
-import { skills } from '../../components/skills';
 
 const useStyles = makeStyles(theme=>({
     cardMargin:{
