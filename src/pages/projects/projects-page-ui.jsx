@@ -59,8 +59,9 @@ const ProjectPageUI = () => {
 
   return (
   <React.Fragment>
-            <Card className={classes.cardMargin} square>
+  <Card className={classes.cardMargin} square>
      <CardContent>
+      <Title>MY PROJECTS</Title>
     <SubTitle>Todo List</SubTitle>
     <Link href='https://github.com/SergiiKov/My-ToDo-List' target="_blank" rel="noopener noreferrer">
                     <div className='project-card-container'>
@@ -99,9 +100,7 @@ const ProjectPageUI = () => {
                         <img src={require(`../../img/vncreate-1.png`)} alt='VN Create' className='img-projects' />
                         <img src={require(`../../img/vncreate-2.png`)} alt='VN Create' className='img-projects' />
                             <div className='projects-text-container'>
-                                <Typography className={classes.tab}  variant='body2'p>Сайт візитка. Розробка сайту за бажанням клієнта з унікальним дизайном та можливостями. 
-                                    Створення сайту на CMS WordPress, Joomla. 
-                                </Typography>
+                                <Typography className={classes.tab}  variant='body2'p>Сайт візитка. Розробка сайтів.</Typography>
                             </div>   
                     </div>
                 </Link>
@@ -110,7 +109,6 @@ const ProjectPageUI = () => {
 
   <Card className={classes.cardMargin} square>
      <CardContent>
-     <Title>MY PROJECTS</Title>
     <SubTitle>Smp.vin.ua</SubTitle>
     <Link href='http://smp.vin.ua/joomla/' target="_blank" rel="noopener noreferrer">
      <div className='project-card-container'>
@@ -132,8 +130,8 @@ const ProjectPageUI = () => {
     <div className='project-card-container'>
                         <img src={require(`../../img/main-page.png`)} alt='main-page iac' className='img-projects' />
                             <div className='projects-text-container'>
-                                <Typography className={classes.tab}  variant='body2'>Головна сторінка для сукупності сайтів соціальної політики Вінниччини. 
-                                    ОКО Інформаційно-аналітичний центр з обслуговування установ соціального захисту населенн
+                                <Typography className={classes.tab}  variant='body2'>
+                                  Головна сторінка для сукупності сайтів соціальної політики Вінниччини. 
                                 </Typography>
                             </div>   
                     </div>
