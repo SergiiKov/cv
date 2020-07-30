@@ -19,16 +19,16 @@ const useStyles = makeStyles( (theme) => ({
     marginBottom: '20px',
     width: '50%',
     [theme.breakpoints.down("md")]: {
-        marginLeft:'2px',
-        marginTop:'2px',
-        marginBottom: '2px',
-        width: '90%'
+        marginLeft:0,
+        marginTop:0,
+        marginBottom: '10px',
+        width: '100%'
       },
       [theme.breakpoints.down("xs")]: {
-        marginLeft:'2px',
-        marginTop:'2px',
-        marginBottom: '2px',
-        width: '90%'
+        marginLeft:0,
+        marginTop:0,
+        marginBottom: '10px',
+        width: '100%'
       }
   },
   media: {
@@ -37,8 +37,7 @@ const useStyles = makeStyles( (theme) => ({
 }));
 
 export default function HomePage() {
-  const classes = useStyles();
-  const theme= useTheme(); 
+  const classes = useStyles(); 
   return (
     <Card className={classes.root}>
       <CardActionArea>
