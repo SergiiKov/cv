@@ -178,6 +178,7 @@ const useStyles = makeStyles((theme) => ({
                 <Grid item container direction='column' justify="center" alignItems='center'>
                     <Grid item>
                         <TextField 
+                        variant="filled"
                         className={classes.widthForm}
                         label='Name'
                         id='name' 
@@ -185,7 +186,8 @@ const useStyles = makeStyles((theme) => ({
                         onChange={(event)=> setName(event.target.value)} />
                     </Grid>
                     <Grid item>
-                        <TextField                         
+                        <TextField  
+                        variant="filled"                       
                         className={classes.widthForm}
                           label='Email' 
                           id='email' 
@@ -197,6 +199,7 @@ const useStyles = makeStyles((theme) => ({
                     </Grid>
                     <Grid item>
                       <TextField 
+                      variant="filled"
                       className={classes.widthForm}
                         label='Phone' 
                         id='phone' 
@@ -208,6 +211,7 @@ const useStyles = makeStyles((theme) => ({
                 </Grid>           
                 <Grid item >
                     <TextField 
+                      variant="filled"
                       className={classes.textField}
                       InputProps={{ disableUnderline: true }} 
                       multiline rows={8} 

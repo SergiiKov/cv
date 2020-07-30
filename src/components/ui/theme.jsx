@@ -5,7 +5,6 @@ const arcBlue = "#3f51b5";
 const arcOrange = "#ff9800";
 const leftRed = '#e53935';
 
-
 const theme = createMuiTheme({
 
     palette: {
@@ -20,8 +19,7 @@ const theme = createMuiTheme({
         },
         secondary: {
             main: `${arcOrange}`,
-        },
-        // type:'dark'
+        }
       },
       typography: {
           tab: {
@@ -37,6 +35,7 @@ const theme = createMuiTheme({
             fontSize:'1.2rem'
           },
       },
+      
       overrides:{
         MuiInputLabel:{
           root:{

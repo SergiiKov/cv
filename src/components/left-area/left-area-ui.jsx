@@ -21,12 +21,12 @@ const useStyles = makeStyles(theme=>({
         minHeight: '90vh',
         padding:'20px',
         [theme.breakpoints.down("md")]: {
-            marginLeft: '0px',
-            marginTop: '0px',
+            marginLeft:0,
+            marginTop: 0
           },
           [theme.breakpoints.down("xs")]: {
-            marginLeft: '0px',
-            marginTop: '0px',
+            marginLeft:0,
+            marginTop:0
           }
     },
     box:{
@@ -70,8 +70,8 @@ export default function LeftAreaUi() {
                     Kovtun Sergii
                 </TextH5>
                   <TextH6 >
-                    <Link href="mailto:sergiikovtun.vn@gmail.com" color='inherit' >
-                      Email: sergiikovtun.vn@gmail.com
+                    <Link href="mailto:sergiikovtun.vn@gmail.com" color='inherit'  >
+                     sergiikovtun.vn@gmail.com
                     </Link>
                   </TextH6>
                 <TextH6>
