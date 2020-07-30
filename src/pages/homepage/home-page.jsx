@@ -14,8 +14,8 @@ import photoMy from '../../img/MyPhoto.jpg';
 
 const useStyles = makeStyles( (theme) => ({
   root: {
-      marginLeft:'20px',
-    marginTop:'20px',
+    marginLeft:'25%',
+    marginTop:'10px',
     marginBottom: '20px',
     width: '50%',
     [theme.breakpoints.down("md")]: {
@@ -32,7 +32,7 @@ const useStyles = makeStyles( (theme) => ({
       }
   },
   media: {
-    height: 480,
+    height: 440,
   },
 }));
 
