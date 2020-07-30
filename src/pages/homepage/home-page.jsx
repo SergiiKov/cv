@@ -1,23 +1,52 @@
+// import '../homepage/home-page.styles.scss';
+
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
 
-import '../homepage/home-page.styles.scss';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 
-class HomePage extends React.Component { 
-    constructor(){
-        super();
-    } 
+import Typography from '@material-ui/core/Typography';
 
-    render(){
-        return(
-            <div className='home-page'>
-                <p>Kovtun Sergii </p> 
-                <p>Personal Website</p> 
-                <p>In the process of developing</p> 
-            </div>
-        );
-    } 
-};
+import photoMy from '../../img/MyPhoto.jpg'; 
 
-export default HomePage;
+const useStyles = makeStyles({
+  root: {
+      marginLeft:'20px',
+    marginTop:'20px',
+    marginBottom: '20px',
+    width: '50%'
+  },
+  media: {
+    height: 480,
+  },
+});
+
+export default function HomePage() {
+  const classes = useStyles();
+
+  return (
+    <Card className={classes.root}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image={photoMy}
+          title="Kovtun Sergii"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+          Kovtun Sergii
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+          Personal web page in the process of developing
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+  );
+}
+
  
 
