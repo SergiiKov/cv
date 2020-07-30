@@ -1,7 +1,7 @@
 // import '../homepage/home-page.styles.scss';
 
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 
@@ -12,21 +12,33 @@ import Typography from '@material-ui/core/Typography';
 
 import photoMy from '../../img/MyPhoto.jpg'; 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles( (theme) => ({
   root: {
       marginLeft:'20px',
     marginTop:'20px',
     marginBottom: '20px',
-    width: '50%'
+    width: '50%',
+    [theme.breakpoints.down("md")]: {
+        marginLeft:'2px',
+        marginTop:'2px',
+        marginBottom: '2px',
+        width: '90%'
+      },
+      [theme.breakpoints.down("xs")]: {
+        marginLeft:'2px',
+        marginTop:'2px',
+        marginBottom: '2px',
+        width: '90%'
+      }
   },
   media: {
     height: 480,
   },
-});
+}));
 
 export default function HomePage() {
   const classes = useStyles();
-
+  const theme= useTheme(); 
   return (
     <Card className={classes.root}>
       <CardActionArea>

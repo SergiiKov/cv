@@ -18,7 +18,7 @@ import photoMy from '../../img/MyPhoto.jpg';
 const useStyles = makeStyles(theme=>({
     mainBox:{
         backgroundColor: '#e53935',
-        height: '100vh',
+        minHeight: '90vh',
         padding:'20px',
         [theme.breakpoints.down("md")]: {
             marginLeft: '0px',
