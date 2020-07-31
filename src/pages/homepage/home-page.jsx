@@ -17,7 +17,8 @@ const useStyles = makeStyles( (theme) => ({
     marginLeft:'25%',
     marginTop:'10px',
     marginBottom: '20px',
-    width: '50%',
+    // width: '50%',
+    width: '30em',
     [theme.breakpoints.down("md")]: {
         marginLeft:0,
         marginTop:0,
@@ -32,7 +33,13 @@ const useStyles = makeStyles( (theme) => ({
       }
   },
   media: {
-    height: 440,
+     height: 440,
+    [theme.breakpoints.down("md")]: {
+      height: '50em',
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: '50em',
+    }
   },
 }));
 
