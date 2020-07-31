@@ -1,5 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
+import Table from './Table';
+import personalData from '../../components/data/stats';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -60,6 +63,25 @@ const useStyles = makeStyles(theme=>({
 const AboutPage = () => {
   const classes = useStyles();
 
+  const [data, setData] = useState(personalData);
+
+  const tick = () => {
+    const divisor = 1000 * 60 * 60 * 24 * 365.2421897; // ms in an average year
+    const birthTime = new Date('1990-10-13T09:24:00');
+    setData({
+      ...data,
+      age: {
+        label: 'Current age',
+        value: ((Date.now() - birthTime) / divisor).toFixed(11),
+      },
+    });
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => tick(), 25);
+    return () => { clearInterval(timer); };
+  }, []);
+
   return (
        <React.Fragment>
   <Card className={classes.cardMargin} square>
@@ -82,21 +104,10 @@ const AboutPage = () => {
       Hi, I'm Kovtun Sergii a software engineer with over four years IT industry experience, that wants to evolve in the field of web development.
       I want to try something new and ready to work hard to learn it.    
     </Box>
-
-    <SubTitle>
-      Some stats about me
-    </SubTitle>
-    <Box className={classes.boxP}>
-      Current age: 29
-    </Box>
-    <Box className={classes.boxP}>
-      Current city: Vinnitsa
-    </Box>
-    <Box className={classes.boxP}>
-      Marital status: 1
-    </Box>
+    <SubTitle>Some stats about me</SubTitle>
+    <Table data={Object.keys(data).map((key) => data[key])} />
   </CardContent>
-  </Card>
+</Card>
 </React.Fragment>
       );
 }

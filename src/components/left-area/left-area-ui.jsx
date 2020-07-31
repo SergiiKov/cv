@@ -46,9 +46,9 @@ const useStyles = makeStyles(theme=>({
             height: '50vmin',
           },
           transition: '1s ease-in-out',
-          '&:hover': {
-           transform: 'translate(3em,0)'
-          }
+            '&:hover': {
+              transform: 'translate(5em,0)' 
+            }
     },
     buttonLeftArea:{
         marginLeft: '0px',
