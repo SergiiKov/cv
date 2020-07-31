@@ -93,7 +93,7 @@ const AboutPage = () => {
       Current city: Vinnitsa
     </Box>
     <Box className={classes.boxP}>
-      Marital status: один
+      Marital status: 1
     </Box>
   </CardContent>
   </Card>
