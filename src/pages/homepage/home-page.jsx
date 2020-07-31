@@ -15,7 +15,7 @@ import photoMy from '../../img/MyPhoto.jpg';
 const useStyles = makeStyles( (theme) => ({
   root: {
     marginLeft:'25%',
-    marginTop:'10px',
+    marginTop:'20px',
     marginBottom: '20px',
     // width: '50%',
     width: '30em',
