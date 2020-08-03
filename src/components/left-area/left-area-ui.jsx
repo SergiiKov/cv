@@ -9,7 +9,9 @@ import Tooltip from '@material-ui/core/Tooltip';
 import TextH5 from '../ui/TextH5';
 import TextH6 from '../ui/TextH6';
 import TextBody2 from '../ui/TextBody2';
+import SubTitle from '../ui/sub-title';
 import SvgIconsColor from '../links-component/links-icons-ui';
+import Paper from '@material-ui/core/Paper';
 
 import cvUa from '../../img/cv_ua.pdf'
 import cvEn from '../../img/cv_en.pdf'
@@ -17,7 +19,7 @@ import photoMy from '../../img/MyPhoto.jpg';
 
 const useStyles = makeStyles(theme=>({
     mainBox:{
-        backgroundColor: '#e53935',
+        // backgroundColor: '#e53935',
         minHeight: '90vh',
         padding:'20px',
         [theme.breakpoints.down("md")]: {
@@ -62,13 +64,13 @@ export default function LeftAreaUi() {
 
     return(
             <React.Fragment>
-            <Box className={classes.mainBox} >
+            <Box className={classes.mainBox} component={Paper} >
                 <Box>
                 <   img src={photoMy} alt="Sergii Kovtun"  className={classes.photoContainer}/>
                 </Box>
-                <TextH5>
+                <SubTitle>
                     Kovtun Sergii
-                </TextH5>
+                </SubTitle>
                   <TextH6 >
                     <Link href="mailto:sergiikovtun.vn@gmail.com" color='inherit'  >
                      sergiikovtun.vn@gmail.com

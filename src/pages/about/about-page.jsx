@@ -105,7 +105,6 @@ const AboutPage = () => {
     </Box>
     <SubTitle>Some stats about me</SubTitle>
     <Table data={Object.keys(data).map((key) => data[key])} />
-    Current city Vinnitsa
   </CardContent>
 </Card>
 </React.Fragment>
