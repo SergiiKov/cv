@@ -65,8 +65,8 @@ const AboutPage = () => {
   const [data, setData] = useState(personalData);
 
   const tick = () => {
-    const divisor = 1000 * 60 * 60 * 24 * 365.2421897; // ms in an average year
-    const birthTime = new Date('1990-10-13T09:24:00');
+    const divisor = 1000 * 60 * 60 * 24 * 365.2425;
+    const birthTime = new Date('1990, 10, 13');
     setData({
       ...data,
       age: {
@@ -105,6 +105,7 @@ const AboutPage = () => {
     </Box>
     <SubTitle>Some stats about me</SubTitle>
     <Table data={Object.keys(data).map((key) => data[key])} />
+    Current city Vinnitsa
   </CardContent>
 </Card>
 </React.Fragment>
