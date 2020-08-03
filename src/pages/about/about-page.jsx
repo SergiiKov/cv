@@ -86,9 +86,9 @@ const AboutPage = () => {
   <Card className={classes.cardMargin} square>
      <CardContent>
      <Title>ABOUT THIS SITE</Title>
-    <SubTitle>A beautiful, responsive, React app written with modern JavaScript.</SubTitle>
+    <SubTitle>A beautiful, responsive, React app written with modern JavaScript and React components.</SubTitle>
      <Box className={classes.boxP}>
-       Welcome to my website. Please feel free to read more about me, or you can check out my resume, my projects, or contact me.
+       Welcome to my website. Please read more <Link style={{color:'#3f51b5'}} to="/cv">about me</Link>, or you can check out <Link style={{color:'#3f51b5'}} to="/resume">my resume</Link>, <Link style={{color:'#3f51b5'}} to="/projects"> my projects</Link>, or <Link style={{color:'#3f51b5'}} to="/contact">contact me</Link>.
      </Box>
     <Box className={classes.boxP}>
       This is react website created to introduce me and my skills in web development (and my skills in english).
