@@ -42,7 +42,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
 
         mailOptions = {...mailOptions, 
             to: email, 
-            subject: "We have resived your massege",
+            subject: "I have received your message",
             html: 
             `
             
