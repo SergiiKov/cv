@@ -8,7 +8,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Title from '../../components/ui/title';
-
 import SubTitle from '../../components/ui/sub-title';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';

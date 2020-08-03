@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import TableRows from './TableRow';
+import TableRow from './TableRow';
 
 const Table = ({ data }) => (
   <table>
     <tbody>
       {data.map((pair) => (
-        <TableRows
+        <TableRow
           key={pair.label}
           label={pair.label}
           value={pair.value}
